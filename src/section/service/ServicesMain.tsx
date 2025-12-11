@@ -1,0 +1,139 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import ServiceImg1 from '../../assets/images/services/services-v1-img1.jpg';
+import ServiceImg2 from '../../assets/images/services/services-v1-img2.jpg';
+import ServiceImg3 from '../../assets/images/services/services-v1-img3.jpg';
+
+const services = [
+  {
+    title: 'LTL (Less Than Truckload)',
+    desc: 'Cost-effective option for smaller shipments. Share trailer space and pay only for what you need.',
+    image: ServiceImg1,
+    iconClass: 'icon-delivery-man',
+    link: '/track-transport',
+  },
+  {
+    title: 'FTL (Full Truckload)',
+    desc: 'Dedicated trucks for large shipments with direct routes and priority delivery.',
+    image: ServiceImg2,
+    iconClass: 'icon-shipment',
+    link: '/international-transport',
+  },
+  {
+    title: 'Interstate Transport',
+    desc: 'Efficient trucking services across states with reliable long-distance solutions.',
+    image: ServiceImg3,
+    iconClass: 'icon-international-shipping',
+    link: '/personal-delivery',
+  },
+  {
+    title: 'Intrastate Transport',
+    desc: 'Reliable local/statewide deliveries for fast regional distribution.',
+    image: ServiceImg1,
+    iconClass: 'icon-ship-1',
+    link: '/warehouse-facility',
+  },
+  {
+    title: 'Reefer Transport',
+    desc: 'Temperature-controlled shipments for perishables and climate-sensitive goods.',
+    image: ServiceImg2,
+    iconClass: 'icon-storehouse',
+    link: '/ocean-transport',
+  },
+  {
+    title: 'Air-Conditioned Transport',
+    desc: 'Safe and climate-controlled delivery for sensitive goods like electronics and pharmaceuticals.',
+    image: ServiceImg3,
+    iconClass: 'icon-humanitarian-aid',
+    link: '/emergency-transport',
+  },
+  {
+    title: 'Container Drayage',
+    desc: 'Efficient transport of containers from ports to warehouses or other destinations.',
+    image: ServiceImg1,
+    iconClass: 'icon-delivery-man',
+    link: '/ocean-transport',
+  },
+  {
+    title: 'Dry Van',
+    desc: 'Standard enclosed trailer for general cargo protection from weather elements.',
+    image: ServiceImg2,
+    iconClass: 'icon-shipment',
+    link: '/international-transport',
+  },
+  {
+    title: 'Flat Bed',
+    desc: 'Open trailers for oversized or irregularly shaped cargo that needs easy loading.',
+    image: ServiceImg3,
+    iconClass: 'icon-international-shipping',
+    link: '/emergency-transport',
+  },
+  {
+    title: 'Dump Truck',
+    desc: 'Transport for bulk materials like sand, gravel, or construction waste.',
+    image: ServiceImg1,
+    iconClass: 'icon-ship-1',
+    link: '/track-transport',
+  },
+  {
+    title: 'Oversize/Overweight',
+    desc: 'Specialized transport for cargo exceeding standard size or weight limits.',
+    image: ServiceImg2,
+    iconClass: 'icon-storehouse',
+    link: '/personal-delivery',
+  },
+  {
+    title: 'Warehousing & Storage',
+    desc: 'Safe storage facilities for short or long-term needs with inventory management.',
+    image: ServiceImg3,
+    iconClass: 'icon-humanitarian-aid',
+    link: '/warehouse-facility',
+  },
+];
+
+const ServiceOne = () => {
+  return (
+    <section className="service-one service-one--service">
+      <div className="container">
+        <div className="row">
+          {services.map((service, index) => (
+            <div
+              className={`col-xl-4 col-lg-6 col-md-6 wow ${
+                index % 2 === 0 ? 'fadeInLeft' : 'fadeInRight'
+              }`}
+              data-wow-delay="0ms"
+              data-wow-duration="1500ms"
+              key={index}
+            >
+              <div className="service-one__single">
+                <div className="service-one__single-inner">
+                  <div className="service-one__single-img">
+                    <img src={service.image} alt={service.title} />
+                  </div>
+
+                  <div className="service-one__single-content">
+                    <h2>
+                      <Link to={service.link}>{service.title}</Link>
+                    </h2>
+                    <p>{service.desc}</p>
+                    <div className="btn-box">
+                      <Link to={service.link}>
+                        Read More <span className="icon-right-arrow21"></span>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="icon">
+                  <span className={service.iconClass}></span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ServiceOne;
