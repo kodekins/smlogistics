@@ -186,7 +186,7 @@ Service One
     top: -20px;
     right: 0px;
     width: 25px;
-    border-bottom: 20px solid #04171d;
+    border-bottom: 20px solid var(--logistiq-blue-dark);
     border-left: 0px solid transparent;
     border-right: 25px solid transparent;
     transition: all 200ms linear;
@@ -195,7 +195,7 @@ Service One
 }
 
 .service-one__single:hover .icon::before {
-    border-bottom: 20px solid #7f2b11;
+    border-bottom: 20px solid var(--logistiq-red);
 }
 
 .service-one__single .icon span::before {

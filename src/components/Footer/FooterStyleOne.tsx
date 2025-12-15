@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Footershape from '../../assets/images/pattern/footer-v1-pattern.png';
-const footerLogo = "/ovaim-corp-logo.png";
+const footerLogo = "/start-ms-logo.png";
 
 const FooterStyleOne = () => {
 

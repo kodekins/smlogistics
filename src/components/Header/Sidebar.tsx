@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-const logo = "/ovaim-corp-logo.png";
+const logo = "/start-ms-logo.png";
 
 const Sidebar = ({ isSidebar, handleSidebar }) => {
     const [isActivee, setIsActivee] = useState(false)

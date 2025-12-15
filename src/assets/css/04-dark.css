@@ -45,7 +45,7 @@ h6,
 .team-one,
 .brand-one,
 .blog-one__single-content-inner {
-    background: #042630;
+    background: var(--logistiq-blue-dark);
 }
 
 .service-one__pattern {
@@ -67,7 +67,7 @@ h6,
 }
 
 .service-one__single .icon {
-    background: #04171d;
+    background: var(--logistiq-blue-dark);
 }
 
 .owl-dot-style1.owl-theme .owl-dots .owl-dot span {
@@ -94,7 +94,7 @@ h6,
 
 .why-choose-one__form-box,
 .cta-one__inner {
-    background: #103844;
+    background: rgba(var(--logistiq-blue-rgb), .38);
 }
 
 .why-choose-one__form-distance-inner .ranger-min-max-block input[type="text"] {
@@ -166,7 +166,7 @@ h6,
 }
 
 .counter-one__single-inner .icon::before {
-    border-bottom: 90px solid #042630;
+    border-bottom: 90px solid var(--logistiq-blue-dark);
 }
 
 .counter-one__single-inner .icon span::before {
@@ -178,7 +178,7 @@ h6,
 }
 
 .counter-one__single .shape1 {
-    border-top: 20px solid #042630;
+    border-top: 20px solid var(--logistiq-blue-dark);
 }
 
 .counter-one__single-inner .content-box .count-text-box .plus {

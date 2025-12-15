@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import footerShape1 from '../../../assets/images/shapes/site-footer-three-bg-shape.png';
-const footerLogo = "/ovaim-corp-logo.png";
+const footerLogo = "/start-ms-logo.png";
 
 const footerData = {
   newsletterTitle: 'Subscribe to Our',

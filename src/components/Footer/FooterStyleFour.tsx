@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-const footerLogo = "/ovaim-corp-logo.png";
+const footerLogo = "/start-ms-logo.png";
 
 
 // Example footer data (replace with actual dynamic data)

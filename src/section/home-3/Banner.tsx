@@ -33,7 +33,7 @@ const Banner = () => {
     {
       id: 1,
       image: sliderImg1,
-      tagline: "Welcome to Ovaim Corp",
+      tagline: "Welcome to Star MS Logistics",
       title: "We Provide Global",
       titleHighlight: "Logistic",
       description:
@@ -44,7 +44,7 @@ const Banner = () => {
     {
       id: 2,
       image: sliderImg2,
-      tagline: "Welcome to Ovaim Corp",
+  tagline: "Welcome to Star MS Logistics",
       title: "Fast & Reliable",
       titleHighlight: "Shipping",
       description:
@@ -55,7 +55,7 @@ const Banner = () => {
     {
       id: 3,
       image: sliderImg3,
-      tagline: "Welcome to Ovaim Corp",
+  tagline: "Welcome to Star MS Logistics",
       title: "Worldwide",
       titleHighlight: "Network",
       description:
@@ -66,7 +66,7 @@ const Banner = () => {
     {
       id: 4,
       image: sliderImg2,
-      tagline: "Welcome to Ovaim Corp",
+  tagline: "Welcome to Star MS Logistics",
       title: "Worldwide",
       titleHighlight: "Network",
       description:
@@ -77,7 +77,7 @@ const Banner = () => {
     {
       id: 5,
       image: sliderImg1,
-      tagline: "Welcome to Ovaim Corp",
+  tagline: "Welcome to Star MS Logistics",
       title: "We Provide Global",
       titleHighlight: "Logistic",
       description:
@@ -88,7 +88,7 @@ const Banner = () => {
     {
       id: 6,
       image: sliderImg2,
-      tagline: "Welcome to Ovaim Corp",
+  tagline: "Welcome to Star MS Logistics",
       title: "Fast & Reliable",
       titleHighlight: "Shipping",
       description:
@@ -99,7 +99,7 @@ const Banner = () => {
     {
       id: 7,
       image: sliderImg3,
-      tagline: "Welcome to Ovaim Corp",
+  tagline: "Welcome to Star MS Logistics",
       title: "Worldwide",
       titleHighlight: "Network",
       description:
@@ -150,7 +150,7 @@ const Banner = () => {
                     <div className="tagline">
                       <div className="round"></div>
                       <div className="text">
-                        <span>Welcome to Ovaim Corp</span>
+                        <span>Welcome to Star MS Logistics</span>
                       </div>
                     </div>
 

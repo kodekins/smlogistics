@@ -73,7 +73,7 @@
   /* Backwards-compatible aliases */
   --logistiq-base: var(--logistiq-blue);
   --logistiq-base-rgb: var(--logistiq-blue-rgb);
-  /* Darker blue used where a near-black is needed (replaces old #062E39) */
+  /* Darker brand blue used where a near-black is needed (replaced old #062E39) */
   --logistiq-blue-dark: #082F47;
   --logistiq-blue-dark-rgb: 8, 47, 71;
   --logistiq-black: var(--logistiq-blue-dark);
@@ -766,7 +766,7 @@ button {
 }
 
 .xs-bg-black {
-  background-color: #000000;
+  background-color: var(--logistiq-black);
 }
 
 .xs-sidebar-group .content-inner .logo {
@@ -781,7 +781,7 @@ button {
   display: block;
   font-size: 20px;
   line-height: 30px;
-  color: #fff;
+  color: var(--logistiq-white);
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 15px;
@@ -793,7 +793,7 @@ button {
 }
 
 .xs-sidebar-group .content-inner .content-box p {
-  color: #ffffff;
+  color: var(--logistiq-white);
 }
 
 .xs-sidebar-group .content-inner .form-inner .form-group {
@@ -814,7 +814,7 @@ button {
   height: 50px;
   font-size: 15px;
   padding: 10px 20px;
-  color: #848484;
+  color: var(--logistiq-gray);
   border: none;
   outline: none;
   transition: all 500ms ease;
@@ -985,7 +985,7 @@ button {
   width: 16px;
   height: 16px;
   background-color: transparent;
-  border: 1px solid #e3e4ea;
+  border: 1px solid rgba(var(--logistiq-white-rgb), .08);
   cursor: pointer;
   border-radius: 4px;
   -webkit-transition: all 300ms ease;
@@ -1016,7 +1016,7 @@ button {
 }
 
 .checked-box1 input[type="checkbox"]:checked+label span {
-  border-color: #e3e4ea;
+  border-color: rgba(var(--logistiq-white-rgb), .08);
 }
 
 .checked-box1 input[type="checkbox"]:checked+label span:before {
@@ -1175,7 +1175,7 @@ animation: spinner 1s infinite linear;
 
 
 .handle-preloader .loader-section {
-  background-color: #ffffff;
+  background-color: var(--logistiq-white);
   height: 100%;
   position: fixed;
   top: 0;
@@ -6799,7 +6799,7 @@ Main Header Three
   width: 100%;
   height: 100vh;
   /* use brand blue -> black gradient; red accent kept for highlights */
-  background: linear-gradient(135deg, var(--logistiq-blue) 0%, #000000 100%);
+  background: linear-gradient(135deg, var(--logistiq-blue) 0%, var(--logistiq-black) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6812,7 +6812,7 @@ Main Header Three
 }
 
 .logo h1 {
-  color: #ffffff;
+  color: var(--logistiq-white);
   font-size: 50px;
   margin-bottom: 2rem;
   font-weight: 700;

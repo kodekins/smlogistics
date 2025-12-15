@@ -6,8 +6,7 @@ Banner One
 .banner-one {
     position: relative;
     display: block;
-    background: rgb(18, 33, 38);
-    background: linear-gradient(90deg, rgba(18, 33, 38, 1) 0%, rgba(18, 33, 38, 1) 35%, rgba(10, 44, 54, 1) 60%, rgba(10, 44, 54, 1) 100%);
+    background: linear-gradient(90deg, rgba(var(--logistiq-blue-dark-rgb), 1) 0%, rgba(var(--logistiq-blue-dark-rgb), 1) 35%, rgba(var(--logistiq-blue-rgb), 1) 60%, rgba(var(--logistiq-blue-rgb), 1) 100%);
     padding: 512px 0px 94px;
     z-index: 2;
 }
@@ -20,8 +19,7 @@ Banner One
     right: -300px;
     opacity: 0.80;
     content: "";
-    background: rgb(14, 18, 29);
-    background: linear-gradient(-120deg, rgba(14, 18, 29, 0.90) 10%, rgba(var(--logistiq-red-rgb), 0.7) 30%, rgba(14, 18, 29, 0.9) 50%);
+    background: linear-gradient(-120deg, rgba(var(--logistiq-blue-dark-rgb), 0.90) 10%, rgba(var(--logistiq-red-rgb), 0.7) 30%, rgba(var(--logistiq-blue-dark-rgb), 0.9) 50%);
 }
 
 
@@ -249,7 +247,7 @@ Banner One
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 2px solid #e4e4e4;
+    border: 2px solid rgba(var(--logistiq-white-rgb), 0.08);
     padding: 3px 3px 3px;
     margin: -6px auto 8px;
     z-index: 2;
@@ -337,7 +335,7 @@ Banner One
 }
 
 .banner-one__content-right-text p {
-    color: #E4E4E4;
+    color: rgba(var(--logistiq-white-rgb), 0.88);
     font-size: 20px;
     line-height: 34px;
 }

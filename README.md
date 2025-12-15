@@ -55,7 +55,7 @@ npm run preview
 ## 📦 Project Structure
 
 ```
-ovaim-corp/
+star-ms-logistics/
 ├── src/
 │   ├── components/      # Reusable UI components
 │   ├── pages/          # Page components
@@ -99,12 +99,12 @@ The application is fully responsive and optimized for:
 
 ## 📄 License
 
-Copyright 2025 Ovaim Corp. All Rights Reserved.
+Copyright 2025 Star MS Logistics. All Rights Reserved.
 
 ## 🤝 Support
 
 For support and inquiries:
-- Email: support@ovaimcorp.com
+- Email: support@starmslogistics.com
 - Phone: +880 123 456 789
 - Address: 3060 Commercial Street Road, Fratton, Birmingham, AL 35020
 

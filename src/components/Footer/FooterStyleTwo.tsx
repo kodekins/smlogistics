@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'; // Import the Link component from React Router
 
 // Import images
-const footerLogo = "/ovaim-corp-logo.png";
+const footerLogo = "/start-ms-logo.png";
 import pattern1 from '../../assets/images/pattern/footer-v1-pattern.png'; // Replace with your actual path
 import pattern2 from '../../assets/images/shapes/footer-v2-shape3.png'; // Replace with your actual path
 import pattern3 from '../../assets/images/shapes/footer-v2-shape2.png'; // Replace with your actual path
@@ -221,7 +221,7 @@ const FooterTwo = () => {
             <div className="footer-one__bottom-inner">
               <div className="footer-one__bottom-text">
                 <p>
-                  © Copyright 2025 <Link to="/">Ovaim Corp.</Link> All Rights
+                  © Copyright 2025 <Link to="/">Star MS Logistics.</Link> All Rights
                   Reserved
                 </p>
               </div>

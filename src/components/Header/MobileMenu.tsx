@@ -1,7 +1,7 @@
 "use client";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-const navLogo = "/ovaim-corp-logo.png";
+const navLogo = "/start-ms-logo.png";
 
 const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
   const [isActive, setIsActive] = useState({

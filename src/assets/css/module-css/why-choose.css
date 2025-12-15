@@ -217,7 +217,7 @@ Why Choose One
     display: block;
     width: 100%;
     height: 6px;
-    background: #e8e8e8;
+    background: var(--logistiq-gray-bg);
     border-radius: 3px;
     outline: none;
     appearance: none;
@@ -240,6 +240,48 @@ Why Choose One
     border-radius: 50%;
     cursor: pointer;
     border: none;
+}
+
+/* Why Us custom styles */
+.why-us-area {
+    padding-top: 120px;
+    padding-bottom: 90px;
+}
+.why-us-thumb img {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(8,47,71,0.25);
+}
+.why-us-content .sec-title__tagline {
+    color: var(--logistiq-base);
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.why-us-content .sec-title__title {
+    font-size: 34px;
+    color: var(--logistiq-black);
+    margin-bottom: 18px;
+}
+.why-us-list ul li {
+    margin-bottom: 18px;
+}
+.why-us-list ul li h4 {
+    font-size: 18px;
+    color: var(--logistiq-black);
+    margin-bottom: 6px;
+}
+.why-us-list ul li p {
+    color: var(--logistiq-gray);
+}
+.why-us-cta .thm-btn {
+    padding: 12px 30px;
+    border-radius: 6px;
+}
+.why-us-cta .thm-btn.thm-btn--outline {
+    background: transparent;
+    color: var(--logistiq-red);
+    border: 1px solid var(--logistiq-red);
 }
 
 
@@ -360,7 +402,7 @@ Why Choose One
 
 .why-choose-one__form .custom-select option:disabled {
     color: #999;
-    background: #f8f9fa;
+    background: var(--logistiq-gray-bg);
 }
 
 
@@ -586,7 +628,7 @@ Why Choose Two
 }
 
 .why-choose-two__content-text p {
-    color: #E4E4E4;
+    color: rgba(var(--logistiq-white-rgb), 0.88);
 }
 
 
@@ -714,7 +756,7 @@ Why Choose Two
     left: 50%;
     bottom: 0;
     width: 1px;
-    background: #e4e4e4;
+    background: var(--logistiq-gray-bg);
     content: "";
     z-index: 1;
 }

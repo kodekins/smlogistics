@@ -4,7 +4,7 @@ import MenuItems from './MenuItems';
 import MobileMenu from './MobileMenu';
 import SearchPopup from './SearchPopup'; // Uncommented this, since you're using it below
 import Sidebar from './Sidebar';
-const navLogo = "/ovaim-corp-logo.png";
+const navLogo = "/start-ms-logo.png";
 
 const HeaderStyleOne = (props) => {
     const { parentMenu, secondParentMenu, activeMenu } = props;

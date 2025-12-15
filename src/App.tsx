@@ -31,6 +31,7 @@ import BlogLeftSidebar from "./pages/blog-left-sidebar";
 import BlogRightSidebar from "./pages/blog-right-sidebar";
 import BlogDetails from "./pages/blog-details";
 import Contact from "./pages/contact";
+import WhyUsPage from "./pages/why-us";
 import { useEffect, useState } from "react";
 
 const App = () => {
@@ -72,6 +73,7 @@ const App = () => {
         <Route path="testimonial" element={<Testimonial isVisible={isVisible} />} />
         <Route path="pricing" element={<Pricing isVisible={isVisible} />} />
         <Route path="faq" element={<Faq isVisible={isVisible} />} />
+  <Route path="why-us" element={<WhyUsPage isVisible={isVisible} />} />
         <Route path="*" element={<NoPage isVisible={isVisible} />} />
         <Route path="products" element={<Products isVisible={isVisible} />} />
         <Route path="product-details" element={<ProductDetails isVisible={isVisible} />} />

@@ -84,7 +84,7 @@ Footer One
 }
 
 .footer-one__about-text {
-    color: #E4E4E4;
+    color: rgba(var(--logistiq-white-rgb), 0.88);
 }
 
 .footer-one__about-contact-info {
@@ -121,7 +121,7 @@ Footer One
 }
 
 .footer-one__about-contact-info .text-box p {
-    color: #E4E4E4;
+    color: rgba(var(--logistiq-white-rgb), 0.88);
     font-size: 14px;
     line-height: 22px;
     font-weight: 400;
@@ -159,7 +159,7 @@ Footer One
 }
 
 .footer-one__quick-links-list li a {
-    color: #E4E4E4;
+    color: rgba(var(--logistiq-white-rgb), 0.88);
     font-size: 17px;
     line-height: 28px;
     font-weight: 400;
@@ -227,13 +227,13 @@ Footer One
 }
 
 .footer-one__contact-box ul li .text-box p {
-    color: #E4E4E4;
+    color: rgba(var(--logistiq-white-rgb), 0.88);
     font-size: 17px;
     line-height: 28px;
 }
 
 .footer-one__contact-box ul li .text-box p a {
-    color: #E4E4E4;
+    color: rgba(var(--logistiq-white-rgb), 0.88);
 }
 
 .footer-one__contact-box ul li .text-box p a:hover {
@@ -246,7 +246,7 @@ Footer One
 }
 
 .footer-one__subscribe-text {
-    color: #E4E4E4;
+    color: rgba(var(--logistiq-white-rgb), 0.88);
     font-size: 17px;
     line-height: 24px;
     font-weight: 400;
