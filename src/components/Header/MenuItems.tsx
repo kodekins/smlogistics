@@ -31,7 +31,7 @@ const MenuItems = () => {
         </Link>
       </li>
       <li className={isActive(menuRoutes.services) ? 'dropdown current-menu-item' : 'dropdown'}>
-        <Link to="#">Shipping Solutions</Link>
+        <Link to="/service">Shipping Solutions</Link>
         <ul className="sub-menu">
           <li>
             <Link to="/track-transport" className={currentPath === '/track-transport' ? 'active-menu' : ''}>
@@ -95,19 +95,9 @@ const MenuItems = () => {
           </li>
         </ul>
       </li>
-      <li className={currentPath === '/service' ? 'current-menu-item' : ''}>
-        <Link to="/service" className={currentPath === '/service' ? 'active-menu' : ''}>
-          Types Of Commodities
-        </Link>
-      </li>
       <li className={currentPath === '/faq' ? 'current-menu-item' : ''}>
         <Link to="/faq" className={currentPath === '/faq' ? 'active-menu' : ''}>
           FAQs
-        </Link>
-      </li>
-      <li className={currentPath === '/contact' ? 'current-menu-item' : ''}>
-        <Link to="/contact" className={currentPath === '/contact' ? 'active-menu' : ''}>
-          Request A Quote
         </Link>
       </li>
     </ul>

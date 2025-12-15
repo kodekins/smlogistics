@@ -217,7 +217,7 @@ Team One
 ***/
 .team-one .swiper-button-next,
 .team-one .swiper-button-prev {
-    color: #ff6b35 !important;
+    color: var(--logistiq-red) !important;
     background: #fff;
     width: 50px !important;
     height: 50px !important;

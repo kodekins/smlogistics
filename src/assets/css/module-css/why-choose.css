@@ -228,7 +228,7 @@ Why Choose One
     appearance: none;
     width: 20px;
     height: 20px;
-    background: #ff6b35;
+    background: var(--logistiq-red);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -236,7 +236,7 @@ Why Choose One
 .why-choose-one__form-distance-inner .range-slider::-moz-range-thumb {
     width: 20px;
     height: 20px;
-    background: #ff6b35;
+    background: var(--logistiq-red);
     border-radius: 50%;
     cursor: pointer;
     border: none;
@@ -326,7 +326,7 @@ Why Choose One
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     appearance: none;
     box-shadow: none;
-    background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 24 24%27 stroke=%27%23ff6b35%27%3e%3cpath stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27m19 9-7 7-7-7%27%3e%3c/path%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 24 24%27 stroke=%27%23C4362A%27%3e%3cpath stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27m19 9-7 7-7-7%27%3e%3c/path%3e%3c/svg%3e");
     background-position: right 15px center;
     background-repeat: no-repeat;
     background-size: 18px;
@@ -402,7 +402,7 @@ Why Choose One
 .why-choose-one__form .input-box input[type="date"]:focus::-webkit-datetime-edit-month-field,
 .why-choose-one__form .input-box input[type="date"]:focus::-webkit-datetime-edit-day-field,
 .why-choose-one__form .input-box input[type="date"]:focus::-webkit-datetime-edit-year-field {
-    color: #ff6b35;
+    color: var(--logistiq-red);
 }
 
 .why-choose-one__form .input-box .select-box select {
@@ -410,7 +410,7 @@ Why Choose One
 }
 
 .why-choose-one__form .input-box input[type="date"]:focus {
-    border-color: #ff6b35;
+    border-color: var(--logistiq-red);
     outline: none;
 }
 

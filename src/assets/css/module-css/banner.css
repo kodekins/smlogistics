@@ -21,7 +21,7 @@ Banner One
     opacity: 0.80;
     content: "";
     background: rgb(14, 18, 29);
-    background: linear-gradient(-120deg, rgba(14, 18, 29, 0.90) 10%, rgba(255, 94, 20, 0.7) 30%, rgba(14, 18, 29, 0.9) 50%);
+    background: linear-gradient(-120deg, rgba(14, 18, 29, 0.90) 10%, rgba(var(--logistiq-red-rgb), 0.7) 30%, rgba(14, 18, 29, 0.9) 50%);
 }
 
 
@@ -1202,7 +1202,7 @@ Slider One
 /* Swiper Navigation Styles For react */
 .slider-one .swiper-button-next,
 .slider-one .swiper-button-prev {
-    color: #ff6b35;
+    color: var(--logistiq-red);
     background: rgba(255, 255, 255, 0.3);
     width: 50px;
     height: 50px;
@@ -1253,7 +1253,7 @@ Slider One
 }
 
 .slider-one .swiper-pagination-bullet-active {
-    background: #ff6b35;
+    background: var(--logistiq-red);
 }
 
 
@@ -1386,12 +1386,12 @@ Slider One
 
 .select-box select:hover {
     border: 1px solid rgba(var(--logistiq-black-rgb), .10);
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23ff6b35'%3e%3cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3e%3c/path%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23C4362A'%3e%3cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3e%3c/path%3e%3c/svg%3e");
 }
 
 .select-box select:focus {
     border: 1px solid rgba(var(--logistiq-black-rgb), .10);
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23ff6b35'%3e%3cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3e%3c/path%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23C4362A'%3e%3cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3e%3c/path%3e%3c/svg%3e");
 }
 
 .select-box select:focus:hover {
@@ -1413,12 +1413,12 @@ Slider One
 }
 
 .select-box select option:hover {
-    background: #ff6b35;
+    background: var(--logistiq-red);
     color: #ffffff;
 }
 
 .select-box select option:checked {
-    background: #ff6b35;
+    background: var(--logistiq-red);
     color: #ffffff;
     font-weight: 600;
 }
@@ -1438,5 +1438,5 @@ Slider One
 
 /* Custom Select Arrow Animation */
 .select-box select:focus {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23ff6b35'%3e%3cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 15l7-7 7 7'%3e%3c/path%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23C4362A'%3e%3cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 15l7-7 7 7'%3e%3c/path%3e%3c/svg%3e");
 }

@@ -219,7 +219,7 @@ Service One
 /* Fixing For react Js Swiper custom styles */
 .service-one .swiper-button-next,
 .service-one .swiper-button-prev {
-    color: #ff6b35 !important;
+    color: var(--logistiq-red) !important;
     background: #fff;
     width: 50px !important;
     height: 50px !important;
@@ -248,7 +248,7 @@ Service One
 }
 
 .service-one .swiper-pagination-bullet {
-    background: #ff6b35 !important;
+    background: var(--logistiq-red) !important;
     opacity: 0.3;
 }
 

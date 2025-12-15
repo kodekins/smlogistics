@@ -62,18 +62,123 @@
 --------------------------------------------------------------*/
 :root {
   --logistiq-font: "DM Sans", sans-serif;
-  --logistiq-base: #FD5523;
-  --logistiq-base-rgb: 253, 85, 35;
-  --logistiq-black: #062E39;
-  --logistiq-black-rgb: 6, 46, 57;
+  /* Brand colors updated to match provided logo: white, blue, red */
+  --logistiq-white: #FFFFFF;
+  --logistiq-white-rgb: 255, 255, 255;
+  --logistiq-blue: #0D4F76; /* deep navy-blue from logo */
+  --logistiq-blue-rgb: 13, 79, 118;
+  /* Darker brand red for accents and active states */
+  --logistiq-red: #C4362A; /* slightly darker red */
+  --logistiq-red-rgb: 196, 54, 42;
+  /* Backwards-compatible aliases */
+  --logistiq-base: var(--logistiq-blue);
+  --logistiq-base-rgb: var(--logistiq-blue-rgb);
+  /* Darker blue used where a near-black is needed (replaces old #062E39) */
+  --logistiq-blue-dark: #082F47;
+  --logistiq-blue-dark-rgb: 8, 47, 71;
+  --logistiq-black: var(--logistiq-blue-dark);
+  --logistiq-black-rgb: var(--logistiq-blue-dark-rgb);
   --logistiq-gray: #565969;
   --logistiq-gray-rgb: 86, 89, 105;
-  --logistiq-white: #ffffff;
-  --logistiq-white-rgb: 255, 255, 255;
   --logistiq-gray-bg: #F4F5F9;
   --logistiq-gray-bg-rgb: 244, 245, 249;
   --logistiq-bdr-color: #232423;
   --logistiq-bdr-color-rgb: 35, 36, 35;
+}
+
+/* Map Bootstrap success/green to brand blue to remove green from theme */
+:root {
+  --bs-success: var(--logistiq-blue);
+  --bs-success-rgb: var(--logistiq-blue-rgb);
+}
+
+/* Force some Bootstrap utility classes that use success color to prefer our brand */
+.text-success{color:var(--logistiq-blue)!important}
+.bg-success{background-color:var(--logistiq-blue)!important}
+.border-success{border-color:var(--logistiq-blue)!important}
+.btn-success{background-color:var(--logistiq-blue)!important;border-color:var(--logistiq-blue)!important;color:var(--logistiq-white)!important}
+.btn-outline-success{color:var(--logistiq-blue)!important;border-color:var(--logistiq-blue)!important}
+.form-control.is-valid,.was-validated .form-control:valid{border-color:var(--logistiq-blue)!important;box-shadow:0 0 0 .25rem rgba(var(--logistiq-blue-rgb),.25)!important}
+.valid-feedback{color:var(--logistiq-blue)!important}
+.form-select.is-valid,.was-validated .form-select:valid{border-color:var(--logistiq-blue)!important;box-shadow:0 0 0 .25rem rgba(var(--logistiq-blue-rgb),.25)!important}
+.form-check-input.is-valid,.was-validated .form-check-input:valid{border-color:var(--logistiq-blue)!important}
+.form-check-input.is-valid:checked,.was-validated .form-check-input:valid:checked{background-color:var(--logistiq-blue)!important}
+
+/* Override embedded green SVG icons from Bootstrap (validation tick and select) to use brand blue */
+.valid-tooltip{background-color:rgba(var(--logistiq-blue-rgb),.9)!important}
+.form-control.is-valid,.was-validated .form-control:valid{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%230D4F76' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+}
+
+.form-select.is-valid,.was-validated .form-select:valid{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%230D4F76' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+}
+
+/* Additional overrides to neutralize Bootstrap green shades (hover, focus, active, badges, alerts) */
+.btn-success,
+.btn-check:active+.btn-success,
+.btn-check:checked+.btn-success,
+.btn-success.active,
+.btn-success:active,
+.show>.btn-success.dropdown-toggle{
+  color:var(--logistiq-white)!important;
+  background-color:var(--logistiq-blue)!important;
+  border-color:var(--logistiq-blue)!important;
+}
+.btn-success:hover,
+.btn-check:focus+.btn-success,
+.btn-success:focus,
+.btn-check:active+.btn-success,
+.btn-check:checked+.btn-success,
+.btn-success.active,
+.btn-success:active,
+.show>.btn-success.dropdown-toggle{
+  color:var(--logistiq-white)!important;
+  background-color:var(--logistiq-blue)!important;
+  border-color:var(--logistiq-blue)!important;
+  box-shadow:0 0 0 .25rem rgba(var(--logistiq-blue-rgb),.25)!important;
+}
+
+.btn-outline-success:hover,
+.btn-outline-success:focus,
+.btn-outline-success.active,
+.btn-outline-success:active,
+.show>.btn-outline-success.dropdown-toggle{
+  color:var(--logistiq-white)!important;
+  background-color:var(--logistiq-blue)!important;
+  border-color:var(--logistiq-blue)!important;
+}
+
+.link-success,
+.link-success:focus,
+.link-success:hover{
+  color:var(--logistiq-blue)!important;
+}
+
+.alert-success{
+  color:var(--logistiq-blue)!important;
+  background-color:rgba(var(--logistiq-blue-rgb),.08)!important;
+  border-color:rgba(var(--logistiq-blue-rgb),.16)!important;
+}
+
+.badge-success{
+  color:var(--logistiq-white)!important;
+  background-color:var(--logistiq-blue)!important;
+}
+
+.form-control.is-valid:focus,
+.was-validated .form-control:valid:focus,
+.form-select.is-valid:focus,
+.was-validated .form-select:valid:focus,
+.form-check-input.is-valid:focus,
+.was-validated .form-check-input:valid:focus{
+  border-color:var(--logistiq-blue)!important;
+  box-shadow:0 0 0 .25rem rgba(var(--logistiq-blue-rgb),.25)!important;
+}
+
+.form-check-input.is-valid~.form-check-label,
+.was-validated .form-check-input:valid~.form-check-label{
+  color:var(--logistiq-blue)!important;
 }
 
 .row {
@@ -100,6 +205,67 @@ a {
   color: var(--logistiq-base);
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
+}
+
+/* Active/visited/focused links show brand red as required */
+a:active,
+a:focus,
+a:visited.active,
+.active,
+.main-menu a.active,
+.main-menu__wrapper .current-menu-item > a,
+.main-menu__wrapper a:active,
+.main-menu__wrapper a:focus {
+  color: var(--logistiq-red) !important;
+}
+
+/* Buttons and CTAs that should use red accents */
+.thm-btn--danger,
+.btn-danger,
+.btn--danger {
+  background: var(--logistiq-red);
+  border-color: var(--logistiq-red);
+  color: var(--logistiq-white);
+}
+
+/* Force all button-like elements to use brand red */
+button,
+.btn,
+.thm-btn,
+a.btn,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  background-color: var(--logistiq-red) !important;
+  border-color: var(--logistiq-red) !important;
+  color: var(--logistiq-white) !important;
+}
+
+/* Hover / active states for buttons */
+button:hover,
+.btn:hover,
+.thm-btn:hover,
+a.btn:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover {
+  background-color: var(--logistiq-red) !important;
+  filter: brightness(0.95) !important;
+}
+
+/* Outline / link styled buttons */
+.btn-outline,
+.btn-outline-primary,
+.btn-outline-danger,
+.btn-outline-secondary {
+  color: var(--logistiq-red) !important;
+  border-color: var(--logistiq-red) !important;
+}
+
+.btn-outline:hover,
+.btn-outline:focus {
+  background-color: var(--logistiq-red) !important;
+  color: var(--logistiq-white) !important;
 }
 
 a,
@@ -1275,7 +1441,8 @@ animation: spinner 1s infinite linear;
   left: 0;
   bottom: -8px;
   right: -40px;
-  background: var(--logistiq-base);
+  /* show red accent behind top-right area */
+  background: var(--logistiq-red);
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 10% 100%);
   content: "";
   z-index: -1;
@@ -1462,7 +1629,7 @@ animation: spinner 1s infinite linear;
 }
 
 .main-header-one__bottom-right-btn a:hover::before {
-  background: var(--logistiq-base);
+  background: var(--logistiq-red);
 }
 
 .main-header-one__bottom-right-btn a i {
@@ -6631,7 +6798,8 @@ Main Header Three
   left: 0;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(135deg, #FD5523 0%, #000000 100%);
+  /* use brand blue -> black gradient; red accent kept for highlights */
+  background: linear-gradient(135deg, var(--logistiq-blue) 0%, #000000 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6726,7 +6894,7 @@ Main Header Three
 }
 
 .mobile-nav__content::-webkit-scrollbar-thumb:hover {
-  background: #f7430e;
+  background: var(--logistiq-red);
   /* On hover */
 }
 
@@ -6758,7 +6926,7 @@ Main Header Three
 }
 
 .xs-sidebar-widget::-webkit-scrollbar-thumb:hover {
-  background: #f7430e;
+  background: var(--logistiq-red);
   /* On hover */
 }
 
@@ -6805,7 +6973,7 @@ Main Header Three
   position: absolute;
   top: 0;
   height: 100%;
-  background: linear-gradient(90deg, #FD5523, #c63003);
+  background: linear-gradient(90deg, var(--logistiq-blue), var(--logistiq-red));
   border-radius: 0px;
   transition: all 0.2s ease;
 }
@@ -6819,7 +6987,7 @@ Main Header Three
   top: 50%;
   width: 24px;
   height: 24px;
-  background-color: #ffffff;
+  background-color: var(--logistiq-white);
   border: 3px solid var(--logistiq-base);
   border-radius: 50%;
   transform: translate(-50%, -50%);
@@ -6959,11 +7127,11 @@ Main Header Three
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.team-swiper-button-next:hover,
-.team-swiper-button-prev:hover {
-  background: #ff6b35;
-  border-color: #ff6b35;
-  color: #ffffff;
+team-swiper-button-next:hover,
+team-swiper-button-prev:hover {
+  background: var(--logistiq-red);
+  border-color: var(--logistiq-red);
+  color: var(--logistiq-white);
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -7024,15 +7192,32 @@ Main Header Three
   cursor: pointer;
 }
 
-.team-swiper-pagination .swiper-pagination-bullet:hover {
-  background: #ff6b35;
+team-swiper-pagination .swiper-pagination-bullet:hover {
+  background: var(--logistiq-red);
   transform: scale(1.2);
 }
 
-.team-swiper-pagination .swiper-pagination-bullet-active {
-  background: #ff6b35;
+team-swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--logistiq-red);
   transform: scale(1.2);
-  box-shadow: 0 2px 10px rgba(255, 107, 53, 0.3);
+  box-shadow: 0 2px 10px rgba(var(--logistiq-red-rgb), 0.3);
+}
+
+/* Header CTA (Get A Quote) - use brand red */
+.main-header-one__bottom-right .main-header-one__bottom-right-btn a,
+.stricky-header .main-header-one__bottom-right .main-header-one__bottom-right-btn a {
+  display: inline-block;
+  background: var(--logistiq-red);
+  color: var(--logistiq-white);
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-weight: 700;
+  transition: background 200ms ease, color 200ms ease;
+}
+.main-header-one__bottom-right .main-header-one__bottom-right-btn a:hover,
+.stricky-header .main-header-one__bottom-right .main-header-one__bottom-right-btn a:hover {
+  background: var(--logistiq-blue);
+  color: var(--logistiq-white);
 }
 
 /* Progress Bar Style Pagination (Alternative) */
@@ -7042,8 +7227,8 @@ Main Header Three
   border-radius: 2px;
 }
 
-.team-swiper-pagination.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  background: linear-gradient(90deg, #ff6b35 0%, #f7931e 100%);
+team-swiper-pagination.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: linear-gradient(90deg, var(--logistiq-red) 0%, var(--logistiq-red) 100%);
   border-radius: 2px;
 }
 
@@ -7054,8 +7239,8 @@ Main Header Three
   font-weight: 600;
 }
 
-.team-swiper-pagination.swiper-pagination-fraction .swiper-pagination-current {
-  color: #ff6b35;
+team-swiper-pagination.swiper-pagination-fraction .swiper-pagination-current {
+  color: var(--logistiq-red);
 }
 
 
