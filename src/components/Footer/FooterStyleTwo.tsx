@@ -74,7 +74,7 @@ const FooterTwo = () => {
                       <div className="text-box">
                         <p>Make a Call</p>
                         <h4>
-                          <Link to="tel:+1234567890">+880 123 456 789</Link>
+                          <Link to="tel:+1234567890">+92 331 343 5042</Link>
                         </h4>
                       </div>
                     </div>
@@ -148,12 +148,12 @@ const FooterTwo = () => {
                           <div className="text-box">
                             <p>
                               <Link to="mailto:yourmail@email.com">
-                                support@logistra.com
+                               starmslogistics@gmail.com
                               </Link>
                             </p>
                             <p>
                               <Link to="mailto:yourmail@email.com">
-                                info@logistra.com
+                               starmslogistics@gmail.com
                               </Link>
                             </p>
                           </div>
@@ -164,7 +164,7 @@ const FooterTwo = () => {
                           </div>
                           <div className="text-box">
                             <p>
-                              <Link to="tel:1234567890">+880 123 456 789 </Link>
+                              <Link to="tel:1234567890">+92 331 343 5042</Link>
                             </p>
                           </div>
                         </li>

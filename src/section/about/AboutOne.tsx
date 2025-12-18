@@ -58,16 +58,18 @@ const AboutOne: React.FC = () => {
                     </div>
                   </div>
                   <h2 className="sec-title__title tg-element-title">
-                    Our Expertise Stands in <br />
-                    <span>Logistics Solutions</span>
+                   Star MS Logistics<br />
+                    <span>End-to-End Logistics</span>
                   </h2>
                 </div>
 
                 <div className="about-one__content-text1" ref={addToRefs}>
                   <p>
-                    Logistic service provider company plays a pivotal role in the
-                    global supply chain ecosystem by efficiently managing the
-                    movement of goods from origin to final destination.
+                    Star MS Logistics is a professional freight brokerage committed to providing efficient,
+                    reliable, and cost-effective shipping solutions. Our goal is to simplify logistics for
+                    businesses and individuals by offering end-to-end services tailored to your needs. With
+                    a focus on transparency, timeliness, and customer satisfaction, we ensure that your
+                    cargo reaches its destination safely and on schedule.
                   </p>
                 </div>
 
@@ -127,7 +129,8 @@ const AboutOne: React.FC = () => {
                     <div className="text-box">
                       <p>Make A Phone Call</p>
                       <h4>
-                        <a href="tel:1234567890">+880 123 456 789</a>
+                        <a href="tel:1234567890">
++92 331 343 5042</a>
                       </h4>
                     </div>
                   </div>

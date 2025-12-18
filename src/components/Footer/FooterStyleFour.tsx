@@ -12,7 +12,7 @@ const footerData = {
     { to: '#', icon: 'icon-pinterest', name: 'Pinterest' },
   ],
   contact: {
-    email: 'debra.holt@example.com',
+    email: 'starmslogistics@gmail.com',
     phones: ['01245789321', '012457895146'],
   },
   services: [
