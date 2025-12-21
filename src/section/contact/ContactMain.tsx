@@ -160,8 +160,8 @@ const ContactMain = () => {
                   <div className="content">
                     <h2>Email</h2>
                     <p>
-                      <Link to="mailto:support@logistra.com">support@logistra.com</Link> <br />
-                      <Link to="mailto:support@logistra.com">support@logistra.com</Link>
+                      <Link to="mailto:starmslogistics@gmail.com">starmslogistics@gmail.com</Link> <br />
+                      <Link to="mailto:support@starmslogistics.com">support@starmslogistics.com</Link>
                     </p>
                   </div>
                 </li>
@@ -171,10 +171,9 @@ const ContactMain = () => {
                     <span className="icon-phone"></span>
                   </div>
                   <div className="content">
-                    <h2>Phones</h2>
+                    <h2>Phone</h2>
                     <p>
-                      <Link to="tel:880123456789">+880 123 456 789</Link> <br />
-                      <Link to="tel:880123456789">+880 123 456 789</Link>
+                      <Link to="tel:+923313435042">+92 331 343 5042</Link>
                     </p>
                   </div>
                 </li>

@@ -64,8 +64,8 @@ const FooterTwo = () => {
                       </Link>
                     </div>
                     <p className="footer-one__about-text">
-                      Logistic service provider company plays a pivotal role in the
-                      global supply chain logistic service provider.
+                      Star MS Logistics is a professional freight brokerage committed to providing efficient, 
+                      reliable, and cost-effective shipping solutions tailored to your needs.
                     </p>
                     <div className="footer-one__about-contact-info">
                       <div className="icon">
@@ -74,7 +74,7 @@ const FooterTwo = () => {
                       <div className="text-box">
                         <p>Make a Call</p>
                         <h4>
-                          <Link to="tel:+1234567890">+92 331 343 5042</Link>
+                          <Link to="tel:+923313435042">+92 331 343 5042</Link>
                         </h4>
                       </div>
                     </div>
@@ -102,13 +102,28 @@ const FooterTwo = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link to="/service">
-                          <span className="icon-right-arrow1" /> Service
+                        <Link to="/why-us">
+                          <span className="icon-right-arrow1" /> Why Us
                         </Link>
                       </li>
                       <li>
-                        <Link to="/project">
-                          <span className="icon-right-arrow1" /> Latest Project
+                        <Link to="/about">
+                          <span className="icon-right-arrow1" /> Our Story
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/service">
+                          <span className="icon-right-arrow1" /> Freight Solutions
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/faq">
+                          <span className="icon-right-arrow1" /> Types of Commodities
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/contact">
+                          <span className="icon-right-arrow1" /> Request a Quote
                         </Link>
                       </li>
                       <li>
@@ -137,7 +152,7 @@ const FooterTwo = () => {
                           </div>
                           <div className="text-box">
                             <p>
-                              3060 Commercial Street Road <br /> Fratton, Australia
+                              United States <br /> Nationwide Coverage
                             </p>
                           </div>
                         </li>
@@ -147,13 +162,13 @@ const FooterTwo = () => {
                           </div>
                           <div className="text-box">
                             <p>
-                              <Link to="mailto:yourmail@email.com">
+                              <Link to="mailto:starmslogistics@gmail.com">
                                starmslogistics@gmail.com
                               </Link>
                             </p>
                             <p>
-                              <Link to="mailto:yourmail@email.com">
-                               starmslogistics@gmail.com
+                              <Link to="mailto:support@starmslogistics.com">
+                               support@starmslogistics.com
                               </Link>
                             </p>
                           </div>
@@ -164,7 +179,7 @@ const FooterTwo = () => {
                           </div>
                           <div className="text-box">
                             <p>
-                              <Link to="tel:1234567890">+92 331 343 5042</Link>
+                              <Link to="tel:+923313435042">+92 331 343 5042</Link>
                             </p>
                           </div>
                         </li>

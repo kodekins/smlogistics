@@ -71,15 +71,15 @@ const Sidebar = ({ isSidebar, handleSidebar }) => {
                                     <h4>Contact Info</h4>
                                     <ul>
                                         <li>
-                                            <span className="icon-location1"></span> 88 broklyn street, New York
+                                            <span className="icon-location1"></span> United States - Nationwide Coverage
                                         </li>
                                         <li>
                                             <span className="icon-phone"></span>
-                                            <Link to="tel:123456789">+1 555-9990-153</Link>
+                                            <Link to="tel:+923313435042">+92 331 343 5042</Link>
                                         </li>
                                         <li>
                                             <span className="fa fa-envelope"></span>
-                                            <Link to="mailto:info@example.com">info@example.com</Link>
+                                            <Link to="mailto:starmslogistics@gmail.com">starmslogistics@gmail.com</Link>
                                         </li>
                                     </ul>
                                 </div>

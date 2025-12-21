@@ -62,8 +62,7 @@ const Header = (props) => {
                                                     </div>
 
                                                     <div className="text-box">
-                                                        <p><span>Talk to Us</span> <Link to="tel:1234567890">[+123 456
-                                                                789]</Link></p>
+                                                        <p><span>Talk to Us</span> <Link to="tel:+923313435042">+92 331 343 5042</Link></p>
                                                     </div>
                                                 </li>
 
@@ -74,7 +73,7 @@ const Header = (props) => {
 
                                                     <div className="text-box">
                                                         <p><span>Mail Us</span> <Link
-                                                                to="mailto:yourmail@email.com">[support@logistra.com]</Link>
+                                                                to="mailto:starmslogistics@gmail.com">starmslogistics@gmail.com</Link>
                                                         </p>
                                                     </div>
                                                 </li>
@@ -175,8 +174,7 @@ const Header = (props) => {
                                                 </div>
 
                                                 <div className="text-box">
-                                                    <p><span>Talk to Us</span> <Link to="tel:1234567890">[+123 456
-                                                            789]</Link></p>
+                                                    <p><span>Talk to Us</span> <Link to="tel:+923313435042">+92 331 343 5042</Link></p>
                                                 </div>
                                             </li>
 
@@ -187,7 +185,7 @@ const Header = (props) => {
 
                                                 <div className="text-box">
                                                     <p><span>Mail Us</span> <Link
-                                                            to="mailto:yourmail@email.com">[support@logistra.com]</Link>
+                                                            to="mailto:starmslogistics@gmail.com">starmslogistics@gmail.com</Link>
                                                     </p>
                                                 </div>
                                             </li>

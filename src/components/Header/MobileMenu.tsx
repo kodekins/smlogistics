@@ -49,55 +49,34 @@ const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
               id="navbarSupportedContent"
             >
               <ul className="main-menu__list">
-                <li className={isActive.key === 1 ? 'dropdown current' : 'dropdown'}>
-                  <Link to="/">Home</Link>
-                  <ul style={{ display: `${isActive.key === 1 ? 'block' : 'none'}` }}>
-                    <li><Link to="/">Home One</Link></li>
-                    <li><Link to="/home-2">Home Two</Link></li>
-                    <li><Link to="/home-3">Home Three</Link></li>
-                    <li className={isActive.subMenuKey === 'header' ? 'dropdown current-menu-item' : 'dropdown'}>
-                      <Link to="">Header Styles</Link>
-                      <ul style={{ display: `${isActive.subMenuKey === 'header' ? 'block' : 'none'}` }}>
-                        <li><Link to="/">Header One</Link></li>
-                        <li><Link to="/home-2">Header Two</Link></li>
-                        <li><Link to="/home-3">Header Three</Link></li>
-                      </ul>
-                      <button className={isActive.subMenuKey === 'header' ? 'expanded open' : ''} onClick={() => handleToggle(1, 'header')}>
-                        <span className="fa fa-angle-right" />
-                      </button>
-                    </li>
-                  </ul>
-                  <button className={isActive.key === 1 ? 'expanded open' : ''} onClick={() => handleToggle(1)}>
-                    <span className="fa fa-angle-right" />
-                  </button>
-                </li>
+                <li><Link to="/" onClick={handleMobileMenu}>Home</Link></li>
 
-                <li><Link to="/about">About Us</Link></li>
-                <li><Link to="/why-us">Why Us</Link></li>
+                <li><Link to="/about" onClick={handleMobileMenu}>About Us</Link></li>
+                <li><Link to="/why-us" onClick={handleMobileMenu}>Why Us</Link></li>
 
                 <li className={isActive.key === 2 ? 'dropdown current' : 'dropdown'}>
-                  <Link to="/service">Shipping Solutions</Link>
+                  <Link to="/service" onClick={handleMobileMenu}>Shipping Solutions</Link>
                   <ul style={{ display: `${isActive.key === 2 ? 'block' : 'none'}` }}>
-                    <li><Link to="/track-transport">LTL (Less Than Truckload)</Link></li>
-                    <li><Link to="/international-transport">FTL (Full Truckload)</Link></li>
-                    <li><Link to="/personal-delivery">Interstate Transport</Link></li>
-                    <li><Link to="/warehouse-facility">Intrastate Transport</Link></li>
-                    <li><Link to="/ocean-transport">Reefer Transport</Link></li>
-                    <li><Link to="/emergency-transport">Air-Conditioned Transport</Link></li>
-                    <li><Link to="/ocean-transport">Container Drayage</Link></li>
-                    <li><Link to="/international-transport">Dry Van</Link></li>
-                    <li><Link to="/emergency-transport">Flat Bed</Link></li>
-                    <li><Link to="/track-transport">Dump Truck</Link></li>
-                    <li><Link to="/personal-delivery">Oversize/Overweight</Link></li>
-                    <li><Link to="/warehouse-facility">Warehousing & Storage</Link></li>
+                    <li><Link to="/track-transport" onClick={handleMobileMenu}>LTL (Less Than Truckload)</Link></li>
+                    <li><Link to="/international-transport" onClick={handleMobileMenu}>FTL (Full Truckload)</Link></li>
+                    <li><Link to="/personal-delivery" onClick={handleMobileMenu}>Interstate Transport</Link></li>
+                    <li><Link to="/warehouse-facility" onClick={handleMobileMenu}>Intrastate Transport</Link></li>
+                    <li><Link to="/ocean-transport" onClick={handleMobileMenu}>Reefer Transport</Link></li>
+                    <li><Link to="/emergency-transport" onClick={handleMobileMenu}>Air-Conditioned Transport</Link></li>
+                    <li><Link to="/ocean-transport" onClick={handleMobileMenu}>Container Drayage</Link></li>
+                    <li><Link to="/international-transport" onClick={handleMobileMenu}>Dry Van</Link></li>
+                    <li><Link to="/emergency-transport" onClick={handleMobileMenu}>Flat Bed</Link></li>
+                    <li><Link to="/track-transport" onClick={handleMobileMenu}>Dump Truck</Link></li>
+                    <li><Link to="/personal-delivery" onClick={handleMobileMenu}>Oversize/Overweight</Link></li>
+                    <li><Link to="/warehouse-facility" onClick={handleMobileMenu}>Warehousing & Storage</Link></li>
                   </ul>
                   <button className={isActive.key === 2 ? 'expanded open' : ''} onClick={() => handleToggle(2)}>
                     <span className="fa fa-angle-right" />
                   </button>
                 </li>
 
-                <li><Link to="/faq">FAQs</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
+                <li><Link to="/faq" onClick={handleMobileMenu}>FAQs</Link></li>
+                <li><Link to="/contact" onClick={handleMobileMenu}>Contact</Link></li>
               </ul>
             </div>
           </div>
@@ -106,13 +85,13 @@ const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
           <ul className="mobile-nav__contact list-unstyled">
             <li>
               <i className="fa fa-envelope"></i>
-              <Link to="mailto:needhelp@elitecons.com">
-                needhelp@elitecons.com
+              <Link to="mailto:starmslogistics@gmail.com" onClick={handleMobileMenu}>
+                starmslogistics@gmail.com
               </Link>
             </li>
             <li>
               <i className="fa fa-phone-alt"></i>
-              <Link to="tel:666-888-0000">666 888 0000</Link>
+              <Link to="tel:+923313435042" onClick={handleMobileMenu}>+92 331 343 5042</Link>
             </li>
           </ul>
 

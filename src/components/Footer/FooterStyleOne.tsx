@@ -65,7 +65,7 @@ const FooterStyleOne = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link to="/about">
+                                                <Link to="/why-us">
                                                     <span className="icon-right-arrow1" /> Why Us
                                                 </Link>
                                             </li>
@@ -80,8 +80,18 @@ const FooterStyleOne = () => {
                                                 </Link>
                                             </li>
                                             <li>
+                                                <Link to="/faq">
+                                                    <span className="icon-right-arrow1" /> Types of Commodities
+                                                </Link>
+                                            </li>
+                                            <li>
                                                 <Link to="/contact">
                                                     <span className="icon-right-arrow1" /> Request a Quote
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/contact">
+                                                    <span className="icon-right-arrow1" /> Contact Us
                                                 </Link>
                                             </li>
                                         </ul>
@@ -132,7 +142,7 @@ const FooterStyleOne = () => {
                                                     </div>
                                                     <div className="text-box">
                                                         <p>
-                                                            <Link to="tel:1234567890">+880 123 456 789 </Link>
+                                                            <Link to="tel:+923313435042">+92 331 343 5042</Link>
                                                         </p>
                                                     </div>
                                                 </li>

@@ -13,7 +13,7 @@ const footerData = {
   ],
   contact: {
     email: 'starmslogistics@gmail.com',
-    phones: ['01245789321', '012457895146'],
+    phones: ['+92 331 343 5042', 'support@starmslogistics.com'],
   },
   services: [
     { to: '/skyline-roofing-solutions', text: 'Roof Renewal' },

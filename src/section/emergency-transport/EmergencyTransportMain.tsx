@@ -6,42 +6,12 @@ import serviceDetailsImg2 from '../../assets/images/services/service-details-img
 import serviceDetailsImg3 from '../../assets/images/services/service-details-img3.jpg';
 import serviceDetailsImg4 from '../../assets/images/services/service-details-img4.jpg';
 import ServiceFaq from '../../components/elements/ServiceFaq';
+import { getServiceFAQs } from '../../data/faqData';
 
 const ServiceDetails = () => {
   // const [activeIndex, setActiveIndex] = useState(0); // First item open by default
 
-  const faqQuestion = [
-    {
-      title: 'Is my technology allowed on tech?',
-      text: `As a premier international transport service provider, we specialize in
-            seamlessly connecting businesses and individuals with efficient and
-            reliable transportation solutions across borders.`
-    },
-    {
-      title: 'What types of cargo can your service handle?',
-      text: `As a premier international transport service provider, we specialize in
-            seamlessly connecting businesses and individuals with efficient and
-            reliable transportation solutions across borders.`
-    },
-    {
-      title: 'What are the typical stages of a logistic project?',
-      text: `As a premier international transport service provider, we specialize in
-            seamlessly connecting businesses and individuals with efficient and
-            reliable transportation solutions across borders.`
-    },
-    {
-      title: 'Is my technology allowed on tech?',
-      text: `As a premier international transport service provider, we specialize in
-            seamlessly connecting businesses and individuals with efficient and
-            reliable transportation solutions across borders.`
-    },
-    {
-      title: 'Can you assist with customs clearance procedures?',
-      text: `As a premier international transport service provider, we specialize in
-            seamlessly connecting businesses and individuals with efficient and
-            reliable transportation solutions across borders.`
-    }
-  ];
+  const faqQuestion = getServiceFAQs('AirConditioned');
 
 
   return (
