@@ -2,41 +2,41 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // Import images
-import projectImg1 from '../../assets/images/project/project-v1-img1.jpg';
-import projectImg2 from '../../assets/images/project/project-v1-img2.jpg';
-import projectImg3 from '../../assets/images/project/project-v1-img3.jpg';
-import projectImg4 from '../../assets/images/project/project-v1-img4.jpg';
+import projectImg1 from '/smlogistics-4.jpg';
+import projectImg2 from '/smlogistics-3.jpg';
+import projectImg3 from '/smlogistics-6.jpg';
+import projectImg4 from '/smlogistics-2.jpg';
 
 const projects = [
   {
     id: 1,
     image: projectImg1,
-    category: "Logistic",
-    title: "Warehouse Inventory",
+    category: "Logistics",
+    title: "Advanced Warehouse Operations",
     colClass: "col-xl-7 col-lg-7",
     animation: "fadeInRight"
   },
   {
     id: 2,
     image: projectImg2,
-    category: "Logistic",
-    title: "Warehouse Inventory",
+    category: "Freight",
+    title: "Ocean & Port Transport",
     colClass: "col-xl-4 col-lg-4",
     animation: "fadeInLeft"
   },
   {
     id: 3,
     image: projectImg3,
-    category: "Logistic",
-    title: "Warehouse Inventory",
+    category: "Transport",
+    title: "Fleet Management Solutions",
     colClass: "col-xl-4 col-lg-4",
     animation: "fadeInRight"
   },
   {
     id: 4,
     image: projectImg4,
-    category: "Logistic",
-    title: "Warehouse Inventory",
+    category: "Technology",
+    title: "Real-Time Tracking Systems",
     colClass: "col-xl-4 col-lg-4",
     animation: "fadeInLeft"
   }

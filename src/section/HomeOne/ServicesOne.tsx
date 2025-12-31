@@ -4,10 +4,10 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
-// Import images - BEST PRACTICE: Direct imports
-import serviceImg1 from '../../assets/images/services/services-v1-img1.jpg';
-import serviceImg2 from '../../assets/images/services/services-v1-img2.jpg';
-import serviceImg3 from '../../assets/images/services/services-v1-img3.jpg';
+// Import images - Using consistent sized images from smlogistics series
+import serviceImg1 from '/smlogistics-1.jpg';
+import serviceImg2 from '/smlogistics-2.jpg';
+import serviceImg3 from '/smlogistics-3.jpg';
 import patternBg from '../../assets/images/pattern/service-v1-pattern.jpg';
 
 
@@ -124,12 +124,12 @@ const ServicesOne = () => {
                                                         alt={service.title}
                                                         style={{
                                                             width: '100%',
-                                                            height: 'auto',
+                                                            height: '350px',
                                                             objectFit: 'cover',
                                                             display: 'block'
                                                         }}
                                                         onError={(e) => {
-                                                            e.target.src = 'https://via.placeholder.com/400x200/cccccc/666666?text=No+Image';
+                                                            e.target.src = 'https://via.placeholder.com/400x350/cccccc/666666?text=No+Image';
                                                         }}
                                                     />
                                                 </div>

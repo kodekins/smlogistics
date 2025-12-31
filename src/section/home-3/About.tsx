@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 // Import images (adjust paths if needed)
 import shapeImg from "../../assets/images/shapes/about-v2-shape2.png";
-import aboutImg1 from "../../assets/images/about/about-v3-img1.jpg";
-import aboutImg2 from "../../assets/images/about/about-v3-img2.jpg";
+import aboutImg1 from "/smlogistics-6.jpg";
+import aboutImg2 from "/smlogistics-4.jpg";
 
 const About = () => {
   return (

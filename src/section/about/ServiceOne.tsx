@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import servicePattern from '../../assets/images/pattern/service-v1-pattern.jpg';
-import serviceImg1 from '../../assets/images/services/services-v1-img1.jpg';
-import serviceImg2 from '../../assets/images/services/services-v1-img2.jpg';
-import serviceImg3 from '../../assets/images/services/services-v1-img3.jpg';
+import serviceImg1 from '/smlogistics-6.jpg';
+import serviceImg2 from '/smlogistics-3.jpg';
+import serviceImg3 from '/smlogistics-4.jpg';
 
 
 const swiperOptions = {

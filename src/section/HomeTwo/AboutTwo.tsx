@@ -7,8 +7,8 @@ import shape5 from '../../assets/images/shapes/about-v2-shape5.png';
 import shape2 from '../../assets/images/shapes/about-v2-shape2.png';
 import shape3 from '../../assets/images/shapes/about-v2-shape3.png';
 import shape4 from '../../assets/images/shapes/about-v2-shape4.png';
-import aboutImg1 from '../../assets/images/about/about-v2-img1.jpg';
-import aboutImg2 from '../../assets/images/about/about-v2-img2.jpg';
+import aboutImg1 from '/smlogistics-4.jpg';
+import aboutImg2 from '/smlogistics-5.jpg';
 import aboutImg3 from '../../assets/images/about/about-v2-img3.png';
 import shape1 from '../../assets/images/shapes/about-v2-shape1.png';
 

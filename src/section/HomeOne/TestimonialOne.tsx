@@ -6,10 +6,10 @@ import 'tiny-slider/dist/tiny-slider.css';
 import testimonialPattern from '../../assets/images/pattern/testimonial-v1-pattern.png';
 import testimonialShape from '../../assets/images/shapes/testimonial-v1-shape1.png';
 import testimonialAuthor from '../../assets/images/testimonial/testimonial-v1-img1.png';
-import testimonialMainImg from '../../assets/images/testimonial/testimonial-v1-img2.jpg';
-import customer1 from '../../assets/images/banner/banner-v1-img2.jpg';
-import customer2 from '../../assets/images/banner/banner-v1-img3.jpg';
-import customer3 from '../../assets/images/banner/banner-v1-img4.jpg';
+import testimonialMainImg from '/smlogistics-5.jpg';
+import customer1 from '/smlogistics-6.jpg';
+import customer2 from '/smlogistics-4.jpg';
+import customer3 from '/smlogistics-3.jpg';
 const TestimonialOne = () => {
   useEffect(() => {
     const slider = tns({

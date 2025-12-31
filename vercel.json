@@ -3,6 +3,14 @@
   "outputDirectory": "dist",
   "rewrites": [
     {
+      "source": "/api/email/newsletter",
+      "destination": "/api/email/newsletter"
+    },
+    {
+      "source": "/api/email/contact",
+      "destination": "/api/email/contact"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

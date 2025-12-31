@@ -6,8 +6,8 @@ import ReactCurvedText from 'react-curved-text'
 // Images
 import About_shape1 from '../../assets/images/shapes/about-v1-shape1.png';
 import About_shape2 from '../../assets/images/shapes/about-v1-shape2.png';
-import About_shape3 from '../../assets/images/about/about-v1-img1.jpg';
-import About_Image from '../../assets/images/about/about-v1-img2.jpg';
+import About_shape3 from '/smlogistics-4.jpg';
+import About_Image from '/smlogistics-5.jpg';
 import About_shape4 from '../../assets/images/shapes/about-v1-shape3.png';
 
 const AboutOne = () => {
@@ -152,11 +152,29 @@ const AboutOne = () => {
                   <img src={About_shape2} alt="Shape2" />
                 </div>
                 <div className="about-one__img1" ref={addToRefs}>
-                  <img src={About_shape3} alt="About1" />
+                  <img 
+                    src={About_shape3} 
+                    alt="About1"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      display: 'block'
+                    }}
+                  />
                 </div>
                 <div className="about-one__img2">
                   <div className="about-one__img2-inner" ref={addToRefs}>
-                    <img src={About_Image} alt="About2" />
+                    <img 
+                      src={About_Image} 
+                      alt="About2"
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        display: 'block'
+                      }}
+                    />
                   </div>
                   <div className="about-one__circle-text">
                     <div className="about-one__round-text-box">

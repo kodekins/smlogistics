@@ -1,10 +1,14 @@
 
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-const logo = "/start-ms-logo.png";
+import { emailApi } from '../../api/emailApi';
+const logo = "/mslogistics-logo.png";
 
 const Sidebar = ({ isSidebar, handleSidebar }) => {
-    const [isActivee, setIsActivee] = useState(false)
+    const [isActivee, setIsActivee] = useState(false);
+    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitMessage, setSubmitMessage] = useState({ type: '', text: '' });
 
     useEffect(() => {
         setIsActivee(isSidebar) // Directly set the state based on prop
@@ -38,25 +42,82 @@ const Sidebar = ({ isSidebar, handleSidebar }) => {
                                 <div className="form-inner">
                                     <h4>Get a free quote</h4>
                                     <form
-                                        onSubmit={(e) => {
-                                            return (
-                                                e.preventDefault(),
-                                                alert("Submited")
-                                            )
+                                        onSubmit={async (e) => {
+                                            e.preventDefault();
+                                            setIsSubmitting(true);
+                                            setSubmitMessage({ type: '', text: '' });
+
+                                            try {
+                                                await emailApi.submitContact({
+                                                    name: formData.name,
+                                                    email: formData.email,
+                                                    phone: '',
+                                                    subject: 'Quick Quote Request',
+                                                    message: formData.message
+                                                });
+                                                
+                                                setSubmitMessage({
+                                                    type: 'success',
+                                                    text: 'Thank you! Your message has been sent.'
+                                                });
+                                                setFormData({ name: '', email: '', message: '' });
+                                            } catch (error: any) {
+                                                setSubmitMessage({
+                                                    type: 'error',
+                                                    text: error.message || 'Failed to send message'
+                                                });
+                                            } finally {
+                                                setIsSubmitting(false);
+                                            }
                                         }}
                                     >
                                         <div className="form-group">
-                                            <input type="text" name="name" placeholder="Name" required="" />
+                                            <input 
+                                                type="text" 
+                                                name="name" 
+                                                placeholder="Name" 
+                                                required 
+                                                value={formData.name}
+                                                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                                                disabled={isSubmitting}
+                                            />
                                         </div>
                                         <div className="form-group">
-                                            <input type="email" name="email" placeholder="Email" required="" />
+                                            <input 
+                                                type="email" 
+                                                name="email" 
+                                                placeholder="Email" 
+                                                required 
+                                                value={formData.email}
+                                                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                                disabled={isSubmitting}
+                                            />
                                         </div>
                                         <div className="form-group">
-                                            <textarea name="message" placeholder="Message..."></textarea>
+                                            <textarea 
+                                                name="message" 
+                                                placeholder="Message..."
+                                                value={formData.message}
+                                                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                                                required
+                                                disabled={isSubmitting}
+                                            ></textarea>
                                         </div>
+                                        {submitMessage.text && (
+                                            <div style={{
+                                                padding: '10px',
+                                                marginBottom: '10px',
+                                                borderRadius: '4px',
+                                                fontSize: '14px',
+                                                backgroundColor: submitMessage.type === 'success' ? '#d4edda' : '#f8d7da',
+                                                color: submitMessage.type === 'success' ? '#155724' : '#721c24'
+                                            }}>
+                                                {submitMessage.text}
+                                            </div>
+                                        )}
                                         <div className="form-group message-btn">
-                                            <button className="thm-btn" type="submit" data-loading-text="Please wait...">
-                                                Submit Now
+                                            <button className="thm-btn" type="submit" disabled={isSubmitting}>
+                                                {isSubmitting ? 'Sending...' : 'Submit Now'}
                                                 <i className="icon-right-arrow21"></i>
                                                 <span className="hover-btn hover-bx"></span>
                                                 <span className="hover-btn hover-bx2"></span>

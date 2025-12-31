@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 // Import images
 import skillShape1 from '../../assets/images/shapes/skill-v1-shape1.png';
 import skillShape2 from '../../assets/images/shapes/skill-v1-shape2.png';
-import skillImg1 from '../../assets/images/resources/skill-v1-img1.jpg';
-import skillImg2 from '../../assets/images/resources/skill-v1-img2.jpg';
+import skillImg1 from '/flatbed-3.jpeg';
+import skillImg2 from '/dumptrucks-2.jpeg';
 
 const SkillOne = () => {
   // Progress bar animation (will run when component mounts)
@@ -40,11 +40,29 @@ const SkillOne = () => {
                 <img src={skillShape2} alt="Decorative shape" />
               </div>
               <div className="skill-one__img1">
-                <img src={skillImg1} alt="Skill demonstration" />
+                <img 
+                  src={skillImg1} 
+                  alt="Skill demonstration"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    display: 'block'
+                  }}
+                />
               </div>
               <div className="skill-one__img2">
                 <div className="inner">
-                  <img src={skillImg2} alt="Skill demonstration" />
+                  <img 
+                    src={skillImg2} 
+                    alt="Skill demonstration"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      display: 'block'
+                    }}
+                  />
                 </div>
               </div>
             </div>

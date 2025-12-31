@@ -3,9 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 
 // Import images from your assets folder
-import sliderImg1 from "../../assets/images/banner/slider-v1-img1.jpg";
-import sliderImg2 from "../../assets/images/banner/slider-v1-img2.jpg";
-import sliderImg3 from "../../assets/images/banner/slider-v1-img3.jpg";
+import sliderImg1 from "/smlogistics-6.jpg";
+import sliderImg2 from "/smlogistics-3.jpg";
+import sliderImg3 from "/smlogistics-1.jpg";
 
 const Banner = () => {
   const [formData, setFormData] = useState({

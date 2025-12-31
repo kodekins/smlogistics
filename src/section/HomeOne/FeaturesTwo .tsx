@@ -8,11 +8,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// Import images
-import featuresImg1 from "../../assets/images/resources/features-v2-img1.jpg";
-import featuresImg2 from "../../assets/images/resources/features-v2-img2.jpg";
-import featuresImg3 from "../../assets/images/resources/features-v2-img3.jpg";
-import featuresImg4 from "../../assets/images/resources/features-v2-img4.jpg";
+// Import truck images from public folder - using consistent sized images
+import ltlImg from '/smlogistics-1.jpg';
+import ftlImg from '/smlogistics-6.jpg';
+import reeferImg from '/smlogistics-2.jpg';
+import flatbedImg from '/smlogistics-3.jpg';
+import interstateImg from '/smlogistics-4.jpg';
+import dryVanImg from '/smlogistics-5.jpg';
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
@@ -40,62 +42,47 @@ const swiperOptions = {
 const FeaturesTwo = () => {
   const featuresData = [
     {
-      img: featuresImg1,
-      tag: "Fast & Efficient",
-      title: "Aviation Freight",
-      text: "It is a long established fact that a reader will be distracted by the readable...",
-      link: "#",
+      img: ltlImg,
+      tag: "Cost-Effective",
+      title: "LTL (Less Than Truckload)",
+      text: "Share trailer space and pay only for what you need. Perfect for smaller shipments with flexible scheduling.",
+      link: "/track-transport",
     },
     {
-      img: featuresImg2,
-      tag: "Cost-effective",
-      title: "Rail Freight",
-      text: "It is a long established fact that a reader will be distracted by the readable...",
-      link: "#",
+      img: ftlImg,
+      tag: "Priority Delivery",
+      title: "FTL (Full Truckload)",
+      text: "Dedicated trucks for large shipments with direct routes and faster delivery times for your full loads.",
+      link: "/international-transport",
     },
     {
-      img: featuresImg3,
-      tag: "Sea Transport",
-      title: "Ocean Freight",
-      text: "It is a long established fact that a reader will be distracted by the readable...",
-      link: "#",
+      img: reeferImg,
+      tag: "Temperature-Controlled",
+      title: "Reefer Transport",
+      text: "Climate-controlled delivery for perishables, pharmaceuticals, and temperature-sensitive goods.",
+      link: "/ocean-transport",
     },
     {
-      img: featuresImg4,
-      tag: "Trucks & Lorries",
-      title: "Roadway Cargo",
-      text: "It is a long established fact that a reader will be distracted by the readable...",
-      link: "#",
+      img: flatbedImg,
+      tag: "Interstate Routes",
+      title: "Interstate Transport",
+      text: "Efficient long-distance trucking across state lines with reliable delivery schedules and tracking.",
+      link: "/personal-delivery",
     },
-      {
-      img: featuresImg1,
-      tag: "Fast & Efficient",
-      title: "Aviation Freight",
-      text: "It is a long established fact that a reader will be distracted by the readable...",
-      link: "#",
+    {
+      img: interstateImg,
+      tag: "Local Delivery",
+      title: "Intrastate Transport",
+      text: "Fast regional deliveries within state boundaries for quick turnaround and local distribution needs.",
+      link: "/warehouse-facility",
     },
-      {
-      img: featuresImg2,
-      tag: "Cost-effective",
-      title: "Rail Freight",
-      text: "It is a long established fact that a reader will be distracted by the readable...",
-      link: "#",
+    {
+      img: dryVanImg,
+      tag: "General Freight",
+      title: "Dry Van Transport",
+      text: "Standard enclosed trailers protecting your general cargo from weather and road elements.",
+      link: "/services",
     },
-        {
-      img: featuresImg3,
-      tag: "Sea Transport",
-      title: "Ocean Freight",
-      text: "It is a long established fact that a reader will be distracted by the readable...",
-      link: "#",
-    },
-      {
-      img: featuresImg4,
-      tag: "Trucks & Lorries",
-      title: "Roadway Cargo",
-      text: "It is a long established fact that a reader will be distracted by the readable...",
-      link: "#",
-    },
-    
   ];
 
   return (
@@ -107,7 +94,7 @@ const FeaturesTwo = () => {
               <div className="sec-title__tagline">
                 <div className="line"></div>
                 <div className="text tg-element-title">
-                  <h4>Fleet Management</h4>
+                  <h4>Our Shipping Solutions</h4>
                 </div>
                 <div className="icon">
                   <span className="icon-plane2 float-bob-x3"></span>
@@ -120,7 +107,7 @@ const FeaturesTwo = () => {
             </div>
 
             <div className="btn-box">
-              <Link className="thm-btn" to="/about">
+              <Link className="thm-btn" to="/services">
                 Our Solutions
                 <i className="icon-right-arrow21"></i>
                 <span className="hover-btn hover-bx"></span>
@@ -140,7 +127,16 @@ const FeaturesTwo = () => {
               <div className="features-two__single">
                 <div className="features-two__single-img">
                   <div className="features-two__single-img-inner">
-                    <img src={item.img} alt={item.title} />
+                    <img 
+                      src={item.img} 
+                      alt={item.title}
+                      style={{
+                        width: '100%',
+                        height: '560px',
+                        objectFit: 'cover',
+                        display: 'block'
+                      }}
+                    />
                     <div className="features-two__single-content">
                       <span>{item.tag}</span>
                       <h2>

@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import footerShape1 from '../../../assets/images/shapes/site-footer-three-bg-shape.png';
-const footerLogo = "/start-ms-logo.png";
+import { emailApi } from '../../api/emailApi';
+const footerLogo = "/mslogistics-logo.png";
 
 const footerData = {
   newsletterTitle: 'Subscribe to Our',
@@ -48,6 +50,10 @@ const footerData = {
 };
 
 const FooterThree = () => {
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState({ type: '', text: '' });
+
   return (
     <>
       {/* Site Footer Three Start */}
@@ -67,14 +73,54 @@ const FooterThree = () => {
                 <span>{footerData.newsletterSubtitle}</span>
               </h3>
               <div className="site-footer-three__form-box">
-                <form className="footer-widget-three__form mc-form" onSubmit={(e) => e.preventDefault()}>
+                <form className="footer-widget-three__form mc-form" onSubmit={async (e) => {
+                  e.preventDefault();
+                  setIsSubmitting(true);
+                  setMessage({ type: '', text: '' });
+
+                  try {
+                    await emailApi.subscribeNewsletter(email);
+                    setMessage({ 
+                      type: 'success', 
+                      text: 'Successfully subscribed!' 
+                    });
+                    setEmail('');
+                  } catch (error: any) {
+                    setMessage({ 
+                      type: 'error', 
+                      text: error.message || 'Failed to subscribe' 
+                    });
+                  } finally {
+                    setIsSubmitting(false);
+                  }
+                }}>
                   <div className="footer-widget-three__form-input-box">
-                    <input type="email" placeholder={footerData.emailPlaceholder} name="EMAIL" />
-                    <button type="submit" className="footer-widget-three__newsletter-btn thm-btn-two">
-                      {footerData.subscribeButtonText}
+                    <input 
+                      type="email" 
+                      placeholder={footerData.emailPlaceholder} 
+                      name="EMAIL" 
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      disabled={isSubmitting}
+                    />
+                    <button type="submit" className="footer-widget-three__newsletter-btn thm-btn-two" disabled={isSubmitting}>
+                      {isSubmitting ? 'Subscribing...' : footerData.subscribeButtonText}
                       <span className="icon-dubble-arrow-right"></span>
                     </button>
                   </div>
+                  {message.text && (
+                    <div style={{
+                      marginTop: '10px',
+                      padding: '10px',
+                      borderRadius: '4px',
+                      fontSize: '14px',
+                      backgroundColor: message.type === 'success' ? '#d4edda' : '#f8d7da',
+                      color: message.type === 'success' ? '#155724' : '#721c24'
+                    }}>
+                      {message.text}
+                    </div>
+                  )}
                 </form>
               </div>
             </div>

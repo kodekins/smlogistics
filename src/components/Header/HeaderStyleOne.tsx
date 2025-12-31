@@ -4,7 +4,7 @@ import MenuItems from './MenuItems';
 import MobileMenu from './MobileMenu';
 import SearchPopup from './SearchPopup'; // Uncommented this, since you're using it below
 import Sidebar from './Sidebar';
-const navLogo = "/start-ms-logo.png";
+const navLogo = "/mslogistics-logo.png";
 
 const HeaderStyleOne = (props) => {
     const { parentMenu, secondParentMenu, activeMenu } = props;

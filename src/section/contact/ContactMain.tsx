@@ -1,9 +1,18 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ContactBg from '../../assets/images/pattern/contact-page-top-pattern.png';
+import { emailApi } from '../../api/emailApi';
 
 const ContactMain = () => {
-  const [currentValue, setValue] = useState("Sub")
+  const [currentValue, setValue] = useState("Sub");
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState({ type: '', text: '' });
 
 
   return (
@@ -56,36 +65,90 @@ const ContactMain = () => {
                 <div className="contact-page__top-form">
                   <form
                     className="contact-form-validated why-choose-one__form"
-                    onSubmit={(e) => {
-                      return(
-                        e.preventDefault(),
-                        alert("Submited")
-                      )
+                    onSubmit={async (e) => {
+                      e.preventDefault();
+                      setIsSubmitting(true);
+                      setSubmitMessage({ type: '', text: '' });
+
+                      try {
+                        const response = await emailApi.submitContact({
+                          name: formData.name,
+                          email: formData.email,
+                          phone: formData.phone,
+                          subject: currentValue === "Sub" ? "General Inquiry" : `Freight Type ${currentValue}`,
+                          message: formData.message
+                        });
+
+                        setSubmitMessage({
+                          type: 'success',
+                          text: response.message || 'Thank you! Your message has been sent successfully. We\'ll get back to you soon.'
+                        });
+                        
+                        // Reset form
+                        setFormData({ name: '', email: '', phone: '', message: '' });
+                        setValue("Sub");
+                      } catch (error: any) {
+                        setSubmitMessage({
+                          type: 'error',
+                          text: error.message || 'Failed to send message. Please try again later.'
+                        });
+                      } finally {
+                        setIsSubmitting(false);
+                      }
                     }}
                   >
                     <div className="row">
                       <div className="col-xl-6 col-lg-6 col-md-6">
                         <div className="input-box">
-                          <input type="text" name="name" placeholder="Name" required />
+                          <input 
+                            type="text" 
+                            name="name" 
+                            placeholder="Name" 
+                            required 
+                            value={formData.name}
+                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                            disabled={isSubmitting}
+                          />
                           <div className="icon"><span className="icon-user"></span></div>
                         </div>
                       </div>
                       <div className="col-xl-6 col-lg-6 col-md-6">
                         <div className="input-box">
-                          <input type="email" name="email" placeholder="Email" required />
+                          <input 
+                            type="email" 
+                            name="email" 
+                            placeholder="Email" 
+                            required 
+                            value={formData.email}
+                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                            disabled={isSubmitting}
+                          />
                           <div className="icon"><span className="icon-email"></span></div>
                         </div>
                       </div>
                       <div className="col-xl-6 col-lg-6 col-md-6">
                         <div className="input-box">
-                          <input type="text" name="Phone" placeholder="Phone" required />
+                          <input 
+                            type="text" 
+                            name="phone" 
+                            placeholder="Phone" 
+                            required 
+                            value={formData.phone}
+                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                            disabled={isSubmitting}
+                          />
                           <div className="icon"><span className="icon-phone2"></span></div>
                         </div>
                       </div>
                       <div className="col-xl-6 col-lg-6 col-md-6">
                         <div className="input-box">
                           <div className="select-box">
-                            <select value={currentValue} onChange={(e) => setValue(e.target.value)} className="selectmenu wide">
+                            <select 
+                              value={currentValue} 
+                              onChange={(e) => setValue(e.target.value)} 
+                              className="selectmenu wide"
+                              disabled={isSubmitting}
+                            >
                               <option value={"Sub"}>Subject</option>
                               <option value={"01"}>Freight Type 01</option>
                               <option value={"02"}>Freight Type 02</option>
@@ -99,15 +162,37 @@ const ContactMain = () => {
 
                       <div className="col-xl-12">
                         <div className="input-box">
-                          <textarea name="message" placeholder="Message"></textarea>
+                          <textarea 
+                            name="message" 
+                            placeholder="Message"
+                            value={formData.message}
+                            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                            required
+                            disabled={isSubmitting}
+                          ></textarea>
                           <div className="icon style2"><span className="icon-pen"></span></div>
                         </div>
                       </div>
 
+                      {submitMessage.text && (
+                        <div className="col-xl-12">
+                          <div style={{
+                            padding: '15px',
+                            marginBottom: '15px',
+                            borderRadius: '5px',
+                            backgroundColor: submitMessage.type === 'success' ? '#d4edda' : '#f8d7da',
+                            color: submitMessage.type === 'success' ? '#155724' : '#721c24',
+                            border: `1px solid ${submitMessage.type === 'success' ? '#c3e6cb' : '#f5c6cb'}`
+                          }}>
+                            {submitMessage.text}
+                          </div>
+                        </div>
+                      )}
+
                       <div className="col-xl-12">
                         <div className="why-choose-one__form-btn">
-                          <button type="submit" className="thm-btn">
-                            Submit Now
+                          <button type="submit" className="thm-btn" disabled={isSubmitting}>
+                            {isSubmitting ? 'Sending...' : 'Submit Now'}
                             <i className="icon-right-arrow21"></i>
                             <span className="hover-btn hover-bx"></span>
                             <span className="hover-btn hover-bx2"></span>

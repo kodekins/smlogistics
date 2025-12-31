@@ -3,82 +3,92 @@ import { Link } from 'react-router-dom';
 import ServiceImg1 from '../../assets/images/services/services-v1-img1.jpg';
 import ServiceImg2 from '../../assets/images/services/services-v1-img2.jpg';
 import ServiceImg3 from '../../assets/images/services/services-v1-img3.jpg';
+import ReeferImg from '/reefer-1.jpeg';
+import FlatbedImg from '/flatbed-1.jpeg';
+import DumpTruckImg from '/dumptrucks-1.jpeg';
+import OverloadImg from '/overload.jpeg';
+import TruckImg1 from '/smlogistics-1.jpg';
+import TruckImg2 from '/smlogistics-2.jpg';
+import TruckImg3 from '/smlogistics-3.jpg';
+import TruckImg4 from '/smlogistics-4.jpg';
+import TruckImg5 from '/smlogistics-5.jpg';
+import TruckImg6 from '/smlogistics-6.jpg';
 
 const services = [
   {
     title: 'LTL (Less Than Truckload)',
     desc: 'Cost-effective option for smaller shipments. Share trailer space and pay only for what you need.',
-    image: ServiceImg1,
+    image: TruckImg1,
     iconClass: 'icon-delivery-man',
     link: '/track-transport',
   },
   {
     title: 'FTL (Full Truckload)',
     desc: 'Dedicated trucks for large shipments with direct routes and priority delivery.',
-    image: ServiceImg2,
+    image: TruckImg6,
     iconClass: 'icon-shipment',
     link: '/international-transport',
   },
   {
     title: 'Interstate Transport',
     desc: 'Efficient trucking services across states with reliable long-distance solutions.',
-    image: ServiceImg3,
+    image: TruckImg3,
     iconClass: 'icon-international-shipping',
     link: '/personal-delivery',
   },
   {
     title: 'Intrastate Transport',
     desc: 'Reliable local/statewide deliveries for fast regional distribution.',
-    image: ServiceImg1,
+    image: TruckImg4,
     iconClass: 'icon-ship-1',
     link: '/warehouse-facility',
   },
   {
     title: 'Reefer Transport',
     desc: 'Temperature-controlled shipments for perishables and climate-sensitive goods.',
-    image: ServiceImg2,
+    image: ReeferImg,
     iconClass: 'icon-storehouse',
     link: '/ocean-transport',
   },
   {
     title: 'Air-Conditioned Transport',
     desc: 'Safe and climate-controlled delivery for sensitive goods like electronics and pharmaceuticals.',
-    image: ServiceImg3,
+    image: ReeferImg,
     iconClass: 'icon-humanitarian-aid',
     link: '/emergency-transport',
   },
   {
     title: 'Container Drayage',
     desc: 'Efficient transport of containers from ports to warehouses or other destinations.',
-    image: ServiceImg1,
+    image: TruckImg2,
     iconClass: 'icon-delivery-man',
     link: '/ocean-transport',
   },
   {
     title: 'Dry Van',
     desc: 'Standard enclosed trailer for general cargo protection from weather elements.',
-    image: ServiceImg2,
+    image: TruckImg5,
     iconClass: 'icon-shipment',
     link: '/international-transport',
   },
   {
     title: 'Flat Bed',
     desc: 'Open trailers for oversized or irregularly shaped cargo that needs easy loading.',
-    image: ServiceImg3,
+    image: FlatbedImg,
     iconClass: 'icon-international-shipping',
     link: '/emergency-transport',
   },
   {
     title: 'Dump Truck',
     desc: 'Transport for bulk materials like sand, gravel, or construction waste.',
-    image: ServiceImg1,
+    image: DumpTruckImg,
     iconClass: 'icon-ship-1',
     link: '/track-transport',
   },
   {
     title: 'Oversize/Overweight',
     desc: 'Specialized transport for cargo exceeding standard size or weight limits.',
-    image: ServiceImg2,
+    image: OverloadImg,
     iconClass: 'icon-storehouse',
     link: '/personal-delivery',
   },

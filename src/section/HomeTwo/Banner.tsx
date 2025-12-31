@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import bannerImg1 from "../../assets/images/banner/banner-v2-img1.jpg";
+import bannerImg1 from "/smlogistics-1.jpg";
 import bannerImg2 from "../../assets/images/banner/banner-v2-img2.png";
 import shape1 from "../../assets/images/shapes/banner-v2-shape1.png";
 import shape2 from "../../assets/images/shapes/banner-v2-shape2.png";

@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // Import images from your local assets folder
-import blogImg1 from "../../assets/images/blog/blog-v1-img1.jpg";
-import blogImg2 from "../../assets/images/blog/blog-v1-img2.jpg";
-import blogImg3 from "../../assets/images/blog/blog-v1-img3.jpg";
+import blogImg1 from "/smlogistics-6.jpg";
+import blogImg2 from "/smlogistics-3.jpg";
+import blogImg3 from "/smlogistics-2.jpg";
 
 const Blog = () => {
   return (

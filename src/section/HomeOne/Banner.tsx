@@ -4,9 +4,9 @@ import HeroImg2 from '../../assets/images/banner/banner-v1-img1.png';
 import HeroImg3 from '../../assets/images/banner/banner-v1-img5.png';
 import HeroImg4 from '../../assets/images/shapes/banner-v1-shape1.png';
 import HeroImg5 from '../../assets/images/banner/banner-v1-flag1.png';
-import HeroImg6 from '../../assets/images/banner/banner-v1-img2.jpg';
-import HeroImg7 from '../../assets/images/banner/banner-v1-img3.jpg';
-import HeroImg8 from '../../assets/images/banner/banner-v1-img4.jpg';
+import HeroImg6 from '/smlogistics-6.jpg';
+import HeroImg7 from '/smlogistics-5.jpg';
+import HeroImg8 from '/smlogistics-1.jpg';
 import { Link } from 'react-router-dom';
 const Banner = () => {
   return (

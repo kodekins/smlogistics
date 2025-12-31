@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // Import images
-import ctaImage from '../../assets/images/resources/cta-v1-img1.png';
+import ctaImage from '/overload.jpeg';
 import ctaPattern from '../../assets/images/pattern/cta-v1-pattern.png';
 import shape1 from '../../assets/images/shapes/cta-v1-shape1.png';
 import shape2 from '../../assets/images/shapes/cta-v1-shape2.png';
@@ -14,7 +14,16 @@ const CtaOne = () => {
         <div className="cta-one__inner">
           {/* CTA Image */}
           <div className="cta-one__img">
-            <img src={ctaImage} alt="CTA illustration" />
+            <img 
+              src={ctaImage} 
+              alt="CTA illustration" 
+              style={{
+                maxWidth: '100%',
+                height: 'auto',
+                objectFit: 'contain',
+                display: 'block'
+              }}
+            />
           </div>
           
           {/* Pattern and Shapes */}

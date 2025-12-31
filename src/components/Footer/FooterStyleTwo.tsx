@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Import the Link component from React Router
+import { emailApi } from '../../api/emailApi';
 
 // Import images
-const footerLogo = "/start-ms-logo.png";
+const footerLogo = "/mslogistics-logo.png";
 import pattern1 from '../../assets/images/pattern/footer-v1-pattern.png'; // Replace with your actual path
 import pattern2 from '../../assets/images/shapes/footer-v2-shape3.png'; // Replace with your actual path
 import pattern3 from '../../assets/images/shapes/footer-v2-shape2.png'; // Replace with your actual path
 import pattern4 from '../../assets/images/shapes/footer-v2-shape1.png'; // Replace with your actual path
 const FooterTwo = () => {
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState({ type: '', text: '' });
+
   return (
     <>
       {/*Start Footer Two*/}
@@ -203,20 +208,39 @@ const FooterTwo = () => {
                     </p>
                     <div className="footer-one__subscribe-form">
                       <form className="subscribe-form"
-                        onSubmit={(e) => {
-                          return (
-                            e.preventDefault(),
-                            alert("Subcribe")
-                          )
+                        onSubmit={async (e) => {
+                          e.preventDefault();
+                          setIsSubmitting(true);
+                          setMessage({ type: '', text: '' });
+
+                          try {
+                            await emailApi.subscribeNewsletter(email);
+                            setMessage({ 
+                              type: 'success', 
+                              text: 'Successfully subscribed!' 
+                            });
+                            setEmail('');
+                          } catch (error: any) {
+                            setMessage({ 
+                              type: 'error', 
+                              text: error.message || 'Failed to subscribe' 
+                            });
+                          } finally {
+                            setIsSubmitting(false);
+                          }
                         }}
                       >
                         <input
                           type="email"
                           name="email"
                           placeholder="Your E-mail"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          required
+                          disabled={isSubmitting}
                         />
-                        <button type="submit" className="thm-btn">
-                          Subcribe
+                        <button type="submit" className="thm-btn" disabled={isSubmitting}>
+                          {isSubmitting ? 'Subscribing...' : 'Subscribe'}
                           <i className="icon-right-arrow21" />
                           <span className="hover-btn hover-bx" />
                           <span className="hover-btn hover-bx2" />
@@ -224,6 +248,18 @@ const FooterTwo = () => {
                           <span className="hover-btn hover-bx4" />
                         </button>
                       </form>
+                      {message.text && (
+                        <div style={{
+                          marginTop: '10px',
+                          padding: '10px',
+                          borderRadius: '4px',
+                          fontSize: '14px',
+                          backgroundColor: message.type === 'success' ? '#d4edda' : '#f8d7da',
+                          color: message.type === 'success' ? '#155724' : '#721c24'
+                        }}>
+                          {message.text}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>

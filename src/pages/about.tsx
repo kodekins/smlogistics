@@ -3,7 +3,7 @@ import BackToTop from '../components/elements/BackToTop';
 import HeaderStyleOne from '../components/Header/HeaderStyleOne';
 import FooterTwo from '../components/Footer/FooterStyleTwo';
 import SiteBreadcrumb from '../components/Breadcumb';
-import bannerbg from '../assets/images/backgrounds/page-header-bg.jpg';
+import bannerbg from '/smlogistics-5.jpg';
 import AboutOne from '../section/about/AboutOne';
 import ServiceOne from '../section/about/ServiceOne';
 import ProjectOne from '../section/about/ProjectOne';

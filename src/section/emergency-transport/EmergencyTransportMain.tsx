@@ -1,10 +1,10 @@
 // import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import serviceSidebarImg from '../../assets/images/resources/service-details-sidebar-img.png';
-import serviceDetailsImg1 from '../../assets/images/services/service-details-img5.jpg';
-import serviceDetailsImg2 from '../../assets/images/services/service-details-img2.jpg';
-import serviceDetailsImg3 from '../../assets/images/services/service-details-img3.jpg';
-import serviceDetailsImg4 from '../../assets/images/services/service-details-img4.jpg';
+import serviceDetailsImg1 from '/reefer-3.jpeg';
+import serviceDetailsImg2 from '/reefer-4.jpeg';
+import serviceDetailsImg3 from '/reefer-1.jpeg';
+import serviceDetailsImg4 from '/reefer-2.jpeg';
 import ServiceFaq from '../../components/elements/ServiceFaq';
 import { getServiceFAQs } from '../../data/faqData';
 
@@ -85,7 +85,11 @@ const ServiceDetails = () => {
               {/* Top Image */}
               <div className="service-details__content-img1">
                 <div className="inner">
-                  <img src={serviceDetailsImg1} alt="International Transport" />
+                  <img 
+                    src={serviceDetailsImg1} 
+                    alt="International Transport"
+                    style={{ width: '100%', height: '400px', objectFit: 'cover', display: 'block' }}
+                  />
                 </div>
               </div>
 
@@ -116,12 +120,20 @@ const ServiceDetails = () => {
                 <div className="row">
                   <div className="col-xl-6 col-lg-6 col-md-6">
                     <div className="single-img">
-                      <img src={serviceDetailsImg2} alt="Service Detail" />
+                      <img 
+                        src={serviceDetailsImg2} 
+                        alt="Service Detail"
+                        style={{ width: '100%', height: '300px', objectFit: 'cover', display: 'block' }}
+                      />
                     </div>
                   </div>
                   <div className="col-xl-6 col-lg-6 col-md-6">
                     <div className="single-img">
-                      <img src={serviceDetailsImg3} alt="Service Detail" />
+                      <img 
+                        src={serviceDetailsImg3} 
+                        alt="Service Detail"
+                        style={{ width: '100%', height: '300px', objectFit: 'cover', display: 'block' }}
+                      />
                     </div>
                   </div>
                 </div>
@@ -133,7 +145,11 @@ const ServiceDetails = () => {
 
               {/* Bottom Image */}
               <div className="service-details__content-img3">
-                <img src={serviceDetailsImg4} alt="Logistics" />
+                <img 
+                  src={serviceDetailsImg4} 
+                  alt="Logistics"
+                  style={{ width: '100%', height: '350px', objectFit: 'cover', display: 'block' }}
+                />
               </div>
 
               {/* FAQ Accordion */}

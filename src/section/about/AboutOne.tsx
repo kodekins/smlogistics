@@ -6,8 +6,8 @@ import gsap from "gsap";
 // Images
 import About_shape1 from "../../assets/images/shapes/about-v1-shape1.png";
 import About_shape2 from "../../assets/images/shapes/about-v1-shape2.png";
-import About_shape3 from "../../assets/images/about/about-v1-img1.jpg";
-import About_Image from "../../assets/images/about/about-v1-img2.jpg";
+import About_shape3 from "/smlogistics-4.jpg";
+import About_Image from "/smlogistics-5.jpg";
 import About_shape4 from "../../assets/images/shapes/about-v1-shape3.png";
 
 const AboutOne: React.FC = () => {

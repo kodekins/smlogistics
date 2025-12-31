@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import ProjectImg1 from "../../assets/images/project/project-v1-img1.jpg";
-import ProjectImg2 from "../../assets/images/project/project-v1-img2.jpg";
-import ProjectImg3 from "../../assets/images/project/project-v1-img3.jpg";
-import ProjectImg4 from "../../assets/images/project/project-v1-img4.jpg";
+import ProjectImg1 from "/smlogistics-4.jpg";
+import ProjectImg2 from "/smlogistics-3.jpg";
+import ProjectImg3 from "/smlogistics-6.jpg";
+import ProjectImg4 from "/smlogistics-2.jpg";
 
 // 🔹 Project data type
 interface ProjectItem {
@@ -19,29 +19,29 @@ interface ProjectItem {
 const projectData: ProjectItem[] = [
   {
     img: ProjectImg1,
-    category: "Logistic",
-    title: "Warehouse Inventory",
+    category: "Logistics",
+    title: "Advanced Warehouse Operations",
     link: "/project-details",
     classes: "col-xl-7 col-lg-7 wow fadeInRight",
   },
   {
     img: ProjectImg2,
-    category: "Logistic",
-    title: "Warehouse Inventory",
+    category: "Freight",
+    title: "Ocean & Port Transport",
     link: "/project-details",
     classes: "col-xl-4 col-lg-4 wow fadeInLeft",
   },
   {
     img: ProjectImg3,
-    category: "Logistic",
-    title: "Warehouse Inventory",
+    category: "Transport",
+    title: "Fleet Management Solutions",
     link: "/project-details",
     classes: "col-xl-4 col-lg-4 wow fadeInRight",
   },
   {
     img: ProjectImg4,
-    category: "Logistic",
-    title: "Warehouse Inventory",
+    category: "Technology",
+    title: "Real-Time Tracking Systems",
     link: "/project-details",
     classes: "col-xl-4 col-lg-4 wow fadeInLeft",
   },

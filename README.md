@@ -28,6 +28,8 @@ Star MS Logistics didn't begin as a company — it began as a **vision**. A visi
 - **Swiper** - Modern touch slider
 - **GSAP** - Professional-grade animation
 - **TypeScript** - Type-safe development
+- **Express** - Backend server
+- **Nodemailer** - Email service integration
 
 ## 🚀 Getting Started
 
@@ -35,6 +37,7 @@ Star MS Logistics didn't begin as a company — it began as a **vision**. A visi
 
 - Node.js 22.x or higher
 - npm or yarn package manager
+- Gmail account with App Password (for email functionality)
 
 ### Installation
 
@@ -42,8 +45,16 @@ Star MS Logistics didn't begin as a company — it began as a **vision**. A visi
 # Install dependencies
 npm install
 
-# Start development server
+# Configure email settings (see EMAIL_SETUP.md for detailed instructions)
+cp .env.example .env
+# Edit .env and add your Gmail credentials
+
+# Start development servers
+# Terminal 1 - Frontend
 npm run dev
+
+# Terminal 2 - Backend (Email Server)
+npm run server:dev
 
 # Build for production
 npm run build
@@ -52,19 +63,39 @@ npm run build
 npm run preview
 ```
 
+### Email Setup
+
+This application includes a complete email integration for:
+- Newsletter subscriptions
+- Contact form submissions
+- Automated email notifications
+
+**📧 For detailed email setup instructions, see [EMAIL_SETUP.md](./EMAIL_SETUP.md)**
+
 ## 📦 Project Structure
 
 ```
 star-ms-logistics/
+├── server/                          # Backend server
+│   ├── config/
+│   │   └── emailConfig.ts          # Email configuration
+│   ├── routes/
+│   │   └── emailRoutes.ts          # API endpoints
+│   ├── services/
+│   │   └── emailService.ts         # Email service
+│   └── index.ts                     # Server entry point
 ├── src/
-│   ├── components/      # Reusable UI components
-│   ├── pages/          # Page components
-│   ├── section/        # Section components for pages
-│   ├── assets/         # Images, fonts, and styles
-│   ├── layouts/        # Layout components
-│   └── lib/           # Utility functions and hooks
-├── public/            # Static assets
-└── package.json       # Project dependencies
+│   ├── api/                        # API clients
+│   ├── components/                 # Reusable UI components
+│   ├── pages/                      # Page components
+│   ├── section/                    # Section components for pages
+│   ├── assets/                     # Images, fonts, and styles
+│   ├── layouts/                    # Layout components
+│   └── lib/                        # Utility functions and hooks
+├── public/                         # Static assets
+├── .env.example                    # Environment template
+├── EMAIL_SETUP.md                  # Email setup guide
+└── package.json                    # Project dependencies
 ```
 
 ## 🌐 Available Pages
@@ -96,6 +127,9 @@ The application is fully responsive and optimized for:
 - Fast loading times
 - Cross-browser compatibility
 - Accessible UI components
+- **Newsletter subscription system**
+- **Contact form with email notifications**
+- **Automated email responses**
 
 ## 📄 License
 
