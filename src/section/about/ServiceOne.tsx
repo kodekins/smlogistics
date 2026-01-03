@@ -76,7 +76,7 @@ const ServicesOne = () => {
                             </div>
                         </div>
                         <h2 className="sec-title__title tg-element-title">Provide Efficient Logistics
-                            <br /> Solutions <span>Business</span></h2>
+                            <br /> Solutions Business</h2>
                     </div>
 
                     <div className="row">

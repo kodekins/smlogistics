@@ -72,7 +72,7 @@ const WhyChooseOne: React.FC = () => {
                 </div>
                 <h2 className="sec-title__title tg-element-title">
                   Why Choose <br /> Star MS
-                  <span> Logistics?</span>
+                  Logistics?
                 </h2>
               </div>
 
@@ -197,7 +197,7 @@ const WhyChooseOne: React.FC = () => {
                     <div className="why-choose-one__form-distance">
                       <div className="title">
                         <p>
-                          Distance (Kilo): {distanceRange.min} - {distanceRange.max}
+                          Distance (Miles): {distanceRange.min} - {distanceRange.max}
                         </p>
                       </div>
                       <div className="why-choose-one__form-distance-inner">
@@ -207,7 +207,7 @@ const WhyChooseOne: React.FC = () => {
                               type="range"
                               className="range-slider"
                               min={0}
-                              max={2000}
+                              max={10000}
                               value={distanceRange.max}
                               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                                 setDistanceRange((prev) => ({
@@ -242,6 +242,7 @@ const WhyChooseOne: React.FC = () => {
                           <option value="Freight Type 03">Freight Type 03</option>
                           <option value="Freight Type 04">Freight Type 04</option>
                           <option value="Freight Type 05">Freight Type 05</option>
+                          <option value="Others">Others</option>
                         </select>
                       </div>
                     </div>

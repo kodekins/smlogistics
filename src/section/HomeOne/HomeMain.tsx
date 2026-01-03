@@ -2,7 +2,6 @@ import React from 'react';
 import Banner from "./Banner"
 import About from "./About"
 import ServicesOne from './ServicesOne';
-import ProjectOne from './ProjectOne';
 import WhyChooseOne from './WhyChooseOne';
 import SkillOne from './SkillOne';
 import TestimonialOne from './TestimonialOne';
@@ -20,7 +19,6 @@ const HomeMain = () => {
 			<Banner />
 			<About />
 			<ServicesOne />
-			<ProjectOne />
 			<WhyChooseOne />
 			<SkillOne />
 			<TestimonialOne />

@@ -28,7 +28,7 @@ const About: React.FC<AboutProps> = ({ isVisible }) => {
       {/* SiteBreadcrumb */}
       <AboutOne />
       <ServiceOne />
-      <ProjectOne />
+      
       <WhyChooseOne />
       <TestimonialOne />
 

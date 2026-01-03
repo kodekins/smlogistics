@@ -82,7 +82,7 @@ const SkillOne = () => {
                   </div>
                 </div>
                 <h2 className="sec-title__title tg-element-title">
-                  Professional Trucking <br /> Excellence In <span>Every Mile</span>
+                  Professional Trucking <br /> Excellence In Every Mile
                 </h2>
               </div>
 

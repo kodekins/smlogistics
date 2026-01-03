@@ -89,7 +89,7 @@ const FaqOne = () => {
                   </div>
                   <h2 className="sec-title__title tg-element-title">
                     Common Questions About <br />
-                    Our <span>Trucking Services?</span>
+                    Our Trucking Services?
                   </h2>
                 </div>
 

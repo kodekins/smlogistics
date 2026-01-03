@@ -1,0 +1,119 @@
+/* Custom overrides for Star MS Logistics branding */
+
+/* 1. Header: white background, blue nav items, red hover */
+.main-header-three__top {
+  background: var(--logistiq-white) !important;
+}
+
+.main-header-three__bottom {
+  background: var(--logistiq-white) !important;
+  margin-top: -33px;
+}
+
+.main-header-three .main-menu .main-menu__list > li > a,
+.stricky-header.stricky-header--style3 .main-menu__list > li > a {
+  color: var(--logistiq-blue) !important;
+}
+
+.main-header-three .main-menu .main-menu__list > li.current-menu-item > a,
+.main-header-three .main-menu .main-menu__list > li:hover > a,
+.stricky-header.stricky-header--style3 .main-menu__list > li.current-menu-item > a,
+.stricky-header.stricky-header--style3 .main-menu__list > li:hover > a {
+  color: var(--logistiq-red) !important;
+}
+
+.main-header-three .main-menu .mobile-nav__toggler {
+  color: var(--logistiq-blue) !important;
+}
+
+.main-header-three .main-menu .mobile-nav__toggler:hover {
+  color: var(--logistiq-red) !important;
+}
+
+/* Make header contact info text dark for visibility on white */
+.header-contact-style1 ul li .text-box p,
+.header-contact-style1 ul li .text-box p a {
+  color: var(--logistiq-black) !important;
+}
+
+.header-contact-style1 ul li .icon span {
+  color: var(--logistiq-blue) !important;
+}
+
+/* Make language switcher and social icons visible on white */
+.main-header__language-switcher .icon span {
+  color: var(--logistiq-blue) !important;
+}
+
+.header-social-links a {
+  color: var(--logistiq-blue) !important;
+}
+
+.header-social-links a:hover {
+  color: var(--logistiq-red) !important;
+}
+
+/* 2. Footer: white background */
+.footer-one {
+  background: var(--logistiq-white) !important;
+}
+
+.footer-one__top {
+  background: var(--logistiq-white) !important;
+}
+
+.footer-one__bottom {
+  background: var(--logistiq-white) !important;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer-one__about-text,
+.footer-one__about-contact-info .text-box p,
+.footer-one__about-contact-info .text-box h4,
+.footer-one__quick-links .title h2,
+.footer-one__quick-links-list li a,
+.footer-one__contact .title h2,
+.footer-one__contact-box .text-box p,
+.footer-one__contact-box .text-box a,
+.footer-one__subscribe .title h2,
+.footer-one__subscribe-text,
+.footer-one__bottom-text p,
+.footer-one__bottom-text p a {
+  color: var(--logistiq-black) !important;
+}
+
+.footer-one .footer-widget__single .title h2,
+.footer-one .footer-widget__single .title h2 .icon-plane3 {
+  color: var(--logistiq-blue) !important;
+}
+
+/* 3. Remove underline bold from everywhere */
+u,
+.underline,
+[style*="text-decoration: underline"],
+[style*="text-decoration:underline"] {
+  text-decoration: none !important;
+  font-weight: normal !important;
+}
+
+strong u,
+b u,
+u strong,
+u b {
+  font-weight: normal !important;
+  text-decoration: none !important;
+}
+
+/* 4. FAQ answers same color as questions */
+.faq-one .accrodion-content .inner p,
+.faq-page .accrodion-content .inner p,
+.accrodion-content .inner p {
+  color: var(--logistiq-black) !important;
+}
+
+.faq-one .accrodion-title h4,
+.faq-page .accrodion-title h4,
+.accrodion-title h4 {
+  color: var(--logistiq-black) !important;
+}
+

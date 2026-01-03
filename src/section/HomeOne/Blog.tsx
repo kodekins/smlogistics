@@ -22,7 +22,7 @@ const Blog = () => {
               </div>
             </div>
             <h2 className="sec-title__title tg-element-title">
-              Latest Industry Updates <br /> From Our <span>Blog</span>
+              Latest Industry Updates <br /> From Our Blog
             </h2>
           </div>
           <div className="row">

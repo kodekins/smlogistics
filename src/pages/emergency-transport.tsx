@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSearchParams } from 'react-router-dom';
 import BackToTop from '../components/elements/BackToTop';
 import HeaderStyleOne from '../components/Header/HeaderStyleOne';
 import FooterTwo from '../components/Footer/FooterStyleTwo';
@@ -11,18 +12,33 @@ import EmergencyTransportMain from '../section/emergency-transport/EmergencyTran
 // Breadcrumbs Background Image
 
 const EmergencyTransport = ({isVisible}) => {
+    const [searchParams] = useSearchParams();
+    const serviceType = searchParams.get('type') || 'airconditioned';
+    
+    const serviceData = {
+        airconditioned: {
+            title: 'Air-Conditioned Transport',
+            description: 'Climate-controlled delivery for sensitive goods'
+        },
+        flatbed: {
+            title: 'Flatbed Transport',
+            description: 'Open trailer transport for oversized cargo'
+        }
+    };
+    
+    const service = serviceData[serviceType as keyof typeof serviceData] || serviceData.airconditioned;
 
     return (
         <React.Fragment>
         <HeaderStyleOne />
         {/* SiteBreadcrumb */}
         <SiteBreadcrumb
-            pageTitle="Warehouse Facility"
-            pageName="Warehouse Facility"
+            pageTitle={service.title}
+            pageName={service.title}
             breadcrumbsImg={bannerbg}
         />
         {/* SiteBreadcrumb */}
-        <EmergencyTransportMain/>
+        <EmergencyTransportMain serviceType={serviceType} />
         
         <BackToTop scroll={isVisible} />
         <FooterTwo />

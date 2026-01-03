@@ -5,11 +5,30 @@ import serviceDetailsImg1 from '/overload.jpeg';
 import serviceDetailsImg2 from '/smlogistics-2.jpg';
 import serviceDetailsImg3 from '/smlogistics-5.jpg';
 import serviceDetailsImg4 from '/flatbed-3.jpeg';
-import ServiceFaq from '../../components/elements/ServiceFaq';
-import { getServiceFAQs } from '../../data/faqData';
 
-const faqQuestion = getServiceFAQs('Interstate');
-const ServiceDetails = () => {
+interface ServiceDetailsProps {
+  serviceType?: string;
+}
+
+const ServiceDetails = ({ serviceType = 'interstate' }: ServiceDetailsProps) => {
+  
+  const serviceContent = {
+    interstate: {
+      title: 'Interstate Transport',
+      subtitle: 'Efficient trucking services across states',
+      description: 'Our interstate transport service provides reliable long-distance freight solutions connecting businesses across state lines throughout the United States. We specialize in coordinating seamless cross-state shipments with experienced carriers who understand regional regulations and routing.',
+      whyChoose: 'Star MS Logistics interstate transport connects major commercial hubs across America with efficient, compliant freight services. Our network of vetted interstate carriers ensures your shipments move smoothly across state borders while adhering to all DOT regulations.'
+    },
+    oversized: {
+      title: 'Oversize/Overweight Transport',
+      subtitle: 'Specialized hauling for oversized loads',
+      description: 'Our oversize/overweight transport service handles freight that exceeds standard legal dimensions or weight limits. We manage all permitting, route planning, pilot car coordination, and compliance requirements for your oversized loads.',
+      whyChoose: 'Star MS Logistics specializes in complex oversized load logistics with experienced specialists who handle permit procurement, route surveys, and escort coordination. We ensure your oversize freight moves legally and safely with full compliance to state and federal regulations.'
+    }
+  };
+  
+  const content = serviceContent[serviceType as keyof typeof serviceContent] || serviceContent.interstate;
+
   return (
     <section className="service-details">
       <div className="container">
@@ -87,23 +106,16 @@ const ServiceDetails = () => {
 
               {/* Main Content */}
               <div className="service-details__content-text1">
-                <h2>Interstate Transport</h2>
+                <h2>{content.title}</h2>
                 <p>
-                  Efficient trucking services across states. Our interstate transport service provides 
-                  reliable long-distance freight solutions connecting businesses across state lines throughout 
-                  the United States. We specialize in coordinating seamless cross-state shipments with 
-                  experienced carriers who understand regional regulations and routing.
+                  {content.subtitle}. {content.description}
                 </p>
               </div>
 
               <div className="service-details__content-text2">
-                <h2>Why Choose Our Interstate Service</h2>
+                <h2>Why Choose Our {content.title} Service</h2>
                 <p>
-                  Star MS Logistics interstate transport connects major commercial hubs across America with 
-                  efficient, compliant freight services. Our network of vetted interstate carriers ensures 
-                  your shipments move smoothly across state borders while adhering to all DOT regulations. 
-                  We handle the complexities of multi-state logistics so you can focus on your business, 
-                  providing reliable service with transparent pricing and real-time tracking.
+                  {content.whyChoose}
                 </p>
               </div>
 
@@ -131,9 +143,6 @@ const ServiceDetails = () => {
               <div className="service-details__content-img3">
                 <img src={serviceDetailsImg4} alt="Logistics" style={{ width: '100%', height: '350px', objectFit: 'cover', display: 'block' }} />
               </div>
-
-              {/* FAQ Accordion */}
-              <ServiceFaq faqQuestions={faqQuestion} />
 
             </div>
           </div>

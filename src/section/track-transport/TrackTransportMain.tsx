@@ -5,11 +5,29 @@ import serviceDetailsImg1 from '/smlogistics-1.jpg';
 import serviceDetailsImg2 from '/smlogistics-3.jpg';
 import serviceDetailsImg3 from '/smlogistics-4.jpg';
 import serviceDetailsImg4 from '/smlogistics-6.jpg';
-import ServiceFaq from '../../components/elements/ServiceFaq';
-import { getServiceFAQs } from '../../data/faqData';
 
-const faqQuestion = getServiceFAQs('LTL');
-const ServiceDetails = () => {
+interface ServiceDetailsProps {
+  serviceType?: string;
+}
+
+const ServiceDetails = ({ serviceType = 'ltl' }: ServiceDetailsProps) => {
+  
+  const serviceContent = {
+    ltl: {
+      title: 'LTL (Less Than Truckload)',
+      subtitle: 'Cost-effective option for smaller shipments',
+      description: 'Our LTL service allows you to share trailer space with other shipments, paying only for the space you need. Perfect for businesses looking to optimize shipping costs while maintaining reliable delivery schedules.',
+      whyChoose: 'With Star MS Logistics LTL services, you get the flexibility of shipping smaller freight volumes without the expense of booking an entire truck. Our extensive carrier network ensures your cargo is handled with care, consolidated efficiently, and delivered on time.'
+    },
+    dumptruck: {
+      title: 'Dump Truck Services',
+      subtitle: 'Bulk material transport and delivery',
+      description: 'Our dump truck services specialize in transporting and delivering bulk materials including gravel, sand, dirt, demolition debris, and construction materials. Perfect for construction sites, landscaping projects, and material supply operations.',
+      whyChoose: 'Star MS Logistics dump truck fleet provides reliable bulk material transport with experienced operators who understand proper loading, safe transport, and precise placement at delivery sites. We handle various material types with appropriate equipment for your specific needs.'
+    }
+  };
+  
+  const content = serviceContent[serviceType as keyof typeof serviceContent] || serviceContent.ltl;
 
   return (
     <section className="service-details">
@@ -88,21 +106,16 @@ const ServiceDetails = () => {
 
               {/* Main Content */}
               <div className="service-details__content-text1">
-                <h2>LTL (Less Than Truckload)</h2>
+                <h2>{content.title}</h2>
                 <p>
-                  Cost-effective option for smaller shipments. Our LTL service allows you to share trailer 
-                  space with other shipments, paying only for the space you need. Perfect for businesses 
-                  looking to optimize shipping costs while maintaining reliable delivery schedules.
+                  {content.subtitle}. {content.description}
                 </p>
               </div>
 
               <div className="service-details__content-text2">
-                <h2>Why Choose Our LTL Service</h2>
+                <h2>Why Choose Our {content.title} Service</h2>
                 <p>
-                  With Star MS Logistics LTL services, you get the flexibility of shipping smaller freight 
-                  volumes without the expense of booking an entire truck. Our extensive carrier network ensures 
-                  your cargo is handled with care, consolidated efficiently, and delivered on time. We provide 
-                  competitive pricing, reliable transit times, and full shipment tracking for complete peace of mind.
+                  {content.whyChoose}
                 </p>
               </div>
 
@@ -130,9 +143,6 @@ const ServiceDetails = () => {
               <div className="service-details__content-img3">
                 <img src={serviceDetailsImg4} alt="Logistics" style={{ width: '100%', height: '350px', objectFit: 'cover', display: 'block' }} />
               </div>
-
-              {/* FAQ Accordion */}
-              <ServiceFaq faqQuestions={faqQuestion} />
 
             </div>
           </div>

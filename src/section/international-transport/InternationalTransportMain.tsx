@@ -5,11 +5,30 @@ import serviceDetailsImg1 from '/flatbed-1.jpeg';
 import serviceDetailsImg2 from '/flatbed-2.jpeg';
 import serviceDetailsImg3 from '/flatbed-3.jpeg';
 import serviceDetailsImg4 from '/flatbed-4.jpeg';
-import ServiceFaq from '../../components/elements/ServiceFaq';
-import { getServiceFAQs } from '../../data/faqData';
 
-const faqQuestion = getServiceFAQs('FTL');
-const ServiceDetails = () => {
+interface ServiceDetailsProps {
+  serviceType?: string;
+}
+
+const ServiceDetails = ({ serviceType = 'ftl' }: ServiceDetailsProps) => {
+  
+  const serviceContent = {
+    ftl: {
+      title: 'FTL (Full Truckload)',
+      subtitle: 'Dedicated trucks for large shipments',
+      description: 'Our FTL service provides you with exclusive use of an entire trailer for your freight, ensuring direct routes, faster transit times, and priority handling for your large-volume shipments across the United States.',
+      whyChoose: 'Full Truckload shipping with Star MS Logistics means your cargo travels directly from pickup to delivery without stops or transfers, reducing handling and transit time. Ideal for high-volume shipments, time-sensitive deliveries, or freight requiring special handling.'
+    },
+    dryvan: {
+      title: 'Dry Van',
+      subtitle: 'Standard enclosed trailer freight services',
+      description: 'Our dry van service is the most common form of freight transportation, providing enclosed trailer space for general cargo that doesn\'t require temperature control. Perfect for palletized goods, boxed items, and non-perishable freight.',
+      whyChoose: 'Star MS Logistics dry van services offer the most versatile and cost-effective solution for standard freight. Our extensive carrier network ensures reliable capacity and competitive rates for your dry goods, with both FTL and LTL options available.'
+    }
+  };
+  
+  const content = serviceContent[serviceType as keyof typeof serviceContent] || serviceContent.ftl;
+
   return (
     <section className="service-details">
       <div className="container">
@@ -87,22 +106,16 @@ const ServiceDetails = () => {
 
               {/* Main Content */}
               <div className="service-details__content-text1">
-                <h2>FTL (Full Truckload)</h2>
+                <h2>{content.title}</h2>
                 <p>
-                  Dedicated trucks for large shipments. Our FTL service provides you with exclusive use 
-                  of an entire trailer for your freight, ensuring direct routes, faster transit times, 
-                  and priority handling for your large-volume shipments across the United States.
+                  {content.subtitle}. {content.description}
                 </p>
               </div>
 
               <div className="service-details__content-text2">
-                <h2>Why Choose Our FTL Service</h2>
+                <h2>Why Choose Our {content.title} Service</h2>
                 <p>
-                  Full Truckload shipping with Star MS Logistics means your cargo travels directly from 
-                  pickup to delivery without stops or transfers, reducing handling and transit time. 
-                  Ideal for high-volume shipments, time-sensitive deliveries, or freight requiring 
-                  special handling. We partner with vetted carriers to ensure your full loads are 
-                  transported safely, securely, and on schedule every time.
+                  {content.whyChoose}
                 </p>
               </div>
 
@@ -130,9 +143,6 @@ const ServiceDetails = () => {
               <div className="service-details__content-img3">
                 <img src={serviceDetailsImg4} alt="Logistics" style={{ width: '100%', height: '350px', objectFit: 'cover', display: 'block' }} />
               </div>
-
-              {/* FAQ Accordion */}
-              <ServiceFaq faqQuestions={faqQuestion} />
 
             </div>
           </div>

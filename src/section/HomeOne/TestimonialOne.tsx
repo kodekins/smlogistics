@@ -87,7 +87,7 @@ const TestimonialOne = () => {
                 </div>
                 <h2 className="sec-title__title tg-element-title">
                   What Our Customers <br />
-                  Say <span>About Us</span>
+                  Say About Us
                 </h2>
               </div>
 

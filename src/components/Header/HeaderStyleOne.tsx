@@ -127,15 +127,6 @@ const HeaderStyleOne = (props) => {
                                                         Get A Quote <i className="icon-right-arrow21" />
                                                     </Link>
                                                 </div>
-                                                <div className="login-box">
-                                                    <Link to="#">
-                                                        <i className="fa fa-sign-in" />{" "}
-                                                        <span>
-                                                            Member <br />
-                                                            Login
-                                                        </span>
-                                                    </Link>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -179,15 +170,6 @@ const HeaderStyleOne = (props) => {
                                                         <div className="main-header-one__bottom-right-btn">
                                                             <Link to="/contact">
                                                                 Get A Quote <i className="icon-right-arrow21" />
-                                                            </Link>
-                                                        </div>
-                                                        <div className="login-box">
-                                                            <Link to="#">
-                                                                <i className="fa fa-sign-in" />{" "}
-                                                                <span>
-                                                                    Member <br />
-                                                                    Login
-                                                                </span>
                                                             </Link>
                                                         </div>
                                                     </div>

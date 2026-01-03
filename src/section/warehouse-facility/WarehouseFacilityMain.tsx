@@ -5,11 +5,30 @@ import serviceDetailsImg1 from '/dumptrucks-1.jpeg';
 import serviceDetailsImg2 from '/dumptrucks-2.jpeg';
 import serviceDetailsImg3 from '/dumptrucks-3.jpeg';
 import serviceDetailsImg4 from '/smlogistics-2.jpg';
-import ServiceFaq from '../../components/elements/ServiceFaq';
-import { getServiceFAQs } from '../../data/faqData';
 
-const faqQuestion = getServiceFAQs('Intrastate');
-const ServiceDetails = () => {
+interface ServiceDetailsProps {
+  serviceType?: string;
+}
+
+const ServiceDetails = ({ serviceType = 'intrastate' }: ServiceDetailsProps) => {
+  
+  const serviceContent = {
+    intrastate: {
+      title: 'Intrastate Transport',
+      subtitle: 'Reliable local and statewide deliveries',
+      description: 'Our intrastate transport provides efficient freight movement within state boundaries, perfect for businesses requiring local distribution networks. We offer same-day, next-day, and scheduled delivery services throughout the state.',
+      whyChoose: 'Star MS Logistics offers comprehensive intrastate freight solutions with our local carrier network that provides fast, cost-effective deliveries within your state. We understand local routes, traffic patterns, and delivery requirements to ensure reliable service.'
+    },
+    warehousing: {
+      title: 'Warehousing & Storage',
+      subtitle: 'Secure storage and distribution facilities',
+      description: 'Our warehousing services provide secure, climate-controlled storage facilities for short or long-term needs. We offer inventory management, order fulfillment, cross-docking, and distribution services from our strategically located warehouses.',
+      whyChoose: 'Star MS Logistics warehouse facilities offer modern, secure spaces with advanced inventory management systems. Whether you need temporary storage during transit, seasonal inventory space, or full distribution services, we provide flexible solutions tailored to your business requirements.'
+    }
+  };
+  
+  const content = serviceContent[serviceType as keyof typeof serviceContent] || serviceContent.intrastate;
+
   return (
     <section className="service-details">
       <div className="container">
@@ -87,23 +106,16 @@ const ServiceDetails = () => {
 
               {/* Main Content */}
               <div className="service-details__content-text1">
-                <h2>Intrastate Transport & Warehousing</h2>
+                <h2>{content.title}</h2>
                 <p>
-                  Reliable local/statewide deliveries and safe storage facilities. Our intrastate transport 
-                  provides efficient freight movement within state boundaries, combined with secure warehousing 
-                  solutions for short or long-term storage needs. Perfect for businesses requiring local 
-                  distribution networks and flexible storage options.
+                  {content.subtitle}. {content.description}
                 </p>
               </div>
 
               <div className="service-details__content-text2">
-                <h2>Why Choose Our Intrastate & Storage Service</h2>
+                <h2>Why Choose Our {content.title} Service</h2>
                 <p>
-                  Star MS Logistics offers comprehensive intrastate freight solutions paired with modern 
-                  warehouse facilities. Our local carrier network provides fast, cost-effective deliveries 
-                  within your state, while our storage facilities offer secure, climate-controlled spaces 
-                  for inventory management. Whether you need same-day local delivery or long-term warehousing, 
-                  we provide flexible solutions tailored to your business requirements.
+                  {content.whyChoose}
                 </p>
               </div>
 
@@ -131,9 +143,6 @@ const ServiceDetails = () => {
               <div className="service-details__content-img3">
                 <img src={serviceDetailsImg4} alt="Logistics" style={{ width: '100%', height: '350px', objectFit: 'cover', display: 'block' }} />
               </div>
-
-              {/* FAQ Accordion */}
-              <ServiceFaq faqQuestions={faqQuestion} />
 
             </div>
           </div>

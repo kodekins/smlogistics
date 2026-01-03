@@ -65,7 +65,7 @@ const FaqOne = () => {
                   </div>
                   <h2 className="sec-title__title tg-element-title">
                     Frequently Asked <br />
-                    <span>Questions</span>
+                    Questions
                   </h2>
                 </div>
 

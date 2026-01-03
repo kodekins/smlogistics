@@ -58,7 +58,7 @@ const WhyUs: React.FC = () => {
                 </div>
                 <h2 className="sec-title__title tg-element-title">
                   Reliable Trucking With <br /> Industry-Leading
-                  <span> Performance!</span>
+                  Performance!
                 </h2>
               </div>
 
@@ -176,7 +176,7 @@ const WhyUs: React.FC = () => {
                     <div className="why-choose-one__form-distance">
                       <div className="title">
                         <p>
-                          Distance (Kilo): {distanceRange.min} -{" "}
+                          Distance (Miles): {distanceRange.min} -{" "}
                           {distanceRange.max}
                         </p>
                       </div>
@@ -187,7 +187,7 @@ const WhyUs: React.FC = () => {
                               type="range"
                               className="range-slider"
                               min="0"
-                              max="2000"
+                              max="10000"
                               value={distanceRange.max}
                               onChange={(e: any) =>
                                 setDistanceRange((prev) => ({

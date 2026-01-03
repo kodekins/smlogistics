@@ -121,7 +121,7 @@ const Team = () => {
                         </div>
                         <h2 className="sec-title__title tg-element-title">
                             Meet Our Professional <br />
-                            Trucking <span>Team</span>
+                            Trucking Team
                         </h2>
                     </div>
 

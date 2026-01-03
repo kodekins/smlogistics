@@ -59,7 +59,7 @@ const AboutOne: React.FC = () => {
                   </div>
                   <h2 className="sec-title__title tg-element-title">
                    Star MS Logistics<br />
-                    <span>End-to-End Logistics</span>
+                    End-to-End Logistic Solutions
                   </h2>
                 </div>
 

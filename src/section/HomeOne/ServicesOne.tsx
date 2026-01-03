@@ -75,7 +75,7 @@ const ServicesOne = () => {
                         </div>
                         <h2 className="sec-title__title tg-element-title">
                             Comprehensive Shipping
-                            <br /> Solutions for <span>Your Business</span>
+                            <br /> Solutions
                         </h2>
                     </div>
 

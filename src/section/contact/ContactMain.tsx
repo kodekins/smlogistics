@@ -75,7 +75,7 @@ const ContactMain = () => {
                           name: formData.name,
                           email: formData.email,
                           phone: formData.phone,
-                          subject: currentValue === "Sub" ? "General Inquiry" : `Freight Type ${currentValue}`,
+                          subject: currentValue === "Sub" ? "General Inquiry" : `Shipping Solutions ${currentValue}`,
                           message: formData.message
                         });
 
@@ -150,11 +150,11 @@ const ContactMain = () => {
                               disabled={isSubmitting}
                             >
                               <option value={"Sub"}>Subject</option>
-                              <option value={"01"}>Freight Type 01</option>
-                              <option value={"02"}>Freight Type 02</option>
-                              <option value={"03"}>Freight Type 03</option>
-                              <option value={"04"}>Freight Type 04</option>
-                              <option value={"05"}>Freight Type 05</option>
+                              <option value={"01"}>Shipping Solutions - Flatbed</option>
+                              <option value={"02"}>Shipping Solutions - Reefer</option>
+                              <option value={"03"}>Shipping Solutions - Dry Van</option>
+                              <option value={"04"}>Shipping Solutions - LTL</option>
+                              <option value={"05"}>Shipping Solutions - Specialized</option>
                             </select>
                           </div>
                         </div>

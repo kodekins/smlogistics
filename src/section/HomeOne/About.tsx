@@ -57,7 +57,7 @@ const AboutOne = () => {
                   </div>
                   <h2 className="sec-title__title tg-element-title">
                     Star MS Logistics <br />
-                    <span>Delivering the Trust</span>
+                    Delivering the Trust
                   </h2>
                 </div>
 

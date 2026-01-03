@@ -190,9 +190,9 @@ const Banner = () => {
               data-wow-delay="0ms"
               data-wow-duration="1500ms"
             >
-              <h2 style={{ fontSize: '72px', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '2px' }}>
+              <h2 style={{ fontSize: '72px', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--logistiq-white)' }}>
                 DELIVERING <br />
-                <span>THE TRUST</span>
+                THE TRUST
               </h2>
               <p>
                 Professional Freight <br /> Brokerage Services{" "}

@@ -5,13 +5,30 @@ import serviceDetailsImg1 from '/reefer-3.jpeg';
 import serviceDetailsImg2 from '/reefer-4.jpeg';
 import serviceDetailsImg3 from '/reefer-1.jpeg';
 import serviceDetailsImg4 from '/reefer-2.jpeg';
-import ServiceFaq from '../../components/elements/ServiceFaq';
-import { getServiceFAQs } from '../../data/faqData';
 
-const ServiceDetails = () => {
+interface ServiceDetailsProps {
+  serviceType?: string;
+}
+
+const ServiceDetails = ({ serviceType = 'airconditioned' }: ServiceDetailsProps) => {
   // const [activeIndex, setActiveIndex] = useState(0); // First item open by default
-
-  const faqQuestion = getServiceFAQs('AirConditioned');
+  
+  const serviceContent = {
+    airconditioned: {
+      title: 'Air-Conditioned Transport',
+      subtitle: 'Climate-controlled delivery for sensitive goods',
+      description: 'Our air-conditioned transport service maintains optimal temperature and humidity levels for products requiring protection from extreme weather conditions. Ideal for electronics, pharmaceuticals, cosmetics, and other climate-sensitive cargo that needs consistent environmental control.',
+      whyChoose: 'Star MS Logistics air-conditioned transport ensures your sensitive products remain in perfect condition regardless of external weather. Our specialized trailers maintain stable internal temperatures, protecting your valuable cargo from heat, humidity, and temperature fluctuations.'
+    },
+    flatbed: {
+      title: 'Flatbed Transport',
+      subtitle: 'Open trailer transport for oversized cargo',
+      description: 'Our flatbed service provides flexible transportation for cargo that cannot fit in enclosed trailers. Perfect for construction materials, heavy machinery, oversized equipment, and loads requiring top or side loading capabilities.',
+      whyChoose: 'Star MS Logistics flatbed services handle your oversized and heavy freight with specialized equipment and experienced drivers. We provide secure tie-down, proper load distribution, and compliance with all DOT regulations for oversized loads.'
+    }
+  };
+  
+  const content = serviceContent[serviceType as keyof typeof serviceContent] || serviceContent.airconditioned;
 
 
   return (
@@ -95,23 +112,16 @@ const ServiceDetails = () => {
 
               {/* Main Content */}
               <div className="service-details__content-text1">
-                <h2>Air-Conditioned Transport</h2>
+                <h2>{content.title}</h2>
                 <p>
-                  Safe and climate-controlled delivery for sensitive goods. Our air-conditioned transport 
-                  service maintains optimal temperature and humidity levels for products requiring protection 
-                  from extreme weather conditions. Ideal for electronics, pharmaceuticals, cosmetics, and 
-                  other climate-sensitive cargo that needs consistent environmental control.
+                  {content.subtitle}. {content.description}
                 </p>
               </div>
 
               <div className="service-details__content-text2">
-                <h2>Why Choose Our Climate-Controlled Service</h2>
+                <h2>Why Choose Our {content.title} Service</h2>
                 <p>
-                  Star MS Logistics air-conditioned transport ensures your sensitive products remain in 
-                  perfect condition regardless of external weather. Our specialized trailers maintain stable 
-                  internal temperatures, protecting your valuable cargo from heat, humidity, and temperature 
-                  fluctuations. With advanced monitoring systems and experienced drivers, we guarantee your 
-                  climate-sensitive freight arrives in pristine condition, meeting all product integrity standards.
+                  {content.whyChoose}
                 </p>
               </div>
 
@@ -151,9 +161,6 @@ const ServiceDetails = () => {
                   style={{ width: '100%', height: '350px', objectFit: 'cover', display: 'block' }}
                 />
               </div>
-
-              {/* FAQ Accordion */}
-              <ServiceFaq faqQuestions={faqQuestion} />
 
             </div>
           </div>

@@ -5,11 +5,29 @@ import serviceDetailsImg1 from '/reefer-1.jpeg';
 import serviceDetailsImg2 from '/reefer-2.jpeg';
 import serviceDetailsImg3 from '/reefer-3.jpeg';
 import serviceDetailsImg4 from '/reefer-4.jpeg';
-import ServiceFaq from '../../components/elements/ServiceFaq';
-import { getServiceFAQs } from '../../data/faqData';
 
-const faqQuestion = getServiceFAQs('Reefer');
-const ServiceDetails = () => {
+interface ServiceDetailsProps {
+  serviceType?: string;
+}
+
+const ServiceDetails = ({ serviceType = 'reefer' }: ServiceDetailsProps) => {
+  
+  const serviceContent = {
+    reefer: {
+      title: 'Reefer Transport',
+      subtitle: 'Temperature-controlled shipments for perishables',
+      description: 'Our refrigerated transport service provides climate-controlled delivery for temperature-sensitive goods including food, pharmaceuticals, and other perishable items that require precise temperature management throughout transit.',
+      whyChoose: 'Star MS Logistics refrigerated transport ensures your perishable goods maintain optimal temperature from origin to destination. Our reefer carriers are equipped with advanced temperature monitoring systems, providing real-time alerts and maintaining strict cold chain integrity.'
+    },
+    container: {
+      title: 'Container Drayage',
+      subtitle: 'Efficient port-to-warehouse container transport',
+      description: 'Our container drayage service provides seamless transportation of shipping containers between ports, rail yards, and warehouses. We specialize in intermodal freight solutions, ensuring your containers move efficiently through the supply chain.',
+      whyChoose: 'Star MS Logistics container drayage offers reliable port pickup and delivery services with experienced drivers who understand port protocols and timing requirements. We handle both import and export containers, providing real-time tracking and efficient coordination.'
+    }
+  };
+  
+  const content = serviceContent[serviceType as keyof typeof serviceContent] || serviceContent.reefer;
 
   return (
     <section className="service-details">
@@ -97,23 +115,16 @@ const ServiceDetails = () => {
 
               {/* Main Content */}
               <div className="service-details__content-text1">
-                <h2>Reefer Transport</h2>
+                <h2>{content.title}</h2>
                 <p>
-                  Temperature-controlled shipments for perishables. Our refrigerated transport service 
-                  provides climate-controlled delivery for temperature-sensitive goods including food, 
-                  pharmaceuticals, and other perishable items that require precise temperature management 
-                  throughout transit.
+                  {content.subtitle}. {content.description}
                 </p>
               </div>
 
               <div className="service-details__content-text2">
-                <h2>Why Choose Our Reefer Service</h2>
+                <h2>Why Choose Our {content.title} Service</h2>
                 <p>
-                  Star MS Logistics refrigerated transport ensures your perishable goods maintain optimal 
-                  temperature from origin to destination. Our reefer carriers are equipped with advanced 
-                  temperature monitoring systems, providing real-time alerts and maintaining strict cold 
-                  chain integrity. Whether transporting frozen, chilled, or temperature-sensitive products, 
-                  we guarantee safe delivery while meeting all food safety and pharmaceutical regulations.
+                  {content.whyChoose}
                 </p>
               </div>
 
@@ -168,9 +179,6 @@ const ServiceDetails = () => {
                   }}
                 />
               </div>
-
-              {/* FAQ Accordion */}
-              <ServiceFaq faqQuestions={faqQuestion} />
 
             </div>
           </div>

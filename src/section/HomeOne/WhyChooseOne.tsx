@@ -64,7 +64,7 @@ const cccc = () => {
                 </div>
                 <h2 className="sec-title__title tg-element-title">
                   Reliable Trucking With <br /> Industry-Leading
-                  <span> Performance!</span>
+                  Performance!
                 </h2>
               </div>
 
@@ -181,7 +181,7 @@ const cccc = () => {
                     <div className="why-choose-one__form-distance">
                       <div className="title">
                         <p>
-                          Distance (Kilo): {distanceRange.min} -{" "}
+                          Distance (Miles): {distanceRange.min} -{" "}
                           {distanceRange.max}
                         </p>
                       </div>
@@ -192,7 +192,7 @@ const cccc = () => {
                               type="range"
                               className="range-slider"
                               min="0"
-                              max="2000"
+                              max="10000"
                               value={distanceRange.max}
                               onChange={(e) =>
                                 setDistanceRange((prev) => ({
@@ -247,6 +247,9 @@ const cccc = () => {
                           </option>
                           <option value="Hazmat">
                             Hazmat
+                          </option>
+                          <option value="Others">
+                            Others
                           </option>
                         </select>
                       </div>

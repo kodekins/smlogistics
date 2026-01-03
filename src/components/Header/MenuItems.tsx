@@ -54,42 +54,42 @@ const MenuItems = () => {
             </Link>
           </li>
           <li>
-            <Link to="/ocean-transport" className={currentPath === '/ocean-transport' ? 'active-menu' : ''}>
+            <Link to="/ocean-transport?type=reefer" className={currentPath === '/ocean-transport' ? 'active-menu' : ''}>
               Reefer Transport
             </Link>
           </li>
           <li>
-            <Link to="/emergency-transport" className={currentPath === '/emergency-transport' ? 'active-menu' : ''}>
+            <Link to="/emergency-transport?type=airconditioned" className={currentPath === '/emergency-transport' ? 'active-menu' : ''}>
               Air-Conditioned Transport
             </Link>
           </li>
           <li>
-            <Link to="/ocean-transport" className={currentPath === '/ocean-transport' ? 'active-menu' : ''}>
+            <Link to="/ocean-transport?type=container" className={currentPath === '/ocean-transport' ? 'active-menu' : ''}>
               Container Drayage
             </Link>
           </li>
           <li>
-            <Link to="/international-transport" className={currentPath === '/international-transport' ? 'active-menu' : ''}>
+            <Link to="/international-transport?type=dryvan" className={currentPath === '/international-transport' ? 'active-menu' : ''}>
               Dry Van
             </Link>
           </li>
           <li>
-            <Link to="/emergency-transport" className={currentPath === '/emergency-transport' ? 'active-menu' : ''}>
+            <Link to="/emergency-transport?type=flatbed" className={currentPath === '/emergency-transport' ? 'active-menu' : ''}>
               Flat Bed
             </Link>
           </li>
           <li>
-            <Link to="/track-transport" className={currentPath === '/track-transport' ? 'active-menu' : ''}>
+            <Link to="/track-transport?type=dumptruck" className={currentPath === '/track-transport' ? 'active-menu' : ''}>
               Dump Truck
             </Link>
           </li>
           <li>
-            <Link to="/personal-delivery" className={currentPath === '/personal-delivery' ? 'active-menu' : ''}>
+            <Link to="/personal-delivery?type=oversized" className={currentPath === '/personal-delivery' ? 'active-menu' : ''}>
               Oversize/Overweight
             </Link>
           </li>
           <li>
-            <Link to="/warehouse-facility" className={currentPath === '/warehouse-facility' ? 'active-menu' : ''}>
+            <Link to="/warehouse-facility?type=warehousing" className={currentPath === '/warehouse-facility' ? 'active-menu' : ''}>
               Warehousing & Storage
             </Link>
           </li>

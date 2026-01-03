@@ -64,8 +64,8 @@ const App = () => {
         <Route path="track-transport" element={<TrackTransport isVisible={isVisible} />} />
         <Route path="personal-delivery" element={<PersonalDelivery isVisible={isVisible} />} />
         <Route path="ocean-transport" element={<OceanTransport isVisible={isVisible} />} />
-        <Route path="warehouse-facility" element={<EmergencyTransport isVisible={isVisible} />} />
-        <Route path="emergency-transport" element={<WarehouseFacility isVisible={isVisible} />} />
+        <Route path="warehouse-facility" element={<WarehouseFacility isVisible={isVisible} />} />
+        <Route path="emergency-transport" element={<EmergencyTransport isVisible={isVisible} />} />
         <Route path="team" element={<Team isVisible={isVisible} />} />
         <Route path="team-details" element={<TeamDetails isVisible={isVisible} />} />
         <Route path="project" element={<Project isVisible={isVisible} />} />

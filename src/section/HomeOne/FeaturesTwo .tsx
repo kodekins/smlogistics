@@ -102,7 +102,7 @@ const FeaturesTwo = () => {
               </div>
               <h2 className="sec-title__title tg-element-title">
                 Trustworthy, Swift, and Safe <br /> Logistics{" "}
-                <span>Options</span>
+                Options
               </h2>
             </div>
 
