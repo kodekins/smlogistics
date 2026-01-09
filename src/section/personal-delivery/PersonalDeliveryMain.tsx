@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import serviceSidebarImg from '../../assets/images/resources/service-details-sidebar-img.png';
-import serviceDetailsImg1 from '/overload.jpeg';
-import serviceDetailsImg2 from '/smlogistics-2.jpg';
-import serviceDetailsImg3 from '/smlogistics-5.jpg';
-import serviceDetailsImg4 from '/flatbed-3.jpeg';
+import serviceSidebarImg from '/sm-contact.png';
+import serviceDetailsImg1 from '/sm-interstate1.jpg';
+import serviceDetailsImg2 from '/sm-interstate2.png';
+import serviceDetailsImg3 from '/sm-interstate3.jpg';
+import serviceDetailsImg4 from '/sm-interstate4.jpg';
 
 interface ServiceDetailsProps {
   serviceType?: string;
@@ -15,15 +14,20 @@ const ServiceDetails = ({ serviceType = 'interstate' }: ServiceDetailsProps) => 
   const serviceContent = {
     interstate: {
       title: 'Interstate Transport',
-      subtitle: 'Efficient trucking services across states',
-      description: 'Our interstate transport service provides reliable long-distance freight solutions connecting businesses across state lines throughout the United States. We specialize in coordinating seamless cross-state shipments with experienced carriers who understand regional regulations and routing.',
-      whyChoose: 'Star MS Logistics interstate transport connects major commercial hubs across America with efficient, compliant freight services. Our network of vetted interstate carriers ensures your shipments move smoothly across state borders while adhering to all DOT regulations.'
-    },
-    oversized: {
-      title: 'Oversize/Overweight Transport',
-      subtitle: 'Specialized hauling for oversized loads',
-      description: 'Our oversize/overweight transport service handles freight that exceeds standard legal dimensions or weight limits. We manage all permitting, route planning, pilot car coordination, and compliance requirements for your oversized loads.',
-      whyChoose: 'Star MS Logistics specializes in complex oversized load logistics with experienced specialists who handle permit procurement, route surveys, and escort coordination. We ensure your oversize freight moves legally and safely with full compliance to state and federal regulations.'
+      subtitle: 'Long-distance freight solutions across state lines',
+      description: 'At Star MS Logistics, we provide long-distance freight solutions connecting businesses across state lines throughout the United States. We specialize in coordinating seamless cross-state shipments with experienced carriers who understand regional regulations, routing requirements, and interstate compliance standards.',
+      mainContent: 'Our interstate transport services are backed by full federal authorization. Star MS Logistics is licensed by the FMCSA and registered with USDOT, allowing us to legally and confidently manage interstate freight movements across multiple U.S. states while meeting all federal safety and operational requirements.',
+      additionalContent: 'Star MS Logistics interstate transport connects major commercial hubs across America with efficient and compliant freight services. Through our network of vetted interstate carriers, we ensure your shipments move smoothly across state borders while strictly adhering to all DOT regulations.',
+      closingStatement: 'Whether you require regional state-to-state transportation or long-haul, cross-country freight solutions, our team focuses on reliability, proper coordination, and timely delivery. From route planning to carrier management, we handle every aspect of interstate transportation with precision and professionalism.',
+      whyChooseTitle: 'Why Choose Our Interstate Transport Service?',
+      benefits: [
+        'Fully licensed and authorized by FMCSA & USDOT',
+        'Reliable long-distance and cross-state freight solutions',
+        'Access to experienced and vetted interstate carriers',
+        'Compliance with all federal and state DOT regulations',
+        'Efficient routing and on-time delivery performance'
+      ],
+      whyChoose: 'Our interstate transport solutions are designed for businesses that need dependable freight movement beyond local and regional boundaries. With Star MS Logistics, your cargo is managed by a licensed, compliance-focused team committed to keeping your supply chain moving efficiently across the United States.'
     }
   };
   
@@ -46,9 +50,7 @@ const ServiceDetails = ({ serviceType = 'interstate' }: ServiceDetailsProps) => 
                     <li><Link to="/track-transport">LTL (Less Than Truckload) <span className="icon-right-arrow21"></span></Link></li>
                     <li><Link to="/international-transport">FTL (Full Truckload) <span className="icon-right-arrow21"></span></Link></li>
                     <li><Link className="active" to="#">Interstate Transport <span className="icon-right-arrow21"></span></Link></li>
-                    <li><Link to="/warehouse-facility">Intrastate Transport <span className="icon-right-arrow21"></span></Link></li>
                     <li><Link to="/ocean-transport">Reefer Transport <span className="icon-right-arrow21"></span></Link></li>
-                    <li><Link to="/emergency-transport">Air-Conditioned Transport <span className="icon-right-arrow21"></span></Link></li>
                   </ul>
                 </div>
               </div>
@@ -60,7 +62,7 @@ const ServiceDetails = ({ serviceType = 'interstate' }: ServiceDetailsProps) => 
                 </div>
                 <div className="service-details__sidebar-single-download">
                   <ul className="clearfix">
-                    {[1, 2, 3].map((item, idx) => (
+                    {[1, 2, 3].map((_item, idx) => (
                       <li key={idx}>
                         <div className="content-box">
                           <div className="icon"><span className="icon-pdf"></span></div>
@@ -108,12 +110,34 @@ const ServiceDetails = ({ serviceType = 'interstate' }: ServiceDetailsProps) => 
               <div className="service-details__content-text1">
                 <h2>{content.title}</h2>
                 <p>
-                  {content.subtitle}. {content.description}
+                  {content.description}
                 </p>
+                {content.mainContent && (
+                  <p style={{ marginTop: '15px' }}>
+                    {content.mainContent}
+                  </p>
+                )}
+                {content.additionalContent && (
+                  <p style={{ marginTop: '15px' }}>
+                    {content.additionalContent}
+                  </p>
+                )}
+                {content.closingStatement && (
+                  <p style={{ marginTop: '15px' }}>
+                    {content.closingStatement}
+                  </p>
+                )}
               </div>
 
               <div className="service-details__content-text2">
-                <h2>Why Choose Our {content.title} Service</h2>
+                <h2>{content.whyChooseTitle || `Why Choose Our ${content.title} Service`}</h2>
+                {content.benefits && (
+                  <ul style={{ marginBottom: '15px', paddingLeft: '20px' }}>
+                    {content.benefits.map((benefit: string, idx: number) => (
+                      <li key={idx} style={{ marginBottom: '8px' }}>{benefit}</li>
+                    ))}
+                  </ul>
+                )}
                 <p>
                   {content.whyChoose}
                 </p>
@@ -133,10 +157,6 @@ const ServiceDetails = ({ serviceType = 'interstate' }: ServiceDetailsProps) => 
                     </div>
                   </div>
                 </div>
-                <p>
-                  This business idea leverages the growing demand for virtual experiences and the need
-                  for professional support in navigating the virtual event landscape.
-                </p>
               </div>
 
               {/* Bottom Image */}

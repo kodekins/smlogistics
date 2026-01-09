@@ -1,9 +1,9 @@
 
 import { Link } from 'react-router-dom';
-import serviceSidebarImg from '../../assets/images/resources/service-details-sidebar-img.png';
-import serviceDetailsImg1 from '/flatbed-1.jpeg';
-import serviceDetailsImg2 from '/flatbed-2.jpeg';
-import serviceDetailsImg3 from '/flatbed-3.jpeg';
+import serviceSidebarImg from '/sm-contact.png';
+import serviceDetailsImg1 from '/sm-dry van1.png';
+import serviceDetailsImg2 from '/sm-dry van2.jpg';
+import serviceDetailsImg3 from '/sm-dry van3.jpg';
 import serviceDetailsImg4 from '/flatbed-4.jpeg';
 
 interface ServiceDetailsProps {
@@ -17,13 +17,33 @@ const ServiceDetails = ({ serviceType = 'ftl' }: ServiceDetailsProps) => {
       title: 'FTL (Full Truckload)',
       subtitle: 'Dedicated trucks for large shipments',
       description: 'Our FTL service provides you with exclusive use of an entire trailer for your freight, ensuring direct routes, faster transit times, and priority handling for your large-volume shipments across the United States.',
-      whyChoose: 'Full Truckload shipping with Star MS Logistics means your cargo travels directly from pickup to delivery without stops or transfers, reducing handling and transit time. Ideal for high-volume shipments, time-sensitive deliveries, or freight requiring special handling.'
+      mainContent: 'Full Truckload shipping with Star MS Logistics means your cargo travels directly from pickup to delivery without stops or transfers, reducing handling and transit time.',
+      additionalContent: '',
+      whyChooseTitle: 'Why Choose Our FTL (Full Truckload) Service?',
+      benefits: [
+        'Exclusive use of entire trailer for your freight',
+        'Direct routes with no stops or transfers',
+        'Faster transit times for urgent shipments',
+        'Priority handling for large-volume loads',
+        'Ideal for time-sensitive deliveries'
+      ],
+      whyChoose: 'Ideal for high-volume shipments, time-sensitive deliveries, or freight requiring special handling with dedicated transport solutions.'
     },
     dryvan: {
-      title: 'Dry Van',
-      subtitle: 'Standard enclosed trailer freight services',
-      description: 'Our dry van service is the most common form of freight transportation, providing enclosed trailer space for general cargo that doesn\'t require temperature control. Perfect for palletized goods, boxed items, and non-perishable freight.',
-      whyChoose: 'Star MS Logistics dry van services offer the most versatile and cost-effective solution for standard freight. Our extensive carrier network ensures reliable capacity and competitive rates for your dry goods, with both FTL and LTL options available.'
+      title: 'Dry Van Transport',
+      subtitle: 'Reliable freight solutions for non-temperature-sensitive cargo',
+      description: 'Dry Van transport is one of the most common and reliable freight solutions in the United States, ideal for shipping goods that do not require temperature control. Dry vans are fully enclosed trailers designed to protect cargo from weather, road debris, and external damage during transit.',
+      mainContent: 'At Star MS Logistics, we provide dependable Dry Van freight services for both regional and long-haul shipments. Our extensive carrier network allows us to move a wide range of commodities efficiently while ensuring safe handling, proper loading, and on-time delivery.',
+      additionalContent: 'Dry Van shipping is a cost-effective solution for palletized, boxed, or packaged goods and is widely used across multiple industries. Whether you need full truckload or partial capacity, our Dry Van services are tailored to meet your transportation needs with consistency and reliability.',
+      whyChooseTitle: 'Why Choose Our Dry Van Services?',
+      benefits: [
+        'Secure, enclosed trailers for cargo protection',
+        'Cost-effective solution for non-temperature-sensitive freight',
+        'Suitable for regional and interstate shipments',
+        'Access to experienced and vetted carriers',
+        'Reliable transit times and professional coordination'
+      ],
+      whyChoose: 'From consumer goods to industrial products, Star MS Logistics ensures your Dry Van shipments move smoothly through a trusted, compliance-focused transportation process.'
     }
   };
   
@@ -46,9 +66,7 @@ const ServiceDetails = ({ serviceType = 'ftl' }: ServiceDetailsProps) => {
                     <li><Link to="/track-transport">LTL (Less Than Truckload) <span className="icon-right-arrow21"></span></Link></li>
                     <li><Link className="active" to="#">FTL (Full Truckload) <span className="icon-right-arrow21"></span></Link></li>
                     <li><Link to="/personal-delivery">Interstate Transport <span className="icon-right-arrow21"></span></Link></li>
-                    <li><Link to="/warehouse-facility">Intrastate Transport <span className="icon-right-arrow21"></span></Link></li>
                     <li><Link to="/ocean-transport">Reefer Transport <span className="icon-right-arrow21"></span></Link></li>
-                    <li><Link to="/emergency-transport">Air-Conditioned Transport <span className="icon-right-arrow21"></span></Link></li>
                   </ul>
                 </div>
               </div>
@@ -60,7 +78,7 @@ const ServiceDetails = ({ serviceType = 'ftl' }: ServiceDetailsProps) => {
                 </div>
                 <div className="service-details__sidebar-single-download">
                   <ul className="clearfix">
-                    {[1, 2, 3].map((item, idx) => (
+                    {[1, 2, 3].map((_item, idx) => (
                       <li key={idx}>
                         <div className="content-box">
                           <div className="icon"><span className="icon-pdf"></span></div>
@@ -108,12 +126,29 @@ const ServiceDetails = ({ serviceType = 'ftl' }: ServiceDetailsProps) => {
               <div className="service-details__content-text1">
                 <h2>{content.title}</h2>
                 <p>
-                  {content.subtitle}. {content.description}
+                  {content.description}
                 </p>
+                {content.mainContent && (
+                  <p style={{ marginTop: '15px' }}>
+                    {content.mainContent}
+                  </p>
+                )}
+                {content.additionalContent && (
+                  <p style={{ marginTop: '15px' }}>
+                    {content.additionalContent}
+                  </p>
+                )}
               </div>
 
               <div className="service-details__content-text2">
-                <h2>Why Choose Our {content.title} Service</h2>
+                <h2>{content.whyChooseTitle || `Why Choose Our ${content.title} Service`}</h2>
+                {content.benefits && (
+                  <ul style={{ marginBottom: '15px', paddingLeft: '20px' }}>
+                    {content.benefits.map((benefit: string, idx: number) => (
+                      <li key={idx} style={{ marginBottom: '8px' }}>{benefit}</li>
+                    ))}
+                  </ul>
+                )}
                 <p>
                   {content.whyChoose}
                 </p>
@@ -133,10 +168,6 @@ const ServiceDetails = ({ serviceType = 'ftl' }: ServiceDetailsProps) => {
                     </div>
                   </div>
                 </div>
-                <p>
-                  This business idea leverages the growing demand for virtual experiences and the need
-                  for professional support in navigating the virtual event landscape.
-                </p>
               </div>
 
               {/* Bottom Image */}

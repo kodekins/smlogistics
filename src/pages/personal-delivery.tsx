@@ -19,10 +19,6 @@ const PersonalDelivery = ({isVisible}) => {
         interstate: {
             title: 'Interstate Transport',
             description: 'Efficient trucking services across states'
-        },
-        oversized: {
-            title: 'Oversize/Overweight Transport',
-            description: 'Specialized hauling for oversized loads'
         }
     };
     

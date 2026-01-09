@@ -1,34 +1,39 @@
 // import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import serviceSidebarImg from '../../assets/images/resources/service-details-sidebar-img.png';
-import serviceDetailsImg1 from '/reefer-3.jpeg';
-import serviceDetailsImg2 from '/reefer-4.jpeg';
-import serviceDetailsImg3 from '/reefer-1.jpeg';
-import serviceDetailsImg4 from '/reefer-2.jpeg';
+import serviceSidebarImg from '/sm-contact.png';
+import serviceDetailsImg1 from '/sm-flatbed1.jpg';
+import serviceDetailsImg2 from '/sm-flatbed2.jpg';
+import serviceDetailsImg3 from '/sm-flatbed3.jpg';
+import serviceDetailsImg4 from '/sm-flatbed4.jpg';
 
 interface ServiceDetailsProps {
   serviceType?: string;
 }
 
-const ServiceDetails = ({ serviceType = 'airconditioned' }: ServiceDetailsProps) => {
+const ServiceDetails = ({ serviceType = 'flatbed' }: ServiceDetailsProps) => {
   // const [activeIndex, setActiveIndex] = useState(0); // First item open by default
   
   const serviceContent = {
-    airconditioned: {
-      title: 'Air-Conditioned Transport',
-      subtitle: 'Climate-controlled delivery for sensitive goods',
-      description: 'Our air-conditioned transport service maintains optimal temperature and humidity levels for products requiring protection from extreme weather conditions. Ideal for electronics, pharmaceuticals, cosmetics, and other climate-sensitive cargo that needs consistent environmental control.',
-      whyChoose: 'Star MS Logistics air-conditioned transport ensures your sensitive products remain in perfect condition regardless of external weather. Our specialized trailers maintain stable internal temperatures, protecting your valuable cargo from heat, humidity, and temperature fluctuations.'
-    },
     flatbed: {
       title: 'Flatbed Transport',
-      subtitle: 'Open trailer transport for oversized cargo',
-      description: 'Our flatbed service provides flexible transportation for cargo that cannot fit in enclosed trailers. Perfect for construction materials, heavy machinery, oversized equipment, and loads requiring top or side loading capabilities.',
-      whyChoose: 'Star MS Logistics flatbed services handle your oversized and heavy freight with specialized equipment and experienced drivers. We provide secure tie-down, proper load distribution, and compliance with all DOT regulations for oversized loads.'
+      subtitle: 'Specialized solution for oversized and overweight freight',
+      description: 'Flatbed transport is the preferred solution for moving oversized, overweight, and irregularly shaped freight that cannot be accommodated in enclosed trailers. With open-deck trailers and flexible loading options, flatbeds allow cargo to be loaded from the top, sides, or rear, making them ideal for heavy and non-standard shipments.',
+      mainContent: 'Flatbed services are commonly used for transporting construction materials, machinery, steel, lumber, pipes, and large equipment. For oversized or overweight freight, flatbeds provide the structural strength and accessibility required to secure loads that exceed standard trailer dimensions or weight limits.',
+      additionalContent: 'At Star MS Logistics, we operate as a licensed freight broker, specializing in coordinating flatbed and heavy-haul shipments through a trusted network of experienced carriers. We ensure that oversized and overweight loads are matched with the right equipment and carriers who understand securement requirements, route planning, and regulatory compliance.',
+      closingStatement: 'Oversized and overweight shipments often require special handling, including proper load securement, route coordination, and adherence to state-specific transportation regulations. As a freight broker, Star MS Logistics manages this complexity on your behalf—connecting your freight with qualified flatbed carriers and ensuring shipments move safely, efficiently, and in compliance with applicable regulations.',
+      whyChooseTitle: 'Why Choose Our Flatbed Services?',
+      benefits: [
+        'Ideal for oversized and overweight freight',
+        'Open-deck trailers for flexible loading and unloading',
+        'Access to experienced flatbed and heavy-haul carriers',
+        'Proper coordination for securement and routing',
+        'Compliance-focused brokerage support for complex shipments'
+      ],
+      whyChoose: 'Whether you\'re moving heavy equipment, industrial materials, or oversized cargo, Star MS Logistics provides reliable flatbed freight solutions backed by professional carrier coordination and industry expertise—ensuring your freight is delivered safely and on time.'
     }
   };
   
-  const content = serviceContent[serviceType as keyof typeof serviceContent] || serviceContent.airconditioned;
+  const content = serviceContent[serviceType as keyof typeof serviceContent] || serviceContent.flatbed;
 
 
   return (
@@ -48,9 +53,7 @@ const ServiceDetails = ({ serviceType = 'airconditioned' }: ServiceDetailsProps)
                     <li><Link to="/track-transport">LTL (Less Than Truckload) <span className="icon-right-arrow21"></span></Link></li>
                     <li><Link to="/international-transport">FTL (Full Truckload) <span className="icon-right-arrow21"></span></Link></li>
                     <li><Link to="/personal-delivery">Interstate Transport <span className="icon-right-arrow21"></span></Link></li>
-                    <li><Link to="/warehouse-facility">Intrastate Transport <span className="icon-right-arrow21"></span></Link></li>
                     <li><Link to="/ocean-transport">Reefer Transport <span className="icon-right-arrow21"></span></Link></li>
-                    <li><Link className="active" to="#">Air-Conditioned Transport <span className="icon-right-arrow21"></span></Link></li>
                   </ul>
                 </div>
               </div>
@@ -62,7 +65,7 @@ const ServiceDetails = ({ serviceType = 'airconditioned' }: ServiceDetailsProps)
                 </div>
                 <div className="service-details__sidebar-single-download">
                   <ul className="clearfix">
-                    {[1, 2, 3].map((item, idx) => (
+                    {[1, 2, 3].map((_item, idx) => (
                       <li key={idx}>
                         <div className="content-box">
                           <div className="icon"><span className="icon-pdf"></span></div>
@@ -114,12 +117,34 @@ const ServiceDetails = ({ serviceType = 'airconditioned' }: ServiceDetailsProps)
               <div className="service-details__content-text1">
                 <h2>{content.title}</h2>
                 <p>
-                  {content.subtitle}. {content.description}
+                  {content.description}
                 </p>
+                {content.mainContent && (
+                  <p style={{ marginTop: '15px' }}>
+                    {content.mainContent}
+                  </p>
+                )}
+                {content.additionalContent && (
+                  <p style={{ marginTop: '15px' }}>
+                    {content.additionalContent}
+                  </p>
+                )}
+                {content.closingStatement && (
+                  <p style={{ marginTop: '15px' }}>
+                    {content.closingStatement}
+                  </p>
+                )}
               </div>
 
               <div className="service-details__content-text2">
-                <h2>Why Choose Our {content.title} Service</h2>
+                <h2>{content.whyChooseTitle || `Why Choose Our ${content.title} Service`}</h2>
+                {content.benefits && (
+                  <ul style={{ marginBottom: '15px', paddingLeft: '20px' }}>
+                    {content.benefits.map((benefit: string, idx: number) => (
+                      <li key={idx} style={{ marginBottom: '8px' }}>{benefit}</li>
+                    ))}
+                  </ul>
+                )}
                 <p>
                   {content.whyChoose}
                 </p>
@@ -147,10 +172,6 @@ const ServiceDetails = ({ serviceType = 'airconditioned' }: ServiceDetailsProps)
                     </div>
                   </div>
                 </div>
-                <p>
-                  This business idea leverages the growing demand for virtual experiences and the need
-                  for professional support in navigating the virtual event landscape.
-                </p>
               </div>
 
               {/* Bottom Image */}

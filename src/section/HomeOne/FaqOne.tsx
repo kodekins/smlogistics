@@ -4,7 +4,7 @@ import ModalVideo from "react-modal-video";
 
 // Import images
 import faqShape from "../../assets/images/shapes/faq-v1-shape1.png";
-import faqImage from "../../assets/images/resources/faq-v1-img1.jpg";
+import faqImage from "/sm-home2.jpg";
 import slidingTextIcon from "../../assets/images/icon/sliding-text-icon-1.png";
 
 const FaqOne = () => {
@@ -35,7 +35,7 @@ const FaqOne = () => {
       id: 3,
       question: "What types of freight do you specialize in?",
       answer:
-        "We handle dry van, flatbed, reefer, hotshot, oversized/overweight, machinery, consumer goods, industrial materials, and specialized loads.",
+        "We handle dry van, flatbed, reefer, hotshot, machinery, consumer goods, industrial materials, and specialized loads.",
     },
   ];
 

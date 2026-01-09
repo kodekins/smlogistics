@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import serviceSidebarImg from '../../assets/images/resources/service-details-sidebar-img.png';
+import serviceSidebarImg from '/sm-contact.png';
 import serviceDetailsImg1 from '/reefer-1.jpeg';
 import serviceDetailsImg2 from '/reefer-2.jpeg';
 import serviceDetailsImg3 from '/reefer-3.jpeg';
@@ -46,9 +46,7 @@ const ServiceDetails = ({ serviceType = 'reefer' }: ServiceDetailsProps) => {
                     <li><Link to="/track-transport">LTL (Less Than Truckload) <span className="icon-right-arrow21"></span></Link></li>
                     <li><Link to="/international-transport">FTL (Full Truckload) <span className="icon-right-arrow21"></span></Link></li>
                     <li><Link to="/personal-delivery">Interstate Transport <span className="icon-right-arrow21"></span></Link></li>
-                    <li><Link to="/warehouse-facility">Intrastate Transport <span className="icon-right-arrow21"></span></Link></li>
                     <li><Link className="active" to="#">Reefer Transport <span className="icon-right-arrow21"></span></Link></li>
-                    <li><Link to="/emergency-transport">Air-Conditioned Transport <span className="icon-right-arrow21"></span></Link></li>
                   </ul>
                 </div>
               </div>
@@ -60,7 +58,7 @@ const ServiceDetails = ({ serviceType = 'reefer' }: ServiceDetailsProps) => {
                 </div>
                 <div className="service-details__sidebar-single-download">
                   <ul className="clearfix">
-                    {[1, 2, 3].map((item, idx) => (
+                    {[1, 2, 3].map((_item, idx) => (
                       <li key={idx}>
                         <div className="content-box">
                           <div className="icon"><span className="icon-pdf"></span></div>

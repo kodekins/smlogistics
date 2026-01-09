@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // Import images
-import ctaImage from '/overload.jpeg';
+import ctaImage from '/sm-home1.png';
 import ctaPattern from '../../assets/images/pattern/cta-v1-pattern.png';
 import shape1 from '../../assets/images/shapes/cta-v1-shape1.png';
 import shape2 from '../../assets/images/shapes/cta-v1-shape2.png';

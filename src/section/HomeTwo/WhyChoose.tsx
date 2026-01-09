@@ -56,17 +56,15 @@ const WhyChooseUs = () => {
                 </div>
               </div>
               <h2 className="sec-title__title tg-element-title">
-                Transportation Services We <br /> Are Often{" "}
-                <span>Considered</span>
+                Trusted Freight Brokerage <br /> Built on <span>Reliability</span>
               </h2>
             </div>
 
             <div className="why-choose-two__content-text">
               <p>
-                Logistic service provider company plays a pivotal role in the
-                global supply chain ecosystem by efficiently managing the
-                movement of goods from origin to final destination. These
-                companies offer a diverse.
+                At Star MS Logistics, we focus on what matters most to shippers — dependable 
+                carrier partnerships, transparent communication, and disciplined freight 
+                management from pickup to delivery.
               </p>
             </div>
 
@@ -124,53 +122,13 @@ const WhyChooseUs = () => {
                       </div>
                       <div className="title">
                         <h4>
-                          Global Logistics <br /> Operation
+                          Vetted Carrier <br /> Network
                         </h4>
                       </div>
                     </div>
                     <div className="text-box">
                       <p>
-                        A logistic service provider company <br /> plays a role
-                        in the global chain
-                      </p>
-                    </div>
-                  </li>
-                  <li className="why-choose-two__single">
-                    <div className="why-choose-two__single-top">
-                      <div className="icon">
-                        <span className="icon-protection"></span>
-                      </div>
-                      <div className="title">
-                        <h4>
-                          Safety & Security <br /> Delivery
-                        </h4>
-                      </div>
-                    </div>
-                    <div className="text-box">
-                      <p>
-                        A logistic service provider company <br /> plays a role
-                        in the global chain
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-
-                <ul>
-                  <li className="why-choose-two__single">
-                    <div className="why-choose-two__single-top">
-                      <div className="icon">
-                        <span className="icon-professional-services"></span>
-                      </div>
-                      <div className="title">
-                        <h4>
-                          Professional Logistics <br /> Management
-                        </h4>
-                      </div>
-                    </div>
-                    <div className="text-box">
-                      <p>
-                        A logistic service provider company <br /> plays a role
-                        in the global chain
+                        We work with carefully screened carriers <br /> to ensure freight is handled by partners.
                       </p>
                     </div>
                   </li>
@@ -181,14 +139,50 @@ const WhyChooseUs = () => {
                       </div>
                       <div className="title">
                         <h4>
-                          Real Time location <br /> Tracking
+                          Real-Time <br /> Communication
                         </h4>
                       </div>
                     </div>
                     <div className="text-box">
                       <p>
-                        A logistic service provider company <br /> plays a role
-                        in the global chain
+                        Proactive updates throughout the <br /> shipment lifecycle — no surprises.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+
+                <ul>
+                  <li className="why-choose-two__single">
+                    <div className="why-choose-two__single-top">
+                      <div className="icon">
+                        <span className="icon-protection"></span>
+                      </div>
+                      <div className="title">
+                        <h4>
+                          Brokerage <br /> Compliance
+                        </h4>
+                      </div>
+                    </div>
+                    <div className="text-box">
+                      <p>
+                        Operations align with U.S. standards <br /> for responsible load management.
+                      </p>
+                    </div>
+                  </li>
+                  <li className="why-choose-two__single">
+                    <div className="why-choose-two__single-top">
+                      <div className="icon">
+                        <span className="icon-phone2"></span>
+                      </div>
+                      <div className="title">
+                        <h4>
+                          Customer-First <br /> Support
+                        </h4>
+                      </div>
+                    </div>
+                    <div className="text-box">
+                      <p>
+                        Dedicated team focused on <br /> responsiveness and problem-solving.
                       </p>
                     </div>
                   </li>

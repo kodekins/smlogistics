@@ -6,8 +6,8 @@ import ReactCurvedText from 'react-curved-text'
 // Images
 import About_shape1 from '../../assets/images/shapes/about-v1-shape1.png';
 import About_shape2 from '../../assets/images/shapes/about-v1-shape2.png';
-import About_shape3 from '/smlogistics-4.jpg';
-import About_Image from '/smlogistics-5.jpg';
+import About_shape3 from '/sm-home2.jpg';
+import About_Image from '/sm-home3.png';
 import About_shape4 from '../../assets/images/shapes/about-v1-shape3.png';
 
 const AboutOne = () => {
@@ -63,18 +63,28 @@ const AboutOne = () => {
 
                 <div className="about-one__content-text1" ref={addToRefs}>
                   <p>
-                    Star MS Logistics didn't begin as a company — it began as a <strong>vision</strong>. 
-                    A vision to build a freight service where every customer feels valued, every shipment is 
-                    handled with care, and every promise is truly honored.
+                    Star MS Logistics began with a clear purpose: to build a freight brokerage where trust, 
+                    transparency, and reliability are not just promises, but standard practice. We connect 
+                    shippers with carefully vetted carriers to ensure freight moves safely, on time, and 
+                    at competitive rates across the USA.
                   </p>
                   <p style={{ marginTop: '15px' }}>
-                    From day one, we believed that great logistics can only come from great people. 
-                    So instead of rushing to launch a brand, <strong>we spent years developing our team — year 
-                    by year, person by person — polishing our people into true industry professionals.</strong>
+                    From day one, we believed that great logistics is driven by great people. Instead 
+                    of rushing to launch a brand, we spent nearly six years building and refining our 
+                    team — carefully gathering talent, strengthening industry knowledge, and developing 
+                    professionals who understand the importance of accountability, communication, and 
+                    customer care.
                   </p>
                   <p style={{ marginTop: '15px' }}>
-                    We focused on creating a team that knows how to act in the best interest of shippers, 
-                    one that prioritizes communication, dependability, and customer care above everything else.
+                    Before bringing Star MS Logistics to market, our focus remained on people excellence 
+                    and operational readiness — investing time in carrier relationships, process discipline, 
+                    and real-world freight experience. This foundation allows us to act in the best interest 
+                    of our shippers on every load we manage.
+                  </p>
+                  <p style={{ marginTop: '15px' }}>
+                    Today, every shipment we handle is supported by a customer-first mindset, proactive 
+                    updates, and a commitment to transparency, giving our clients confidence from pickup 
+                    to delivery.
                   </p>
                 </div>
 
@@ -91,8 +101,8 @@ const AboutOne = () => {
                           </div>
                         </div>
                         <p>
-                          Every shipment is handled with honest communication 
-                          and complete transparency throughout the journey.
+                          We operate with honest communication and full shipment 
+                          visibility throughout the transportation process.
                         </p>
                       </div>
                     </div>
@@ -108,8 +118,8 @@ const AboutOne = () => {
                           </div>
                         </div>
                         <p>
-                          Dedicated support team prioritizing your needs with 
-                          reliable solutions for every shipping requirement.
+                          Our dedicated logistics team delivers reliable, tailored 
+                          freight solutions designed around your shipping needs.
                         </p>
                       </div>
                     </div>

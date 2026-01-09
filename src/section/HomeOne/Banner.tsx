@@ -8,6 +8,7 @@ import HeroImg6 from '/smlogistics-6.jpg';
 import HeroImg7 from '/smlogistics-5.jpg';
 import HeroImg8 from '/smlogistics-1.jpg';
 import { Link } from 'react-router-dom';
+
 const Banner = () => {
   return (
     <>
@@ -195,7 +196,7 @@ const Banner = () => {
                 THE TRUST
               </h2>
               <p>
-                Professional Freight <br /> Brokerage Services{" "}
+                Reliable Freight <br /> Brokerage Solutions Across the USA{" "}
               </p>
             </div>
             <div
@@ -205,8 +206,8 @@ const Banner = () => {
             >
               <div className="banner-one__content-right-text">
                 <p>
-                  Committed to providing efficient, reliable, and cost-effective <br />
-                  shipping solutions tailored to your needs.
+                  Connecting shippers with trusted carriers for safe, <br />
+                  on-time, and cost-effective freight movement.
                 </p>
               </div>
               <div className="banner-one__content-right-middle">
@@ -248,8 +249,7 @@ const Banner = () => {
       </section>
       {/*End Banner One*/}
     </>
-
-
   );
 }
+
 export default Banner;

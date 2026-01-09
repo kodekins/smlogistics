@@ -3,9 +3,10 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 // Import your images and icons (adjust paths as needed)
-import teamImg1 from '../../assets/images/team/team-v1-img1.jpg';
-import teamImg2 from '../../assets/images/team/team-v1-img2.jpg';
-import teamImg3 from '../../assets/images/team/team-v1-img3.jpg';
+import teamImg1 from '/sm-home3.png';
+import teamImg2 from '/sm-home4.png';
+import teamImg3 from '/sm-home1.png';
+import teamImg4 from '/sm-home2.jpg';
 import { Link } from 'react-router-dom';
 
 const Team = () => {
@@ -54,7 +55,7 @@ const Team = () => {
             name: "Nura McKinney",
             position: "CUSTOMER SUCCESS",
             description: "Dedicated to providing exceptional service and support to all our trucking clients.",
-            image: teamImg3,
+            image: teamImg4,
             socialLinks: {
                 linkedin: "#",
                 twitter: "#",

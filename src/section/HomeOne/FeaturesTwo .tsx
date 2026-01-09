@@ -8,13 +8,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// Import truck images from public folder - using consistent sized images
-import ltlImg from '/smlogistics-1.jpg';
-import ftlImg from '/smlogistics-6.jpg';
-import reeferImg from '/smlogistics-2.jpg';
-import flatbedImg from '/smlogistics-3.jpg';
-import interstateImg from '/smlogistics-4.jpg';
-import dryVanImg from '/smlogistics-5.jpg';
+// Import truck images from public folder - using the new set of images
+import ltlImg from '/sm-home3.png';
+import ftlImg from '/sm-home4.png';
+import reeferImg from '/sm-home2.jpg';
+import flatbedImg from '/sm-home4.png';
+import dryVanImg from '/sm-home3.png';
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
@@ -68,13 +67,6 @@ const FeaturesTwo = () => {
       title: "Interstate Transport",
       text: "Efficient long-distance trucking across state lines with reliable delivery schedules and tracking.",
       link: "/personal-delivery",
-    },
-    {
-      img: interstateImg,
-      tag: "Local Delivery",
-      title: "Intrastate Transport",
-      text: "Fast regional deliveries within state boundaries for quick turnaround and local distribution needs.",
-      link: "/warehouse-facility",
     },
     {
       img: dryVanImg,

@@ -63,35 +63,46 @@ const cccc = () => {
                   </div>
                 </div>
                 <h2 className="sec-title__title tg-element-title">
-                  Reliable Trucking With <br /> Industry-Leading
-                  Performance!
+                  Trusted Freight Brokerage <br /> Built on Reliability
                 </h2>
+              </div>
+
+              <div className="why-choose-one__content-text" style={{ marginBottom: '30px' }}>
+                <p style={{ color: '#ffffff', opacity: 0.9 }}>
+                  At Star MS Logistics, we focus on what matters most to shippers — dependable 
+                  carrier partnerships, transparent communication, and disciplined freight 
+                  management from pickup to delivery.
+                </p>
               </div>
 
               <div className="why-choose-one__content-list">
                 <ul>
                   <li>
                     <p>
-                      <span className="icon-plane2"></span> Modern fleet with 
-                      GPS tracking on all vehicles
+                      <span className="icon-check1"></span> <strong>Vetted Carrier Network</strong><br />
+                      We work with carefully screened, compliant carriers to ensure 
+                      your freight is handled by trusted transportation partners.
                     </p>
                   </li>
-                  <li>
+                  <li style={{ marginTop: '15px' }}>
                     <p>
-                      <span className="icon-plane2"></span> 99.8% on-time delivery 
-                      rate across all routes
+                      <span className="icon-check1"></span> <strong>Real-Time Communication & Visibility</strong><br />
+                      Proactive updates and clear communication throughout the 
+                      shipment lifecycle — no surprises, no guesswork.
                     </p>
                   </li>
-                  <li>
+                  <li style={{ marginTop: '15px' }}>
                     <p>
-                      <span className="icon-plane2"></span> Licensed and insured 
-                      for your complete peace of mind
+                      <span className="icon-check1"></span> <strong>Brokerage Compliance & Accountability</strong><br />
+                      Our operations align with U.S. freight brokerage standards, 
+                      giving you confidence that every load is managed responsibly.
                     </p>
                   </li>
-                  <li>
+                  <li style={{ marginTop: '15px' }}>
                     <p>
-                      <span className="icon-plane2"></span> Dedicated support team 
-                      available 24/7/365
+                      <span className="icon-check1"></span> <strong>Customer-First Support</strong><br />
+                      A dedicated logistics team focused on responsiveness, 
+                      problem-solving, and long-term shipper relationships.
                     </p>
                   </li>
                 </ul>

@@ -1,31 +1,11 @@
-import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 // Import images
 import skillShape1 from '../../assets/images/shapes/skill-v1-shape1.png';
 import skillShape2 from '../../assets/images/shapes/skill-v1-shape2.png';
-import skillImg1 from '/flatbed-3.jpeg';
+import skillImg1 from '/sm-home4.png';
 import skillImg2 from '/dumptrucks-2.jpeg';
 
 const SkillOne = () => {
-  // Progress bar animation (will run when component mounts)
-  useEffect(() => {
-    const animateProgressBars = () => {
-      const progressBars = document.querySelectorAll('.count-bar');
-      progressBars.forEach(bar => {
-        const percent = bar.getAttribute('data-percent');
-        bar.style.width = percent;
-      });
-    };
-
-    animateProgressBars();
-  }, []);
-
-  const skills = [
-    { id: 1, name: 'On-Time Delivery Rate', percent: '99%' },
-    { id: 2, name: 'Fleet Management', percent: '95%' },
-    { id: 3, name: 'Customer Satisfaction', percent: '98%' }
-  ];
-
   return (
     <section className="skill-one">
       <div className="container">
@@ -82,38 +62,40 @@ const SkillOne = () => {
                   </div>
                 </div>
                 <h2 className="sec-title__title tg-element-title">
-                  Professional Trucking <br /> Excellence In Every Mile
+                  Freight Brokerage Excellence <br /> You Can Rely On
                 </h2>
               </div>
 
               <div className="skill-one__content-text">
                 <p>
-                  With over 22 years in the trucking industry, we've built our reputation on reliability, 
-                  safety, and exceptional service. Our modern fleet of 500+ trucks and experienced drivers 
-                  ensure your freight arrives on time, every time.
+                  With years of hands-on experience in the freight industry, our team specializes 
+                  in managing shipments through strong carrier relationships, disciplined processes, 
+                  and clear communication. We focus on coordinating freight efficiently while 
+                  protecting our clients’ interests at every stage of the move.
                 </p>
+                <h3 style={{ marginTop: '20px', marginBottom: '15px', color: 'var(--logistiq-black)' }}>What We Do Best</h3>
               </div>
 
-              <ul className="skill-one__progress">
-                {skills.map(skill => (
-                  <li key={skill.id}>
-                    <div className="skill-one__progress-single">
-                      <div className="title-box">
-                        <p>{skill.name}</p>
-                      </div>
-                      <div className="bar">
-                        <div 
-                          className="bar-inner count-bar" 
-                          data-percent={skill.percent}
-                          style={{ width: skill.percent }}
-                        >
-                          <div className="count-text">{skill.percent}</div>
-                        </div>
-                      </div>
-                    </div>
+              <div className="skill-one__content-list" style={{ marginBottom: '30px' }}>
+                <ul className="list-unstyled">
+                  <li style={{ marginBottom: '15px' }}>
+                    <p><strong>✔ Carrier Vetting & Compliance Oversight:</strong><br />
+                    We work with carefully screened carriers that meet required safety, insurance, and compliance standards.</p>
                   </li>
-                ))}
-              </ul>
+                  <li style={{ marginBottom: '15px' }}>
+                    <p><strong>✔ Shipment Coordination & Monitoring:</strong><br />
+                    From pickup to delivery, we manage freight movements with proactive updates and close coordination.</p>
+                  </li>
+                  <li style={{ marginBottom: '15px' }}>
+                    <p><strong>✔ Problem Solving & Exception Handling:</strong><br />
+                    Our team is trained to address delays, changes, and challenges quickly and professionally.</p>
+                  </li>
+                  <li style={{ marginBottom: '15px' }}>
+                    <p><strong>✔ Customer Focused Logistics Support:</strong><br />
+                    We prioritize responsiveness, transparency, and long-term shipper relationships over volume.</p>
+                  </li>
+                </ul>
+              </div>
 
               <div className="skill-one__content-btn">
                 <Link className="thm-btn" to="/contact">

@@ -42,7 +42,7 @@ const FooterTwo = () => {
               </div>
               <div className="footer-one--two__cta-inner">
                 <div className="text-box">
-                  <h2>Reliable Trucking With Industry-Leading Performance!</h2>
+                  <h2>Reliable Brokering With Industry-Leading Performance!</h2>
                 </div>
                 <div className="btn-box">
                   <Link className="thm-btn" to="/contact">

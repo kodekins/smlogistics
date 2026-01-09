@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import serviceSidebarImg from '../../assets/images/resources/service-details-sidebar-img.png';
+import serviceSidebarImg from '/sm-contact.png';
 import serviceDetailsImg1 from '/dumptrucks-1.jpeg';
 import serviceDetailsImg2 from '/dumptrucks-2.jpeg';
 import serviceDetailsImg3 from '/dumptrucks-3.jpeg';
@@ -10,24 +10,18 @@ interface ServiceDetailsProps {
   serviceType?: string;
 }
 
-const ServiceDetails = ({ serviceType = 'intrastate' }: ServiceDetailsProps) => {
+const ServiceDetails = ({ serviceType = 'ltl' }: ServiceDetailsProps) => {
   
   const serviceContent = {
-    intrastate: {
-      title: 'Intrastate Transport',
-      subtitle: 'Reliable local and statewide deliveries',
-      description: 'Our intrastate transport provides efficient freight movement within state boundaries, perfect for businesses requiring local distribution networks. We offer same-day, next-day, and scheduled delivery services throughout the state.',
-      whyChoose: 'Star MS Logistics offers comprehensive intrastate freight solutions with our local carrier network that provides fast, cost-effective deliveries within your state. We understand local routes, traffic patterns, and delivery requirements to ensure reliable service.'
-    },
-    warehousing: {
-      title: 'Warehousing & Storage',
-      subtitle: 'Secure storage and distribution facilities',
-      description: 'Our warehousing services provide secure, climate-controlled storage facilities for short or long-term needs. We offer inventory management, order fulfillment, cross-docking, and distribution services from our strategically located warehouses.',
-      whyChoose: 'Star MS Logistics warehouse facilities offer modern, secure spaces with advanced inventory management systems. Whether you need temporary storage during transit, seasonal inventory space, or full distribution services, we provide flexible solutions tailored to your business requirements.'
+    ltl: {
+      title: 'LTL (Less Than Truckload)',
+      subtitle: 'Cost-effective option for smaller shipments',
+      description: 'Our LTL service allows you to share trailer space with other shipments, paying only for the space you need. Perfect for businesses looking to optimize shipping costs while maintaining reliable delivery schedules.',
+      whyChoose: 'With Star MS Logistics LTL services, you get the flexibility of shipping smaller freight volumes without the expense of booking an entire truck. Our extensive carrier network ensures your cargo is handled with care, consolidated efficiently, and delivered on time.'
     }
   };
   
-  const content = serviceContent[serviceType as keyof typeof serviceContent] || serviceContent.intrastate;
+  const content = serviceContent[serviceType as keyof typeof serviceContent] || serviceContent.ltl;
 
   return (
     <section className="service-details">
@@ -46,9 +40,7 @@ const ServiceDetails = ({ serviceType = 'intrastate' }: ServiceDetailsProps) => 
                     <li><Link to="/track-transport">LTL (Less Than Truckload) <span className="icon-right-arrow21"></span></Link></li>
                     <li><Link to="/international-transport">FTL (Full Truckload) <span className="icon-right-arrow21"></span></Link></li>
                     <li><Link to="/personal-delivery">Interstate Transport <span className="icon-right-arrow21"></span></Link></li>
-                    <li><Link className="active" to="#">Intrastate Transport <span className="icon-right-arrow21"></span></Link></li>
                     <li><Link to="/ocean-transport">Reefer Transport <span className="icon-right-arrow21"></span></Link></li>
-                    <li><Link to="/emergency-transport">Air-Conditioned Transport <span className="icon-right-arrow21"></span></Link></li>
                   </ul>
                 </div>
               </div>
@@ -60,7 +52,7 @@ const ServiceDetails = ({ serviceType = 'intrastate' }: ServiceDetailsProps) => 
                 </div>
                 <div className="service-details__sidebar-single-download">
                   <ul className="clearfix">
-                    {[1, 2, 3].map((item, idx) => (
+                    {[1, 2, 3].map((_item, idx) => (
                       <li key={idx}>
                         <div className="content-box">
                           <div className="icon"><span className="icon-pdf"></span></div>

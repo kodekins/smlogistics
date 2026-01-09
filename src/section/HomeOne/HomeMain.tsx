@@ -7,11 +7,11 @@ import SkillOne from './SkillOne';
 import TestimonialOne from './TestimonialOne';
 import FaqOne from './FaqOne';
 import CTAOne from './CTAOne';
+import CTABrokering from './CTABrokering';
 import CounterOne from './CounterOne';
 import TeamOne from './TeamOne';
 import BrandOne from './BrandOne';
 import FeaturesTwo from './FeaturesTwo ';
-import Blog from './Blog';
 
 const HomeMain = () => {
 	return (
@@ -21,13 +21,13 @@ const HomeMain = () => {
 			<ServicesOne />
 			<WhyChooseOne />
 			<SkillOne />
+			<CTABrokering />
 			<TestimonialOne />
 			<FaqOne />
 			<CTAOne />
 			<CounterOne />
 			<TeamOne />
 			<FeaturesTwo />
-			<Blog />
 			<BrandOne />
 		</React.Fragment>
 	);

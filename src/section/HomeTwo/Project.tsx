@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // Import images
-import projectImg1 from '/smlogistics-4.jpg';
-import projectImg2 from '/smlogistics-3.jpg';
-import projectImg3 from '/smlogistics-6.jpg';
-import projectImg4 from '/smlogistics-2.jpg';
+import projectImg1 from '/sm-home3.png';
+import projectImg2 from '/sm-home4.png';
+import projectImg3 from '/sm-home2.jpg';
+import projectImg4 from '/sm-home1.png';
 
 const projects = [
   {

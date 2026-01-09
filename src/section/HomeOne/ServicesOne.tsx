@@ -1,13 +1,17 @@
 'use client'
 
-import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
-// Import images - Using consistent sized images from smlogistics series
-import serviceImg1 from '/smlogistics-1.jpg';
-import serviceImg2 from '/smlogistics-2.jpg';
-import serviceImg3 from '/smlogistics-3.jpg';
+// Import images - Using the new set of images
+import serviceImg1 from '/sm-ltl1.jpg';
+import serviceImg2 from '/smlogistics-6.jpg';
+import serviceImg3 from '/sm-interstate1.jpg';
+import serviceImg4 from '/reefer-1.jpeg';
+import serviceImg5 from '/smlogistics-2.jpg';
+import serviceImg6 from '/sm-dry van1.png';
+import serviceImg7 from '/sm-flatbed1.jpg';
+import serviceImg8 from '/dumptrucks-1.jpeg';
 import patternBg from '../../assets/images/pattern/service-v1-pattern.jpg';
 
 
@@ -35,11 +39,51 @@ const ServicesOne = () => {
         },
         {
             id: 3,
-            title: "Reefer Transport",
-            description: "Temperature-controlled shipments for perishables. Climate-controlled delivery for sensitive goods.",
+            title: "Interstate Transport",
+            description: "Efficient trucking services across states with reliable long-distance solutions.",
             image: serviceImg3,
             icon: "icon-international-shipping",
+            link: "personal-delivery"
+        },
+        {
+            id: 4,
+            title: "Reefer Transport",
+            description: "Temperature-controlled shipments for perishables. Climate-controlled delivery for sensitive goods.",
+            image: serviceImg4,
+            icon: "icon-storehouse",
             link: "ocean-transport"
+        },
+        {
+            id: 5,
+            title: "Container Drayage",
+            description: "Efficient transport of containers from ports to warehouses or other destinations.",
+            image: serviceImg5,
+            icon: "icon-container",
+            link: "ocean-transport?type=container"
+        },
+        {
+            id: 6,
+            title: "Dry Van",
+            description: "Standard enclosed trailer freight services for general cargo and non-perishable freight.",
+            image: serviceImg6,
+            icon: "icon-truck",
+            link: "international-transport?type=dryvan"
+        },
+        {
+            id: 7,
+            title: "Flat Bed",
+            description: "Open trailer transport for oversized and overweight freight that requires flexible loading.",
+            image: serviceImg7,
+            icon: "icon-flatbed",
+            link: "emergency-transport?type=flatbed"
+        },
+        {
+            id: 8,
+            title: "Dump Truck",
+            description: "Bulk material transport and delivery for construction sites and landscaping projects.",
+            image: serviceImg8,
+            icon: "icon-dump-truck",
+            link: "track-transport?type=dumptruck"
         }
     ];
 
@@ -128,8 +172,8 @@ const ServicesOne = () => {
                                                             objectFit: 'cover',
                                                             display: 'block'
                                                         }}
-                                                        onError={(e) => {
-                                                            e.target.src = 'https://via.placeholder.com/400x350/cccccc/666666?text=No+Image';
+                                                        onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+                                                            e.currentTarget.src = 'https://via.placeholder.com/400x350/cccccc/666666?text=No+Image';
                                                         }}
                                                     />
                                                 </div>

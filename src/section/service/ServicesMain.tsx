@@ -37,25 +37,11 @@ const services = [
     link: '/personal-delivery',
   },
   {
-    title: 'Intrastate Transport',
-    desc: 'Reliable local/statewide deliveries for fast regional distribution.',
-    image: TruckImg4,
-    iconClass: 'icon-ship-1',
-    link: '/warehouse-facility',
-  },
-  {
     title: 'Reefer Transport',
     desc: 'Temperature-controlled shipments for perishables and climate-sensitive goods.',
     image: ReeferImg,
     iconClass: 'icon-storehouse',
     link: '/ocean-transport',
-  },
-  {
-    title: 'Air-Conditioned Transport',
-    desc: 'Safe and climate-controlled delivery for sensitive goods like electronics and pharmaceuticals.',
-    image: ReeferImg,
-    iconClass: 'icon-humanitarian-aid',
-    link: '/emergency-transport',
   },
   {
     title: 'Container Drayage',
@@ -73,7 +59,7 @@ const services = [
   },
   {
     title: 'Flat Bed',
-    desc: 'Open trailers for oversized or irregularly shaped cargo that needs easy loading.',
+    desc: 'Open trailers for irregularly shaped cargo that needs easy loading.',
     image: FlatbedImg,
     iconClass: 'icon-international-shipping',
     link: '/emergency-transport',
@@ -84,20 +70,6 @@ const services = [
     image: DumpTruckImg,
     iconClass: 'icon-ship-1',
     link: '/track-transport',
-  },
-  {
-    title: 'Oversize/Overweight',
-    desc: 'Specialized transport for cargo exceeding standard size or weight limits.',
-    image: OverloadImg,
-    iconClass: 'icon-storehouse',
-    link: '/personal-delivery',
-  },
-  {
-    title: 'Warehousing & Storage',
-    desc: 'Safe storage facilities for short or long-term needs with inventory management.',
-    image: ServiceImg3,
-    iconClass: 'icon-humanitarian-aid',
-    link: '/warehouse-facility',
   },
 ];
 

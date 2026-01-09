@@ -13,20 +13,16 @@ import EmergencyTransportMain from '../section/warehouse-facility/WarehouseFacil
 
 const EmergencyTransport = ({isVisible}) => {
     const [searchParams] = useSearchParams();
-    const serviceType = searchParams.get('type') || 'intrastate';
+    const serviceType = searchParams.get('type') || 'ltl';
     
     const serviceData = {
-        intrastate: {
-            title: 'Intrastate Transport',
-            description: 'Reliable local and statewide deliveries'
-        },
-        warehousing: {
-            title: 'Warehousing & Storage',
-            description: 'Secure storage and distribution facilities'
+        ltl: {
+            title: 'LTL (Less Than Truckload)',
+            description: 'Cost-effective option for smaller shipments'
         }
     };
     
-    const service = serviceData[serviceType as keyof typeof serviceData] || serviceData.intrastate;
+    const service = serviceData[serviceType as keyof typeof serviceData] || serviceData.ltl;
 
     return (
         <React.Fragment>

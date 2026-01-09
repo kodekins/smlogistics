@@ -7,11 +7,10 @@ import shape5 from '../../assets/images/shapes/about-v2-shape5.png';
 import shape2 from '../../assets/images/shapes/about-v2-shape2.png';
 import shape3 from '../../assets/images/shapes/about-v2-shape3.png';
 import shape4 from '../../assets/images/shapes/about-v2-shape4.png';
-import aboutImg1 from '/smlogistics-4.jpg';
-import aboutImg2 from '/smlogistics-5.jpg';
+import aboutImg1 from '/sm-home2.jpg';
+import aboutImg2 from '/sm-home3.png';
 import aboutImg3 from '../../assets/images/about/about-v2-img3.png';
 import shape1 from '../../assets/images/shapes/about-v2-shape1.png';
-
 
 const AboutTwo = () => {
   return (
@@ -66,23 +65,37 @@ const AboutTwo = () => {
                 <div className="sec-title__tagline">
                   <div className="line"></div>
                   <div className="text tg-element-title">
-                    <h4>About Us</h4>
+                    <h4>Our Story</h4>
                   </div>
                   <div className="icon">
                     <span className="icon-plane2 float-bob-x3"></span>
                   </div>
                 </div>
                 <h2 className="sec-title__title tg-element-title">
-                  The Transportation and <br />
-                  Logistics <span>Industry</span>
+                  Star MS Logistics <br />
+                  Delivering the Trust
                 </h2>
               </div>
 
               <div className="about-two__content-text1">
                 <p>
-                  Logistic service provider company plays a pivotal role in the global supply chain of
-                  ecosystem by efficiently managing the movement of goods from point
-                  of origin to final destination.
+                  Star MS Logistics began with a clear purpose: to build a freight brokerage where trust, 
+                  transparency, and reliability are not just promises, but standard practice. We connect 
+                  shippers with carefully vetted carriers to ensure freight moves safely, on time, and 
+                  at competitive rates across the USA.
+                </p>
+                <p style={{ marginTop: '15px' }}>
+                  From day one, we believed that great logistics is driven by great people. Instead 
+                  of rushing to launch a brand, we spent nearly six years building and refining our 
+                  team — carefully gathering talent, strengthening industry knowledge, and developing 
+                  professionals who understand the importance of accountability, communication, and 
+                  customer care.
+                </p>
+                <p style={{ marginTop: '15px' }}>
+                  Before bringing Star MS Logistics to market, our focus remained on people excellence 
+                  and operational readiness — investing time in carrier relationships, process discipline, 
+                  and real-world freight experience. This foundation allows us to act in the best interest 
+                  of our shippers on every load we manage.
                 </p>
               </div>
 
@@ -91,20 +104,16 @@ const AboutTwo = () => {
                   <div className="col-xl-6 col-lg-6 col-md-6">
                     <ul className="about-two__content-text2-list">
                       <li>
-                        <p><span className="icon-check1"></span> Safety And Reliability</p>
-                      </li>
-                      <li>
-                        <p><span className="icon-check1"></span> End-to-End Transportation</p>
+                        <p><span className="icon-check1"></span> <strong>Transparency & Trust</strong><br />
+                        We operate with honest communication and full shipment visibility.</p>
                       </li>
                     </ul>
                   </div>
                   <div className="col-xl-6 col-lg-6 col-md-6">
                     <ul className="about-two__content-text2-list">
                       <li>
-                        <p><span className="icon-check1"></span> Warehousing & Distribution</p>
-                      </li>
-                      <li>
-                        <p><span className="icon-check1"></span> Fast Transportation</p>
+                        <p><span className="icon-check1"></span> <strong>Customer-First Service</strong><br />
+                        Our dedicated team delivers reliable, tailored freight solutions.</p>
                       </li>
                     </ul>
                   </div>

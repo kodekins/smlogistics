@@ -1,10 +1,10 @@
 
 import { Link } from 'react-router-dom';
-import serviceSidebarImg from '../../assets/images/resources/service-details-sidebar-img.png';
-import serviceDetailsImg1 from '/smlogistics-1.jpg';
-import serviceDetailsImg2 from '/smlogistics-3.jpg';
-import serviceDetailsImg3 from '/smlogistics-4.jpg';
-import serviceDetailsImg4 from '/smlogistics-6.jpg';
+import serviceSidebarImg from '/sm-contact.png';
+import serviceDetailsImg1 from '/sm-ltl1.jpg';
+import serviceDetailsImg2 from '/sm-ltl3.jpg';
+import serviceDetailsImg3 from '/sm-ltl4.jpg';
+import serviceDetailsImg4 from '/sm-ltl5.jpg';
 
 interface ServiceDetailsProps {
   serviceType?: string;
@@ -16,14 +16,31 @@ const ServiceDetails = ({ serviceType = 'ltl' }: ServiceDetailsProps) => {
     ltl: {
       title: 'LTL (Less Than Truckload)',
       subtitle: 'Cost-effective option for smaller shipments',
-      description: 'Our LTL service allows you to share trailer space with other shipments, paying only for the space you need. Perfect for businesses looking to optimize shipping costs while maintaining reliable delivery schedules.',
-      whyChoose: 'With Star MS Logistics LTL services, you get the flexibility of shipping smaller freight volumes without the expense of booking an entire truck. Our extensive carrier network ensures your cargo is handled with care, consolidated efficiently, and delivered on time.'
+      description: 'LTL (Less Than Truckload) is a cost-effective option for smaller shipments that do not require a full truck. Our LTL service allows you to share trailer space with other shipments, so you only pay for the space you need. This makes it an ideal solution for businesses looking to optimize shipping costs while maintaining reliable delivery schedules.',
+      mainContent: 'At Star MS Logistics, our LTL services give you the flexibility to move smaller freight volumes without the expense of booking an entire truck. Through our extensive carrier network, your cargo is consolidated efficiently, handled with care, and delivered on time across regional and interstate routes.',
+      whyChooseTitle: 'Why Choose Our LTL (Less Than Truckload) Service?',
+      benefits: [
+        'Cost-effective shipping for smaller freight volumes',
+        'Access to a reliable and extensive carrier network',
+        'Efficient consolidation and secure handling',
+        'Flexible pickup and delivery options',
+        'Consistent, on-time deliveries'
+      ],
+      whyChoose: 'Whether you\'re shipping pallets, cartons, or partial loads, our LTL solutions are designed to keep your supply chain moving smoothly while helping you control logistics costs.'
     },
     dumptruck: {
       title: 'Dump Truck Services',
       subtitle: 'Bulk material transport and delivery',
       description: 'Our dump truck services specialize in transporting and delivering bulk materials including gravel, sand, dirt, demolition debris, and construction materials. Perfect for construction sites, landscaping projects, and material supply operations.',
-      whyChoose: 'Star MS Logistics dump truck fleet provides reliable bulk material transport with experienced operators who understand proper loading, safe transport, and precise placement at delivery sites. We handle various material types with appropriate equipment for your specific needs.'
+      mainContent: 'Star MS Logistics dump truck fleet provides reliable bulk material transport with experienced operators who understand proper loading, safe transport, and precise placement at delivery sites.',
+      whyChooseTitle: 'Why Choose Our Dump Truck Services?',
+      benefits: [
+        'Specialized equipment for various material types',
+        'Experienced operators',
+        'Safe transport and precise placement',
+        'Reliable service for construction and landscaping projects'
+      ],
+      whyChoose: 'We handle various material types with appropriate equipment for your specific needs, ensuring efficient delivery to your construction sites, landscaping projects, or material supply operations.'
     }
   };
   
@@ -46,9 +63,7 @@ const ServiceDetails = ({ serviceType = 'ltl' }: ServiceDetailsProps) => {
                     <li><Link className="active" to="#">LTL (Less Than Truckload) <span className="icon-right-arrow21"></span></Link></li>
                     <li><Link to="/international-transport">FTL (Full Truckload) <span className="icon-right-arrow21"></span></Link></li>
                     <li><Link to="/personal-delivery">Interstate Transport <span className="icon-right-arrow21"></span></Link></li>
-                    <li><Link to="/warehouse-facility">Intrastate Transport <span className="icon-right-arrow21"></span></Link></li>
                     <li><Link to="/ocean-transport">Reefer Transport <span className="icon-right-arrow21"></span></Link></li>
-                    <li><Link to="/emergency-transport">Air-Conditioned Transport <span className="icon-right-arrow21"></span></Link></li>
                   </ul>
                 </div>
               </div>
@@ -60,7 +75,7 @@ const ServiceDetails = ({ serviceType = 'ltl' }: ServiceDetailsProps) => {
                 </div>
                 <div className="service-details__sidebar-single-download">
                   <ul className="clearfix">
-                    {[1, 2, 3].map((item, idx) => (
+                    {[1, 2, 3].map((_item, idx) => (
                       <li key={idx}>
                         <div className="content-box">
                           <div className="icon"><span className="icon-pdf"></span></div>
@@ -108,12 +123,22 @@ const ServiceDetails = ({ serviceType = 'ltl' }: ServiceDetailsProps) => {
               <div className="service-details__content-text1">
                 <h2>{content.title}</h2>
                 <p>
-                  {content.subtitle}. {content.description}
+                  {content.description}
+                </p>
+                <p style={{ marginTop: '15px' }}>
+                  {content.mainContent}
                 </p>
               </div>
 
               <div className="service-details__content-text2">
-                <h2>Why Choose Our {content.title} Service</h2>
+                <h2>{content.whyChooseTitle || `Why Choose Our ${content.title} Service`}</h2>
+                {content.benefits && (
+                  <ul style={{ marginBottom: '15px', paddingLeft: '20px' }}>
+                    {content.benefits.map((benefit: string, idx: number) => (
+                      <li key={idx} style={{ marginBottom: '8px' }}>{benefit}</li>
+                    ))}
+                  </ul>
+                )}
                 <p>
                   {content.whyChoose}
                 </p>
@@ -133,10 +158,6 @@ const ServiceDetails = ({ serviceType = 'ltl' }: ServiceDetailsProps) => {
                     </div>
                   </div>
                 </div>
-                <p>
-                  This business idea leverages the growing demand for virtual experiences and the need
-                  for professional support in navigating the virtual event landscape.
-                </p>
               </div>
 
               {/* Bottom Image */}

@@ -60,15 +60,11 @@ const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
                     <li><Link to="/track-transport" onClick={handleMobileMenu}>LTL (Less Than Truckload)</Link></li>
                     <li><Link to="/international-transport" onClick={handleMobileMenu}>FTL (Full Truckload)</Link></li>
                     <li><Link to="/personal-delivery" onClick={handleMobileMenu}>Interstate Transport</Link></li>
-                    <li><Link to="/warehouse-facility" onClick={handleMobileMenu}>Intrastate Transport</Link></li>
                     <li><Link to="/ocean-transport" onClick={handleMobileMenu}>Reefer Transport</Link></li>
-                    <li><Link to="/emergency-transport" onClick={handleMobileMenu}>Air-Conditioned Transport</Link></li>
                     <li><Link to="/ocean-transport" onClick={handleMobileMenu}>Container Drayage</Link></li>
                     <li><Link to="/international-transport" onClick={handleMobileMenu}>Dry Van</Link></li>
                     <li><Link to="/emergency-transport" onClick={handleMobileMenu}>Flat Bed</Link></li>
                     <li><Link to="/track-transport" onClick={handleMobileMenu}>Dump Truck</Link></li>
-                    <li><Link to="/personal-delivery" onClick={handleMobileMenu}>Oversize/Overweight</Link></li>
-                    <li><Link to="/warehouse-facility" onClick={handleMobileMenu}>Warehousing & Storage</Link></li>
                   </ul>
                   <button className={isActive.key === 2 ? 'expanded open' : ''} onClick={() => handleToggle(2)}>
                     <span className="fa fa-angle-right" />

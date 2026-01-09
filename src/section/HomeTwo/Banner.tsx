@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import bannerImg1 from "/smlogistics-1.jpg";
-import bannerImg2 from "../../assets/images/banner/banner-v2-img2.png";
+import bannerImg1 from "/sm-home3.png";
+import bannerImg2 from "/sm-home4.png";
 import shape1 from "../../assets/images/shapes/banner-v2-shape1.png";
 import shape2 from "../../assets/images/shapes/banner-v2-shape2.png";
 
@@ -31,16 +31,23 @@ const Banner = () => {
                     <div className="banner-two__content">
                         <div className="banner-two__content-top wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
                             <div className="title-box">
-                                <h2>EXPERT TRANSPORTATION <br /> <span>SALUTATION</span></h2>
+                                <h2 style={{ fontSize: '64px', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--logistiq-white)' }}>
+                                    Reliable Freight Brokerage <br />
+                                    Solutions Across the USA
+                                </h2>
+                                <h3 style={{ fontSize: '36px', fontWeight: '900', color: 'var(--logistiq-white)', marginTop: '20px' }}>
+                                    DELIVERING THE TRUST
+                                </h3>
                             </div>
                         </div>
 
                         <div className="banner-two__content-bottom wow fadeInRight" data-wow-delay="0ms"
                             data-wow-duration="1500ms">
                             <div className="text-box">
-                                <p>If you have a parcel and want to know its latest update, then check the latest update
-                                    with your parcel ID in the form below. Don't forget to select the correct category to
-                                    search. Thank You.</p>
+                                <p style={{ fontSize: '20px', lineHeight: '1.4', color: 'var(--logistiq-white)' }}>
+                                    Connecting shippers with trusted carriers for safe, <br />
+                                    on-time, and cost-effective freight movement.
+                                </p>
                             </div>
 
                             <div className="banner-two__tab-box tabs-box">

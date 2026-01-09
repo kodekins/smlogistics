@@ -13,20 +13,16 @@ import EmergencyTransportMain from '../section/emergency-transport/EmergencyTran
 
 const EmergencyTransport = ({isVisible}) => {
     const [searchParams] = useSearchParams();
-    const serviceType = searchParams.get('type') || 'airconditioned';
+    const serviceType = searchParams.get('type') || 'flatbed';
     
     const serviceData = {
-        airconditioned: {
-            title: 'Air-Conditioned Transport',
-            description: 'Climate-controlled delivery for sensitive goods'
-        },
         flatbed: {
             title: 'Flatbed Transport',
-            description: 'Open trailer transport for oversized cargo'
+            description: 'Open trailer transport for large cargo'
         }
     };
     
-    const service = serviceData[serviceType as keyof typeof serviceData] || serviceData.airconditioned;
+    const service = serviceData[serviceType as keyof typeof serviceData] || serviceData.flatbed;
 
     return (
         <React.Fragment>
