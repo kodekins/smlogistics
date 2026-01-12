@@ -54,7 +54,7 @@ const FooterStyleOne = () => {
                                     <div className="footer-widget__single footer-one__quick-links">
                                         <div className="title">
                                             <h2>
-                                                Quick Links <span className="icon-plane3" />
+                                                Quick Links <span className="icon-shipment" />
                                             </h2>
                                         </div>
                                         <ul className="footer-one__quick-links-list">
@@ -108,7 +108,7 @@ const FooterStyleOne = () => {
                                     <div className="footer-widget__single footer-one__contact">
                                         <div className="title">
                                             <h2>
-                                                Get In Touch <span className="icon-plane3" />
+                                                Get In Touch <span className="icon-shipment" />
                                             </h2>
                                         </div>
                                         <div className="footer-one__contact-box">
@@ -161,7 +161,7 @@ const FooterStyleOne = () => {
                                     <div className="footer-widget__single footer-one__subscribe">
                                         <div className="title">
                                             <h2>
-                                                Subscribe Us <span className="icon-plane3" />
+                                                Subscribe Us <span className="icon-shipment" />
                                             </h2>
                                         </div>
                                         <p className="footer-one__subscribe-text">

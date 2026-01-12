@@ -67,7 +67,7 @@ const WhyChooseOne: React.FC = () => {
                     <h4>Why Choose Us</h4>
                   </div>
                   <div className="icon">
-                    <span className="icon-plane2 float-bob-x3"></span>
+                    <span className="icon-shipment float-bob-x3"></span>
                   </div>
                 </div>
                 <h2 className="sec-title__title tg-element-title">
@@ -80,27 +80,27 @@ const WhyChooseOne: React.FC = () => {
                 <ul>
                   <li>
                     <p>
-                      <span className="icon-plane2"></span> <strong>Expertise & Experience:</strong> Years of experience in the logistics and freight industry
+                      <span className="icon-shipment"></span> <strong>Expertise & Experience:</strong> Years of experience in the logistics and freight industry
                     </p>
                   </li>
                   <li>
                     <p>
-                      <span className="icon-plane2"></span> <strong>Reliable Partners:</strong> We work with trusted carriers and partners to ensure smooth operations
+                      <span className="icon-shipment"></span> <strong>Reliable Partners:</strong> We work with trusted carriers and partners to ensure smooth operations
                     </p>
                   </li>
                   <li>
                     <p>
-                      <span className="icon-plane2"></span> <strong>Cost-Effective Solutions:</strong> Competitive pricing without compromising service quality
+                      <span className="icon-shipment"></span> <strong>Cost-Effective Solutions:</strong> Competitive pricing without compromising service quality
                     </p>
                   </li>
                   <li>
                     <p>
-                      <span className="icon-plane2"></span> <strong>Customer-Centric Approach:</strong> Dedicated support to handle all queries and concerns
+                      <span className="icon-shipment"></span> <strong>Customer-Centric Approach:</strong> Dedicated support to handle all queries and concerns
                     </p>
                   </li>
                   <li>
                     <p>
-                      <span className="icon-plane2"></span> <strong>End-to-End Tracking:</strong> Monitor your shipments at every step for peace of mind
+                      <span className="icon-shipment"></span> <strong>End-to-End Tracking:</strong> Monitor your shipments at every step for peace of mind
                     </p>
                   </li>
                 </ul>

@@ -53,6 +53,7 @@ const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
 
                 <li><Link to="/about" onClick={handleMobileMenu}>About Us</Link></li>
                 <li><Link to="/why-us" onClick={handleMobileMenu}>Why Us</Link></li>
+                <li><Link to="/types-of-commodities" onClick={handleMobileMenu}>Types of Commodities</Link></li>
 
                 <li className={isActive.key === 2 ? 'dropdown current' : 'dropdown'}>
                   <Link to="/service" onClick={handleMobileMenu}>Shipping Solutions</Link>

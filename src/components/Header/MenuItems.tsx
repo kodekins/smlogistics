@@ -30,6 +30,11 @@ const MenuItems = () => {
           Why Us
         </Link>
       </li>
+      <li className={currentPath === '/types-of-commodities' ? 'current-menu-item' : ''}>
+        <Link to="/types-of-commodities" className={currentPath === '/types-of-commodities' ? 'active-menu' : ''}>
+          Types of Commodities
+        </Link>
+      </li>
       <li className={isActive(menuRoutes.services) ? 'dropdown current-menu-item' : 'dropdown'}>
         <Link to="/service">Shipping Solutions</Link>
         <ul className="sub-menu">

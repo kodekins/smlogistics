@@ -66,7 +66,7 @@ const ServicesOne = () => {
             title: "Dry Van",
             description: "Standard enclosed trailer freight services for general cargo and non-perishable freight.",
             image: serviceImg6,
-            icon: "icon-truck",
+            icon: "icon-shipment",
             link: "international-transport?type=dryvan"
         },
         {
@@ -74,7 +74,7 @@ const ServicesOne = () => {
             title: "Flat Bed",
             description: "Open trailer transport for oversized and overweight freight that requires flexible loading.",
             image: serviceImg7,
-            icon: "icon-flatbed",
+            icon: "icon-international-shipping",
             link: "emergency-transport?type=flatbed"
         },
         {
@@ -82,7 +82,7 @@ const ServicesOne = () => {
             title: "Dump Truck",
             description: "Bulk material transport and delivery for construction sites and landscaping projects.",
             image: serviceImg8,
-            icon: "icon-dump-truck",
+            icon: "icon-ship-1",
             link: "track-transport?type=dumptruck"
         }
     ];
@@ -114,7 +114,7 @@ const ServicesOne = () => {
                                 <h4>Our Service</h4>
                             </div>
                             <div className="icon">
-                                <span className="icon-plane2 float-bob-x3"></span>
+                                <span className="icon-shipment float-bob-x3"></span>
                             </div>
                         </div>
                         <h2 className="sec-title__title tg-element-title">

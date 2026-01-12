@@ -54,7 +54,7 @@ const AboutOne: React.FC = () => {
                       <h4>Our Company</h4>
                     </div>
                     <div className="icon">
-                      <span className="icon-plane2 float-bob-x3" />
+                      <span className="icon-shipment float-bob-x3" />
                     </div>
                   </div>
                   <h2 className="sec-title__title tg-element-title">

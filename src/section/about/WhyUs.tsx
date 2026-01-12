@@ -53,7 +53,7 @@ const WhyUs: React.FC = () => {
                     <h4>Why Choose us</h4>
                   </div>
                   <div className="icon">
-                    <span className="icon-plane2 float-bob-x3"></span>
+                    <span className="icon-shipment float-bob-x3"></span>
                   </div>
                 </div>
                 <h2 className="sec-title__title tg-element-title">
@@ -66,27 +66,27 @@ const WhyUs: React.FC = () => {
                 <ul>
                   <li>
                     <p>
-                      <span className="icon-plane2"></span> Expertise & Experience: Years of experience in the logistics and freight industry.
+                      <span className="icon-shipment"></span> Expertise & Experience: Years of experience in the logistics and freight industry.
                     </p>
                   </li>
                   <li>
                     <p>
-                      <span className="icon-plane2"></span> Reliable Partners: We work with trusted carriers and partners to ensure smooth operations.
+                      <span className="icon-shipment"></span> Reliable Partners: We work with trusted carriers and partners to ensure smooth operations.
                     </p>
                   </li>
                   <li>
                     <p>
-                      <span className="icon-plane2"></span> Cost-Effective Solutions: Competitive pricing without compromising service quality.
+                      <span className="icon-shipment"></span> Cost-Effective Solutions: Competitive pricing without compromising service quality.
                     </p>
                   </li>
                   <li>
                     <p>
-                      <span className="icon-plane2"></span> Customer-Centric Approach: Dedicated support to handle all queries and concerns.
+                      <span className="icon-shipment"></span> Customer-Centric Approach: Dedicated support to handle all queries and concerns.
                     </p>
                   </li>
                   <li>
                     <p>
-                      <span className="icon-plane2"></span> End-to-End Tracking: Monitor your shipments at every step for peace of mind.
+                      <span className="icon-shipment"></span> End-to-End Tracking: Monitor your shipments at every step for peace of mind.
                     </p>
                   </li>
                 </ul>
