@@ -1,6 +1,122 @@
 /* Custom overrides for Star MS Logistics branding */
 
 /* 1. Header: white background, blue nav items, red hover */
+.main-header-one {
+  background: var(--logistiq-white) !important;
+}
+
+.main-header-one__top {
+  background: var(--logistiq-white) !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.main-header-one__bottom {
+  background: var(--logistiq-white) !important;
+}
+
+.main-header-one .main-menu .main-menu__list > li > a {
+  color: var(--logistiq-blue) !important;
+}
+
+.main-header-one .main-menu .main-menu__list > li.current-menu-item > a,
+.main-header-one .main-menu .main-menu__list > li:hover > a {
+  color: var(--logistiq-red) !important;
+}
+
+.main-header-one .main-menu .mobile-nav__toggler {
+  color: var(--logistiq-blue) !important;
+}
+
+.main-header-one .main-menu .mobile-nav__toggler:hover {
+  color: var(--logistiq-red) !important;
+}
+
+/* Sticky header white background */
+.stricky-header.stricked-menu {
+  background: var(--logistiq-white) !important;
+}
+
+.stricky-header .main-menu__list > li > a {
+  color: var(--logistiq-blue) !important;
+}
+
+.stricky-header .main-menu__list > li.current-menu-item > a,
+.stricky-header .main-menu__list > li:hover > a {
+  color: var(--logistiq-red) !important;
+}
+
+/* Mobile Menu: white background with blue text */
+.mobile-nav__content {
+  background-color: var(--logistiq-white) !important;
+}
+
+.mobile-nav__close {
+  color: var(--logistiq-blue) !important;
+}
+
+.mobile-nav__close:hover {
+  color: var(--logistiq-red) !important;
+}
+
+.mobile-nav__content .main-menu__list > li > a,
+.mobile-nav__content .main-menu__list > li > ul > li > a,
+.mobile-nav__content .main-menu__list > li > ul > li > ul > li > a {
+  color: var(--logistiq-blue) !important;
+}
+
+.mobile-nav__content .main-menu__list > li:not(:last-child),
+.mobile-nav__content .main-menu__list > li > ul > li:not(:last-child),
+.mobile-nav__content .main-menu__list > li > ul > li > ul > li:not(:last-child) {
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.mobile-nav__content .main-menu__list > li > ul,
+.mobile-nav__content .main-menu__list > li > ul > li > ul {
+  border-top: 1px solid #e0e0e0 !important;
+}
+
+.mobile-nav__content .main-menu__list li a:hover,
+.mobile-nav__content .main-menu__list li a.expanded {
+  color: var(--logistiq-red) !important;
+}
+
+.mobile-nav__content .main-menu__list > li > button:after,
+.mobile-nav__content .main-menu__list > li > ul > li > button:after,
+.mobile-nav__content .main-menu__list > li > ul > li > ul > li > button:after {
+  color: var(--logistiq-blue) !important;
+}
+
+.mobile-nav__content .main-menu__list > li > button.expanded:after,
+.mobile-nav__content .main-menu__list > li > ul > li > button.expanded:after,
+.mobile-nav__content .main-menu__list > li > ul > li > ul > li > button.expanded:after {
+  color: var(--logistiq-red) !important;
+}
+
+.mobile-nav__contact li {
+  color: var(--logistiq-blue) !important;
+}
+
+.mobile-nav__contact li a {
+  color: var(--logistiq-blue) !important;
+}
+
+.mobile-nav__contact li a:hover {
+  color: var(--logistiq-red) !important;
+}
+
+.mobile-nav__contact li > i {
+  background-color: var(--logistiq-blue) !important;
+  color: var(--logistiq-white) !important;
+}
+
+.mobile-nav__social a {
+  color: var(--logistiq-blue) !important;
+}
+
+.mobile-nav__social a:hover {
+  color: var(--logistiq-red) !important;
+}
+
 .main-header-three__top {
   background: var(--logistiq-white) !important;
 }

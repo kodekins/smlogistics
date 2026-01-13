@@ -67,7 +67,7 @@ const ProjectOne: React.FC = () => {
                     <h4>Latest Project</h4>
                   </div>
                   <div className="icon">
-                    <span className="icon-plane2 float-bob-x3"></span>
+                    <span className="icon-shipment float-bob-x3"></span>
                   </div>
                 </div>
                 <h2 className="sec-title__title tg-element-title">

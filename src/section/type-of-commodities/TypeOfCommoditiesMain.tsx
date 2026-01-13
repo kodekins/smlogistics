@@ -2,16 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // Import images from public folder
-const ConsumerGoodsImg = '/sm-dry van1.png';
-const ElectronicsImg = '/smlogistics-4.jpg';
-const FoodAgriImg = '/reefer-1.jpeg';
-const IndustrialImg = '/smlogistics-2.jpg';
-const ConstructionImg = '/flatbed-1.jpeg';
-const VehiclesImg = '/sm-flatbed1.jpg';
-const OversizedImg = '/overload.jpeg';
-const ChemicalsImg = '/smlogistics-5.jpg';
-const BulkRecycleImg = '/dumptrucks-1.jpeg';
-const GeneralFreightImg = '/sm-ltl1.jpg';
+const ConsumerGoodsImg = '/ms-toc1.jpeg';
+const ElectronicsImg = '/ms-toc5.jpeg';
+const FoodAgriImg = '/ms-toc3.jpeg';
+const IndustrialImg = '/ms-toc2.jpeg';
+const ConstructionImg = '/ms-toc4.jpeg';
+const VehiclesImg = '/ms-toc1.jpeg';
+const OversizedImg = '/ms-toc4.jpeg';
+const ChemicalsImg = '/ms-toc3.jpeg';
+const BulkRecycleImg = '/ms-toc2.jpeg';
+const GeneralFreightImg = '/ms-toc5.jpeg';
 
 const commodities = [
   {

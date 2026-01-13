@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
 // Import images
-import skillShape1 from '../../assets/images/shapes/skill-v1-shape1.png';
-import skillShape2 from '../../assets/images/shapes/skill-v1-shape2.png';
 import skillImg1 from '/sm-home4.png';
 import skillImg2 from '/dumptrucks-2.jpeg';
 
@@ -13,12 +11,6 @@ const SkillOne = () => {
           {/* Skill Images Section */}
           <div className="col-xl-5">
             <div className="skill-one__img">
-              <div className="shape1 float-bob-y">
-                <img src={skillShape1} alt="Decorative shape" />
-              </div>
-              <div className="shape2 float-bob-y">
-                <img src={skillShape2} alt="Decorative shape" />
-              </div>
               <div className="skill-one__img1">
                 <img 
                   src={skillImg1} 
@@ -58,7 +50,7 @@ const SkillOne = () => {
                     <h4>Our Skills</h4>
                   </div>
                   <div className="icon">
-                    <span className="icon-plane2 float-bob-x3"></span>
+                    <span className="icon-shipment float-bob-x3"></span>
                   </div>
                 </div>
                 <h2 className="sec-title__title tg-element-title">

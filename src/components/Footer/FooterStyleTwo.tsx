@@ -33,13 +33,7 @@ const FooterTwo = () => {
                   alt=""
                 />
               </div>
-              <div className="shape2">
-                <img
-                  className="float-bob-y"
-                  src={pattern4}
-                  alt=""
-                />
-              </div>
+              
               <div className="footer-one--two__cta-inner">
                 <div className="text-box">
                   <h2>Reliable Brokering With Industry-Leading Performance!</h2>

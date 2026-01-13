@@ -1,15 +1,12 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import ModalVideo from "react-modal-video";
 import { allFAQs } from "../../data/faqData";
 
 // Import images
-import faqShape from "../../assets/images/shapes/faq-v1-shape1.png";
 import faqImage from "../../assets/images/resources/faq-v1-img1.jpg";
 import slidingTextIcon from "../../assets/images/icon/sliding-text-icon-1.png";
 
 const FaqOne = () => {
-  const [isOpen, setOpen] = useState(false);
   const [activeAccordion, setActiveAccordion] = useState(1);
   const slidingTextRef = useRef(null);
 
@@ -43,10 +40,6 @@ const FaqOne = () => {
 
   return (
     <section className="faq-one">
-      <div className="shape1 float-bob-x">
-        <img src={faqShape} alt="Decorative shape" />
-      </div>
-
       <div className="container">
         <div className="row">
           {/* FAQ Content */}
@@ -60,7 +53,7 @@ const FaqOne = () => {
                       <h4>Company's FAQ</h4>
                     </div>
                     <div className="icon">
-                      <span className="icon-plane2 float-bob-x3"></span>
+                      <span className="icon-shipment float-bob-x3"></span>
                     </div>
                   </div>
                   <h2 className="sec-title__title tg-element-title">
@@ -101,24 +94,11 @@ const FaqOne = () => {
             </div>
           </div>
 
-          {/* FAQ Image + Video */}
+          {/* FAQ Image */}
           <div className="col-xl-6">
             <div className="faq-one__img">
               <div className="faq-one__img-box">
                 <img src={faqImage} alt="FAQ visual" />
-
-                <div className="faq-one__video-link">
-                  <button
-                    onClick={() => setOpen(true)}
-                    className="video-popup"
-                    style={{ background: "none", border: "none" }}
-                  >
-                    <div className="faq-one__video-icon">
-                      <span className="icon-video"></span>
-                      <i className="ripple"></i>
-                    </div>
-                  </button>
-                </div>
               </div>
             </div>
           </div>
@@ -146,14 +126,6 @@ const FaqOne = () => {
           </div>
         </div>
       </div>
-
-      <ModalVideo
-        channel="youtube"
-        autoplay
-        isOpen={isOpen}
-        videoId="kJQP7kiw5Fk"
-        onClose={() => setOpen(false)}
-      />
     </section>
   );
 };

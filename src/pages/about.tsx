@@ -3,12 +3,10 @@ import BackToTop from '../components/elements/BackToTop';
 import HeaderStyleOne from '../components/Header/HeaderStyleOne';
 import FooterTwo from '../components/Footer/FooterStyleTwo';
 import SiteBreadcrumb from '../components/Breadcumb';
-import bannerbg from '/smlogistics-5.jpg';
+import bannerbg from '/ms-about2.png';
 import AboutOne from '../section/about/AboutOne';
-import ServiceOne from '../section/about/ServiceOne';
-import ProjectOne from '../section/about/ProjectOne';
+import ServicesOne from '../section/HomeOne/ServicesOne';
 import WhyChooseOne from '../section/about/WhyChooseOne';
-import TestimonialOne from '../section/about/TestimonialOne';
 
 // 🔹 Props type
 interface AboutProps {
@@ -27,10 +25,8 @@ const About: React.FC<AboutProps> = ({ isVisible }) => {
       />
       {/* SiteBreadcrumb */}
       <AboutOne />
-      <ServiceOne />
-      
+      <ServicesOne />
       <WhyChooseOne />
-      <TestimonialOne />
 
       <BackToTop scroll={isVisible} />
        <FooterTwo />

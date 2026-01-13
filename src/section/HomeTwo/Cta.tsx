@@ -22,12 +22,6 @@ const Cta = () => {
                     <div className="shape1 float-bob-x">
                         <img src={shape1} alt="Shape decoration" />
                     </div>
-                    <div className="shape2">
-                        <img src={shape2} alt="Shape decoration" />
-                    </div>
-                    <div className="shape3">
-                        <img src={shape3} alt="Shape decoration" />
-                    </div>
                     <div className="cta-one__content">
                         <h2>Recognized as One of The <br /> Leading <span>Company!</span></h2>
                         <p>Logistic service provider company plays a pivotal <br />

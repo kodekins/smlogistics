@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import patternBg from "../../assets/images/pattern/why-choose-v1-pattern.png";
-import shape1 from "../../assets/images/shapes/why-choose-v1-shape1.png";
 
 const cccc = () => {
   const [formData, setFormData] = useState({
@@ -44,9 +43,6 @@ const cccc = () => {
       <div className="why-choose-one__pattern">
         <img src={patternBg} alt="Pattern Background" />
       </div>
-      <div className="shape1 float-bob-y">
-        <img src={shape1} alt="Floating Shape" />
-      </div>
       <div className="container">
         <div className="row">
           {/* Start Why Choose One Content */}
@@ -59,7 +55,7 @@ const cccc = () => {
                     <h4>Why Choose us</h4>
                   </div>
                   <div className="icon">
-                    <span className="icon-plane2 float-bob-x3"></span>
+                    <span className="icon-shipment float-bob-x3"></span>
                   </div>
                 </div>
                 <h2 className="sec-title__title tg-element-title">

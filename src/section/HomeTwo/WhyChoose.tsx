@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import ModalVideo from "react-modal-video";
-import "react-modal-video/css/modal-video.min.css";
+import React from "react";
 import CountUp from "react-countup";
 
 // Import images directly
@@ -15,8 +13,6 @@ import img3 from "../../assets/images/resources/why-choose-v2-img3.png";
 import img4 from "../../assets/images/resources/why-choose-v2-img4.png";
 
 const WhyChooseUs = () => {
-  const [isOpen, setOpen] = useState(false);
-
   return (
     <>
       <section className="why-choose-two">
@@ -26,18 +22,6 @@ const WhyChooseUs = () => {
         >
           <div className="shape3 float-bob-x">
             <img src={shape3} alt="" />
-          </div>
-          <div className="why-choose-two__video-box">
-            <button
-              onClick={() => setOpen(true)}
-              className="video-popup"
-              style={{ background: "none", border: "none", padding: 0 }}
-            >
-              <div className="why-choose-two__video-box-icon">
-                <span className="icon-video"></span>
-                <i className="ripple"></i>
-              </div>
-            </button>
           </div>
         </div>
         <div className="shape1">
@@ -52,7 +36,7 @@ const WhyChooseUs = () => {
                   <h4>Why choose us</h4>
                 </div>
                 <div className="icon">
-                  <span className="icon-plane2 float-bob-x3"></span>
+                  <span className="icon-shipment float-bob-x3"></span>
                 </div>
               </div>
               <h2 className="sec-title__title tg-element-title">
@@ -192,14 +176,6 @@ const WhyChooseUs = () => {
           </div>
         </div>
       </section>
-
-      <ModalVideo
-        channel="youtube"
-        autoplay
-        isOpen={isOpen}
-        videoId="kJQP7kiw5Fk"
-        onClose={() => setOpen(false)}
-      />
     </>
   );
 };

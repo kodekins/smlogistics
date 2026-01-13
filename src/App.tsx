@@ -74,7 +74,7 @@ const App = () => {
         <Route path="testimonial" element={<Testimonial isVisible={isVisible} />} />
         <Route path="pricing" element={<Pricing isVisible={isVisible} />} />
         <Route path="faq" element={<Faq isVisible={isVisible} />} />
-        <Route path="why-us" element={<WhyUsPage isVisible={isVisible} />} />
+  <Route path="why-us" element={<WhyUsPage isVisible={isVisible} />} />
         <Route path="types-of-commodities" element={<TypesOfCommodities isVisible={isVisible} />} />
         <Route path="*" element={<NoPage isVisible={isVisible} />} />
         <Route path="products" element={<Products isVisible={isVisible} />} />

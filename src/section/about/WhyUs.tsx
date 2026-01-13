@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import patternBg from "../../assets/images/pattern/why-choose-v1-pattern.png";
-import shape1 from "../../assets/images/shapes/why-choose-v1-shape1.png";
 
 const WhyUs: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -37,9 +36,6 @@ const WhyUs: React.FC = () => {
     <section className="why-choose-one">
       <div className="why-choose-one__pattern">
         <img src={patternBg} alt="Pattern Background" />
-      </div>
-      <div className="shape1 float-bob-y">
-        <img src={shape1} alt="Floating Shape" />
       </div>
       <div className="container">
         <div className="row">

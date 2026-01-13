@@ -72,7 +72,7 @@ const ServicesOne = () => {
                                 <h4>Our Service</h4>
                             </div>
                             <div className="icon">
-                                <span className="icon-plane2 float-bob-x3"></span>
+                                <span className="icon-shipment float-bob-x3"></span>
                             </div>
                         </div>
                         <h2 className="sec-title__title tg-element-title">Provide Efficient Logistics

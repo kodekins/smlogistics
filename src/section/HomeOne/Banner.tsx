@@ -2,7 +2,6 @@ import HeroShape1 from '../../assets/images/pattern/banner-v1-pattern.png';
 import HeroImg1 from '../../assets/images/pattern/banner-v1-pattern2.png';
 import HeroImg2 from '../../assets/images/banner/banner-v1-img1.png';
 import HeroImg3 from '../../assets/images/banner/banner-v1-img5.png';
-import HeroImg4 from '../../assets/images/shapes/banner-v1-shape1.png';
 import HeroImg5 from '../../assets/images/banner/banner-v1-flag1.png';
 import HeroImg6 from '/smlogistics-6.jpg';
 import HeroImg7 from '/smlogistics-5.jpg';
@@ -34,9 +33,6 @@ const Banner = () => {
             src={HeroImg3}
             alt="#"
           />
-        </div>
-        <div className="shape1 rotate-me">
-          <img src={HeroImg4} alt="#" />
         </div>
         <div className="container">
           <div className="banner-one__location clearfix">

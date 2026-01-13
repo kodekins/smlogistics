@@ -1550,7 +1550,7 @@ animation: spinner 1s infinite linear;
   left: -40px;
   bottom: -20px;
   right: 0;
-  background: var(--logistiq-base);
+  background: var(--logistiq-white);
   clip-path: polygon(0 0, 100% 0%, 87% 100%, 0% 100%);
   z-index: -1;
   content: "";
@@ -3719,7 +3719,7 @@ Main Header Three
     margin-left: 40px;
   }
 
-  .working-process-one__single .plane-icon {
+  .working-process-one__single .shipment-icon {
     display: none;
   }
 
@@ -4168,7 +4168,7 @@ Main Header Three
     display: block;
   }
 
-  .working-process-one__single .plane-icon {
+  .working-process-one__single .shipment-icon {
     display: none;
   }
 
@@ -5017,7 +5017,7 @@ Main Header Three
     margin-top: 30px;
   }
 
-  .working-process-one__single .plane-icon {
+  .working-process-one__single .shipment-icon {
     display: none;
   }
 

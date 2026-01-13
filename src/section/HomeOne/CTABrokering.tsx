@@ -25,20 +25,7 @@ const CTABrokering = () => {
           boxShadow: '0 10px 30px rgba(0,0,0,0.2)'
         }}>
           {/* Decorative Shapes */}
-          <div style={{
-            position: 'absolute',
-            left: '30px',
-            top: '50%',
-            transform: 'translateY(-50%)',
-            zIndex: 1
-          }}>
-            <img
-              className="float-bob-x3"
-              src={pattern3}
-              alt=""
-              style={{ width: '80px', opacity: 0.3 }}
-            />
-          </div>
+          
           <div style={{
             position: 'absolute',
             right: '30px',

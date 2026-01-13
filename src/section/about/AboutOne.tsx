@@ -1,13 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import ReactCurvedText from "react-curved-text";
 import gsap from "gsap";
 
 // Images
-import About_shape1 from "../../assets/images/shapes/about-v1-shape1.png";
-import About_shape2 from "../../assets/images/shapes/about-v1-shape2.png";
-import About_shape3 from "/smlogistics-4.jpg";
-import About_Image from "/smlogistics-5.jpg";
+import About_shape3 from "/ms-about2.png";
+import About_Image from "/ms-about3.png";
 import About_shape4 from "../../assets/images/shapes/about-v1-shape3.png";
 
 const AboutOne: React.FC = () => {
@@ -65,11 +62,56 @@ const AboutOne: React.FC = () => {
 
                 <div className="about-one__content-text1" ref={addToRefs}>
                   <p>
-                    Star MS Logistics is a professional freight brokerage committed to providing efficient,
-                    reliable, and cost-effective shipping solutions. Our goal is to simplify logistics for
-                    businesses and individuals by offering end-to-end services tailored to your needs. With
-                    a focus on transparency, timeliness, and customer satisfaction, we ensure that your
-                    cargo reaches its destination safely and on schedule.
+                    Star MS Logistics is a U.S.–based freight brokerage company officially licensed in December 2025, 
+                    built on a foundation of over 10 years of hands-on experience in the U.S. freight and logistics market.
+                  </p>
+                </div>
+
+                <div className="about-one__content-text1" ref={addToRefs}>
+                  <p>
+                    Before launching under the Star MS Logistics name, our leadership and core operations team spent 
+                    more than a decade working as freight broker agents, dispatch professionals, and carrier coordinators 
+                    within the U.S. transportation industry. While our brokerage license is recent, our people, systems, 
+                    and market knowledge are deeply established.
+                  </p>
+                </div>
+
+                <div className="about-one__content-text1" ref={addToRefs}>
+                  <p>
+                    Star MS Logistics was formed to bring that experience under one independent, fully compliant brokerage 
+                    — combining industry expertise with modern processes, transparency, and accountability.
+                  </p>
+                </div>
+
+                <div className="about-one__content-text1" ref={addToRefs}>
+                  <p>
+                    As a freight broker, we do not own trucks. Our role is to professionally connect reliable carriers 
+                    with shippers, ensuring every load is handled with precision, compliance, and care. From rate 
+                    negotiation to dispatch, documentation, and delivery follow-up, we manage the process end-to-end.
+                  </p>
+                </div>
+
+                <div className="about-one__content-text1" ref={addToRefs}>
+                  <p>
+                    Our experienced staff and management team understand the real challenges of freight movement — delays, 
+                    capacity shortages, compliance risks, and cargo protection. We work only with verified carriers, 
+                    supported by active insurance validation and compliance checks.
+                  </p>
+                </div>
+
+                <div className="about-one__content-text1" ref={addToRefs}>
+                  <p>
+                    Every shipment we arrange is protected through strict carrier vetting, insurance verification, and 
+                    risk-control procedures — giving our customers confidence that their freight is not only moving, 
+                    but fully protected.
+                  </p>
+                </div>
+
+                <div className="about-one__content-text1" ref={addToRefs}>
+                  <p>
+                    Today, Star MS Logistics provides nationwide freight solutions across the United States, including 
+                    FTL, LTL, dry van, reefer, flatbed, and specialized freight. We serve businesses that value reliability, 
+                    clear communication, and long-term logistics partnerships.
                   </p>
                 </div>
 
@@ -82,12 +124,11 @@ const AboutOne: React.FC = () => {
                             <span className="icon-worldwide-shipping-1" />
                           </div>
                           <div className="title-box">
-                            <h3>Worldwide Service</h3>
+                            <h3>Nationwide Coverage</h3>
                           </div>
                         </div>
                         <p>
-                          Logistic service provider company plays a pivotal role
-                          in the global
+                          Comprehensive freight solutions across all U.S. states through our verified carrier network
                         </p>
                       </div>
                     </div>
@@ -99,12 +140,11 @@ const AboutOne: React.FC = () => {
                             <span className="icon-24-hours-service" />
                           </div>
                           <div className="title-box">
-                            <h3>24/7 Online Support</h3>
+                            <h3>Experienced Team</h3>
                           </div>
                         </div>
                         <p>
-                          Logistic service provider company plays a pivotal role
-                          in the global
+                          Over 10 years of combined expertise in freight brokerage and carrier coordination
                         </p>
                       </div>
                     </div>
@@ -141,12 +181,6 @@ const AboutOne: React.FC = () => {
             {/* About Image */}
             <div className="col-xl-5">
               <div className="about-one__img">
-                <div className="shape1 float-bob-y">
-                  <img src={About_shape1} alt="Shape1" />
-                </div>
-                <div className="shape2 float-bob-y">
-                  <img src={About_shape2} alt="Shape2" />
-                </div>
                 <div className="about-one__img1" ref={addToRefs}>
                   <img src={About_shape3} alt="About1" />
                 </div>
@@ -154,38 +188,7 @@ const AboutOne: React.FC = () => {
                   <div className="about-one__img2-inner" ref={addToRefs}>
                     <img src={About_Image} alt="About2" />
                   </div>
-                  <div className="about-one__circle-text">
-                    <div className="about-one__round-text-box">
-                      <div className="inner">
-                        <div className="about-one__curved-circle rotate-me">
-                          <ReactCurvedText
-                            width={150}
-                            height={150}
-                            cx={75}
-                            cy={75}
-                            rx={55}
-                            ry={55}
-                            startOffset={0}
-                            reversed={true}
-                            text="WELCOME TO OUR COMPANY SINCE 2002"
-                            textProps={{ style: { fontSize: "14" } }}
-                            textPathProps={{ fill: "#ffffff" }}
-                            tspanProps={null}
-                            ellipseProps={null}
-                            svgProps={null}
-                          />
-                        </div>
-                      </div>
-                      <div className="overlay-icon-box">
-                        <Link to="#">
-                          <i className="icon-location1" />
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="shape3 float-bob-y">
-                    <img src={About_shape4} alt="Shape3" />
-                  </div>
+                  
                 </div>
               </div>
             </div>

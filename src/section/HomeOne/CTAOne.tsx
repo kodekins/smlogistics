@@ -33,12 +33,6 @@ const CtaOne = () => {
           <div className="shape1 float-bob-x">
             <img src={shape1} alt="Decorative shape" />
           </div>
-          <div className="shape2">
-            <img src={shape2} alt="Decorative shape" />
-          </div>
-          <div className="shape3">
-            <img src={shape3} alt="Decorative shape" />
-          </div>
           
           {/* CTA Content */}
           <div className="cta-one__content">

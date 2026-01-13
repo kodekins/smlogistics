@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import bannerImg1 from "/sm-home3.png";
 import bannerImg2 from "/sm-home4.png";
-import shape1 from "../../assets/images/shapes/banner-v2-shape1.png";
-import shape2 from "../../assets/images/shapes/banner-v2-shape2.png";
 
 const Banner = () => {
     const [activeIndex, setActiveIndex] = useState(1);
-    const handleOnClick = (index) => {
+    const handleOnClick = (index: number) => {
         setActiveIndex(index);
     };
 
@@ -20,12 +18,6 @@ const Banner = () => {
                 </div>
                 <div className="banner-two__img2 float-bob-x">
                     <img src={bannerImg2} alt="" />
-                </div>
-                <div className="shape1 float-bob-y">
-                    <img src={shape1} alt="" />
-                </div>
-                <div className="shape2">
-                    <img src={shape2} alt="" />
                 </div>
                 <div className="container clearfix">
                     <div className="banner-two__content">

@@ -115,18 +115,18 @@ Working Process One
 }
 
 
-.working-process-one__single .plane-icon {
+.working-process-one__single .shipment-icon {
     position: absolute;
     top: 37px;
     right: -35px;
 }
 
-.working-process-one__single .plane-icon span {
+.working-process-one__single .shipment-icon span {
     position: relative;
     display: block;
 }
 
-.working-process-one__single .plane-icon span::before {
+.working-process-one__single .shipment-icon span::before {
     position: relative;
     display: inline-block;
     color: var(--logistiq-base);
