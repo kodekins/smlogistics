@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { allFAQs } from "../../data/faqData";
 
 // Import images
-import faqImage from "../../assets/images/resources/faq-v1-img1.jpg";
+import faqImage from "/ms-faq.png";
 import slidingTextIcon from "../../assets/images/icon/sliding-text-icon-1.png";
 
 const FaqOne = () => {
