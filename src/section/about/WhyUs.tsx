@@ -11,7 +11,7 @@ const WhyUs: React.FC = () => {
     load: "Load",
   });
 
-  const [distanceRange, setDistanceRange] = useState({ min: 0, max: 1000 });
+  const [distanceRange, setDistanceRange] = useState({ min: 0, max: 10000 });
 
   const handleInputChange = (e: any) => {
     const { name, value } = e.target;

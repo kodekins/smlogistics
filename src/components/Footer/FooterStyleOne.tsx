@@ -41,7 +41,7 @@ const FooterStyleOne = () => {
                                             <div className="text-box">
                                                 <p>Call For Quote</p>
                                                 <h4>
-                                                    <Link to="tel:+923313435042">+92 331 343 5042</Link>
+                                                    <Link to="tel:+18477891170">847-789-1170</Link>
                                                 </h4>
                                             </div>
                                         </div>
@@ -129,15 +129,11 @@ const FooterStyleOne = () => {
                                                     </div>
                                                     <div className="text-box">
                                                         <p>
-                                                            <Link to="mailto:starmslogistics@gmail.com">
-                                                                starmslogistics@gmail.com
+                                                            <Link to="mailto:contact@starmslogistics.com">
+                                                                contact@starmslogistics.com
                                                             </Link>
                                                         </p>
-                                                        <p>
-                                                            <Link to="mailto:support@starmslogistics.com">
-                                                                support@starmslogistics.com
-                                                            </Link>
-                                                        </p>
+                                                        
                                                     </div>
                                                 </li>
                                                 <li>
@@ -146,7 +142,7 @@ const FooterStyleOne = () => {
                                                     </div>
                                                     <div className="text-box">
                                                         <p>
-                                                            <Link to="tel:+923313435042">+92 331 343 5042</Link>
+                                                            <Link to="tel:+18477891170">847-789-1170</Link>
                                                         </p>
                                                     </div>
                                                 </li>

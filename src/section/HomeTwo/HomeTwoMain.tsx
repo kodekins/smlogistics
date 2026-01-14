@@ -22,7 +22,7 @@ const HomeTwoMain = () => {
 		<Project />
 		<Cta />
 		<Team />
-		<Testimonial />
+		
 		<Brand />
 		<WhyChoose />
 		<WorkingProcess />

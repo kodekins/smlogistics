@@ -13,7 +13,6 @@ import ltlImg from '/sm-home3.png';
 import ftlImg from '/sm-home4.png';
 import reeferImg from '/sm-home2.jpg';
 import flatbedImg from '/sm-home4.png';
-import dryVanImg from '/sm-home3.png';
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
@@ -68,13 +67,6 @@ const FeaturesTwo = () => {
       text: "Efficient long-distance trucking across state lines with reliable delivery schedules and tracking.",
       link: "/personal-delivery",
     },
-    {
-      img: dryVanImg,
-      tag: "General Freight",
-      title: "Dry Van Transport",
-      text: "Standard enclosed trailers protecting your general cargo from weather and road elements.",
-      link: "/services",
-    },
   ];
 
   return (
@@ -86,7 +78,7 @@ const FeaturesTwo = () => {
               <div className="sec-title__tagline">
                 <div className="line"></div>
                 <div className="text tg-element-title">
-                  <h4>Our Shipping Solutions</h4>
+                  <h4>Our Services</h4>
                 </div>
                 <div className="icon">
                   <span className="icon-shipment float-bob-x3"></span>

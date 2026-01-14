@@ -8,12 +8,8 @@ import serviceImg1 from '/sm-ltl1.jpg';
 import serviceImg2 from '/smlogistics-6.jpg';
 import serviceImg3 from '/sm-interstate1.jpg';
 import serviceImg4 from '/reefer-1.jpeg';
-import serviceImg5 from '/smlogistics-2.jpg';
-import serviceImg6 from '/sm-dry van1.png';
-import serviceImg7 from '/sm-flatbed1.jpg';
 import serviceImg8 from '/dumptrucks-1.jpeg';
 import patternBg from '../../assets/images/pattern/service-v1-pattern.jpg';
-
 
 
 
@@ -55,30 +51,6 @@ const ServicesOne = () => {
         },
         {
             id: 5,
-            title: "Container Drayage",
-            description: "Efficient transport of containers from ports to warehouses or other destinations.",
-            image: serviceImg5,
-            icon: "icon-container",
-            link: "ocean-transport?type=container"
-        },
-        {
-            id: 6,
-            title: "Dry Van",
-            description: "Standard enclosed trailer freight services for general cargo and non-perishable freight.",
-            image: serviceImg6,
-            icon: "icon-shipment",
-            link: "international-transport?type=dryvan"
-        },
-        {
-            id: 7,
-            title: "Flat Bed",
-            description: "Open trailer transport for oversized and overweight freight that requires flexible loading.",
-            image: serviceImg7,
-            icon: "icon-international-shipping",
-            link: "emergency-transport?type=flatbed"
-        },
-        {
-            id: 8,
             title: "Dump Truck",
             description: "Bulk material transport and delivery for construction sites and landscaping projects.",
             image: serviceImg8,

@@ -62,7 +62,7 @@ const Header = (props) => {
                                                     </div>
 
                                                     <div className="text-box">
-                                                        <p><span>Talk to Us</span> <Link to="tel:+923313435042">+92 331 343 5042</Link></p>
+                                                        <p><span>Talk to Us</span> <Link to="tel:+18477891170">847-789-1170</Link></p>
                                                     </div>
                                                 </li>
 
@@ -73,8 +73,26 @@ const Header = (props) => {
 
                                                     <div className="text-box">
                                                         <p><span>Mail Us</span> <Link
-                                                                to="mailto:starmslogistics@gmail.com">starmslogistics@gmail.com</Link>
+                                                                to="mailto:contact@starmslogistics.com">contact@starmslogistics.com</Link>
                                                         </p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div className="icon">
+                                                        <span className="icon-phone"></span>
+                                                    </div>
+
+                                                    <div className="text-box">
+                                                        <p><span>Talk to Us</span> <Link to="tel:+18477891170">847-789-1170</Link></p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div className="icon">
+                                                        <span className="icon-truck"></span>
+                                                    </div>
+
+                                                    <div className="text-box">
+                                                        <p><span>Talk to Us</span> <Link to="tel:+18477891170">847-789-1170</Link></p>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -174,7 +192,7 @@ const Header = (props) => {
                                                 </div>
 
                                                 <div className="text-box">
-                                                    <p><span>Talk to Us</span> <Link to="tel:+923313435042">+92 331 343 5042</Link></p>
+                                                    <p><span>Talk to Us</span> <Link to="tel:+18477891170">847-789-1170</Link></p>
                                                 </div>
                                             </li>
 

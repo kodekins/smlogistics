@@ -170,7 +170,7 @@ const AboutOne: React.FC = () => {
                       <p>Make A Phone Call</p>
                       <h4>
                         <a href="tel:1234567890">
-+92 331 343 5042</a>
+847-789-1170</a>
                       </h4>
                     </div>
                   </div>

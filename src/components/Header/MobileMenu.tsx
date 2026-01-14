@@ -53,18 +53,14 @@ const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
 
                 <li><Link to="/about" onClick={handleMobileMenu}>About Us</Link></li>
                 <li><Link to="/why-us" onClick={handleMobileMenu}>Why Us</Link></li>
-                <li><Link to="/types-of-commodities" onClick={handleMobileMenu}>Types of Commodities</Link></li>
 
                 <li className={isActive.key === 2 ? 'dropdown current' : 'dropdown'}>
-                  <Link to="/service" onClick={handleMobileMenu}>Shipping Solutions</Link>
+                  <Link to="/service" onClick={handleMobileMenu}>Services</Link>
                   <ul style={{ display: `${isActive.key === 2 ? 'block' : 'none'}` }}>
                     <li><Link to="/track-transport" onClick={handleMobileMenu}>LTL (Less Than Truckload)</Link></li>
                     <li><Link to="/international-transport" onClick={handleMobileMenu}>FTL (Full Truckload)</Link></li>
                     <li><Link to="/personal-delivery" onClick={handleMobileMenu}>Interstate Transport</Link></li>
                     <li><Link to="/ocean-transport" onClick={handleMobileMenu}>Reefer Transport</Link></li>
-                    <li><Link to="/ocean-transport" onClick={handleMobileMenu}>Container Drayage</Link></li>
-                    <li><Link to="/international-transport" onClick={handleMobileMenu}>Dry Van</Link></li>
-                    <li><Link to="/emergency-transport" onClick={handleMobileMenu}>Flat Bed</Link></li>
                     <li><Link to="/track-transport" onClick={handleMobileMenu}>Dump Truck</Link></li>
                   </ul>
                   <button className={isActive.key === 2 ? 'expanded open' : ''} onClick={() => handleToggle(2)}>
@@ -82,13 +78,13 @@ const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
           <ul className="mobile-nav__contact list-unstyled">
             <li>
               <i className="fa fa-envelope"></i>
-              <Link to="mailto:starmslogistics@gmail.com" onClick={handleMobileMenu}>
-                starmslogistics@gmail.com
+              <Link to="mailto:contact@starmslogistics.com" onClick={handleMobileMenu}>
+                contact@starmslogistics.com
               </Link>
             </li>
             <li>
               <i className="fa fa-phone-alt"></i>
-              <Link to="tel:+923313435042" onClick={handleMobileMenu}>+92 331 343 5042</Link>
+              <Link to="tel:+18477891170" onClick={handleMobileMenu}>847-789-1170</Link>
             </li>
           </ul>
 

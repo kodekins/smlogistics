@@ -1,17 +1,14 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import ServiceImg1 from '../../assets/images/services/services-v1-img1.jpg';
-import ServiceImg2 from '../../assets/images/services/services-v1-img2.jpg';
-import ServiceImg3 from '../../assets/images/services/services-v1-img3.jpg';
-import ReeferImg from '/reefer-1.jpeg';
-import FlatbedImg from '/flatbed-1.jpeg';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Autoplay, Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
 import DumpTruckImg from '/dumptrucks-1.jpeg';
-import OverloadImg from '/overload.jpeg';
-import TruckImg1 from '/smlogistics-1.jpg';
-import TruckImg2 from '/smlogistics-2.jpg';
-import TruckImg3 from '/smlogistics-3.jpg';
-import TruckImg4 from '/smlogistics-4.jpg';
-import TruckImg5 from '/smlogistics-5.jpg';
+import TruckImg1 from '/sm-ltl1.jpg';
+import TruckImg3 from '/sm-interstate1.jpg';
+import TruckImg4 from '/reefer-2.jpeg';
 import TruckImg6 from '/smlogistics-6.jpg';
 
 const services = [
@@ -39,30 +36,9 @@ const services = [
   {
     title: 'Reefer Transport',
     desc: 'Temperature-controlled shipments for perishables and climate-sensitive goods.',
-    image: ReeferImg,
+    image: TruckImg4,
     iconClass: 'icon-storehouse',
     link: '/ocean-transport',
-  },
-  {
-    title: 'Container Drayage',
-    desc: 'Efficient transport of containers from ports to warehouses or other destinations.',
-    image: TruckImg2,
-    iconClass: 'icon-delivery-man',
-    link: '/ocean-transport',
-  },
-  {
-    title: 'Dry Van',
-    desc: 'Standard enclosed trailer for general cargo protection from weather elements.',
-    image: TruckImg5,
-    iconClass: 'icon-shipment',
-    link: '/international-transport',
-  },
-  {
-    title: 'Flat Bed',
-    desc: 'Open trailers for irregularly shaped cargo that needs easy loading.',
-    image: FlatbedImg,
-    iconClass: 'icon-international-shipping',
-    link: '/emergency-transport',
   },
   {
     title: 'Dump Truck',
@@ -75,43 +51,197 @@ const services = [
 
 const ServiceOne = () => {
   return (
-    <section className="service-one service-one--service">
+    <section className="service-one service-one--service" style={{ padding: '80px 0' }}>
       <div className="container">
-        <div className="row">
+        {/* Desktop View: Alternating Rows */}
+        <div className="d-none d-md-block">
           {services.map((service, index) => (
             <div
-              className={`col-xl-4 col-lg-6 col-md-6 wow ${
+              className={`row align-items-center wow ${
                 index % 2 === 0 ? 'fadeInLeft' : 'fadeInRight'
               }`}
               data-wow-delay="0ms"
               data-wow-duration="1500ms"
               key={index}
+              style={{ 
+                marginBottom: index !== services.length - 1 ? '60px' : '0',
+                backgroundColor: index % 2 === 0 ? '#f8f9fa' : '#ffffff',
+                padding: '40px 30px',
+                borderRadius: '10px',
+                boxShadow: '0 2px 10px rgba(0,0,0,0.05)'
+              }}
             >
-              <div className="service-one__single">
-                <div className="service-one__single-inner">
-                  <div className="service-one__single-img">
-                    <img src={service.image} alt={service.title} />
-                  </div>
-
-                  <div className="service-one__single-content">
-                    <h2>
-                      <Link to={service.link}>{service.title}</Link>
-                    </h2>
-                    <p>{service.desc}</p>
-                    <div className="btn-box">
-                      <Link to={service.link}>
-                        Read More <span className="icon-right-arrow21"></span>
-                      </Link>
-                    </div>
+              {/* Image Column */}
+              <div 
+                className={`col-xl-6 col-lg-6 ${index % 2 === 0 ? 'order-1' : 'order-2'}`}
+              >
+                <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '8px' }}>
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    style={{
+                      width: '100%',
+                      height: '400px',
+                      objectFit: 'cover',
+                      display: 'block',
+                      borderRadius: '8px'
+                    }}
+                  />
+                  <div 
+                    className="icon"
+                    style={{
+                      position: 'absolute',
+                      bottom: '20px',
+                      right: '20px',
+                      width: '80px',
+                      height: '80px',
+                      backgroundColor: '#ff6b35',
+                      borderRadius: '50%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      boxShadow: '0 4px 15px rgba(255, 107, 53, 0.4)'
+                    }}
+                  >
+                    <span className={service.iconClass} style={{ fontSize: '32px', color: '#fff' }}></span>
                   </div>
                 </div>
+              </div>
 
-                <div className="icon">
-                  <span className={service.iconClass}></span>
+              {/* Content Column */}
+              <div 
+                className={`col-xl-6 col-lg-6 ${index % 2 === 0 ? 'order-2' : 'order-1'}`}
+                style={{ 
+                  paddingLeft: index % 2 === 0 ? '40px' : '20px',
+                  paddingRight: index % 2 === 0 ? '20px' : '40px'
+                }}
+              >
+                <div>
+                  <h2 style={{ 
+                    fontSize: '32px', 
+                    fontWeight: '700', 
+                    marginBottom: '20px',
+                    color: '#1a1a1a'
+                  }}>
+                    <Link 
+                      to={service.link}
+                      style={{ color: '#1a1a1a', textDecoration: 'none' }}
+                    >
+                      {service.title}
+                    </Link>
+                  </h2>
+                  <p style={{ 
+                    fontSize: '16px', 
+                    lineHeight: '1.8', 
+                    color: '#666',
+                    marginBottom: '30px'
+                  }}>
+                    {service.desc}
+                  </p>
+                  <div className="btn-box">
+                    <Link 
+                      to={service.link}
+                      className="thm-btn"
+                      style={{
+                        display: 'inline-block',
+                        padding: '12px 30px',
+                        backgroundColor: '#ff6b35',
+                        color: '#fff',
+                        borderRadius: '5px',
+                        textDecoration: 'none',
+                        fontWeight: '600'
+                      }}
+                    >
+                      Learn More <span className="icon-right-arrow21"></span>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Mobile View: Slider */}
+        <div className="d-md-none">
+          <Swiper
+            modules={[Pagination, Autoplay, Navigation]}
+            spaceBetween={20}
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 3500, disableOnInteraction: false }}
+            style={{ paddingBottom: '50px' }}
+          >
+            {services.map((service, index) => (
+              <SwiperSlide key={index}>
+                <div 
+                  style={{ 
+                    backgroundColor: '#ffffff',
+                    padding: '25px',
+                    borderRadius: '20px',
+                    boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                    border: '1px solid #f0f0f0',
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column'
+                  }}
+                >
+                  <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '15px', marginBottom: '20px' }}>
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      style={{
+                        width: '100%',
+                        height: '260px',
+                        objectFit: 'cover',
+                        display: 'block'
+                      }}
+                    />
+                    <div style={{ position: 'absolute', top: '0', left: '0', right: '0', bottom: '0', background: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.2) 100%)' }}></div>
+                    <div 
+                      style={{
+                        position: 'absolute',
+                        bottom: '15px',
+                        right: '15px',
+                        width: '55px',
+                        height: '55px',
+                        backgroundColor: '#ff6b35',
+                        borderRadius: '50%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        boxShadow: '0 4px 10px rgba(255, 107, 53, 0.3)'
+                      }}
+                    >
+                      <span className={service.iconClass} style={{ fontSize: '22px', color: '#fff' }}></span>
+                    </div>
+                  </div>
+                  <h3 style={{ fontSize: '26px', fontWeight: '700', marginBottom: '15px', color: '#1a1a1a' }}>
+                    {service.title}
+                  </h3>
+                  <p style={{ fontSize: '15px', lineHeight: '1.7', color: '#666', marginBottom: '25px', flex: '1' }}>
+                    {service.desc}
+                  </p>
+                  <Link 
+                    to={service.link}
+                    className="thm-btn"
+                    style={{
+                      display: 'inline-block',
+                      padding: '12px 30px',
+                      backgroundColor: '#ff6b35',
+                      color: '#fff',
+                      borderRadius: '8px',
+                      textDecoration: 'none',
+                      fontWeight: '600',
+                      fontSize: '15px',
+                      textAlign: 'center'
+                    }}
+                  >
+                    Learn More <span className="icon-right-arrow21"></span>
+                  </Link>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </section>

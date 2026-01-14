@@ -62,7 +62,7 @@ const HeaderStyleOne = (props) => {
                                                         <div className="text-box">
                                                             <p>
                                                                 <span>Talk to Us</span>{" "}
-                                                                <Link to="tel:+923313435042">+92 331 343 5042</Link>
+                                                                <Link to="tel:+18477891170">847-789-1170</Link>
                                                             </p>
                                                         </div>
                                                     </li>
@@ -73,9 +73,31 @@ const HeaderStyleOne = (props) => {
                                                         <div className="text-box">
                                                             <p>
                                                                 <span>Mail Us</span>{" "}
-                                                                <Link to="mailto:starmslogistics@gmail.com">
-                                                                    starmslogistics@gmail.com
+                                                                <Link to="mailto:contact@starmslogistics.com">
+                                                                    contact@starmslogistics.com
                                                                 </Link>
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div className="icon">
+                                                            <span className="icon-dot" />
+                                                        </div>
+                                                        <div className="text-box">
+                                                            <p>
+                                                                <span>Talk to Us</span>{" "}
+                                                                <Link to="tel:+18477891170">847-789-1170</Link>
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div className="icon">
+                                                            <span className="icon-dot" />
+                                                        </div>
+                                                        <div className="text-box">
+                                                            <p>
+                                                                <span>Talk to Us</span>{" "}
+                                                                <Link to="tel:+18477891170">847-789-1170</Link>
                                                             </p>
                                                         </div>
                                                     </li>
@@ -84,9 +106,8 @@ const HeaderStyleOne = (props) => {
                                         </div>
                                         <div className="main-header-one__top-right">
                                             <div className="header-social-links">
-                                                <Link to="#"><span className="icon-facebook-f" /></Link>
-                                                <Link to="#"><span className="icon-twitter1" /></Link>
-                                                <Link to="#"><span className="icon-instagram" /></Link>
+                                                <Link to="#"><span className="icon-whatsapp" /></Link>
+                                                
                                                 <Link to="#"><span className="icon-linkedin" /></Link>
                                             </div>
                                             <div className="header-search-box">

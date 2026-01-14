@@ -80,7 +80,7 @@ const HeaderStyleTwo = (props) => {
                                                             <div className="text-box">
                                                                 <p className="text1">Send Us Mail</p>
                                                                 <p className="text2"><Link
-                                                                        to="mailto:starmslogistics@gmail.com">starmslogistics@gmail.com</Link>
+                                                                        to="mailto:Contact@starmslogistics.com">Contact@starmslogistics.com</Link>
                                                                 </p>
                                                             </div>
                                                         </li>
@@ -92,7 +92,7 @@ const HeaderStyleTwo = (props) => {
 
                                                             <div className="text-box">
                                                                 <p className="text1">Make A Call</p>
-                                                                <p className="text2"><Link to="tel:+923313435042">+92 331 343 5042</Link></p>
+                                                                <p className="text2"><Link to="tel:+18477891170">847-789-1170</Link></p>
                                                             </div>
                                                         </li>
                                                     </ul>
@@ -200,7 +200,7 @@ const HeaderStyleTwo = (props) => {
                                                                     <div className="text-box">
                                                                         <p className="text1">Send Us Mail</p>
                                                                         <p className="text2"><Link
-                                                                                to="mailto:starmslogistics@gmail.com">starmslogistics@gmail.com</Link>
+                                                                                to="mailto:Contact@starmslogistics.com">Contact@starmslogistics.com</Link>
                                                                         </p>
                                                                     </div>
                                                                 </li>
@@ -212,7 +212,7 @@ const HeaderStyleTwo = (props) => {
 
                                                                     <div className="text-box">
                                                                         <p className="text1">Make A Call</p>
-                                                                        <p className="text2"><Link to="tel:+923313435042">+92 331 343 5042</Link></p>
+                                                                        <p className="text2"><Link to="tel:+18477891170">847-789-1170</Link></p>
                                                                     </div>
                                                                 </li>
                                                             </ul>

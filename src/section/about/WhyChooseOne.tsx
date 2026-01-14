@@ -27,7 +27,7 @@ const WhyChooseOne: React.FC = () => {
     load: "Load",
   });
 
-  const [distanceRange, setDistanceRange] = useState<DistanceRange>({ min: 0, max: 1000 });
+  const [distanceRange, setDistanceRange] = useState<DistanceRange>({ min: 0, max: 10000 });
 
   // 🔹 Handle input change
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {

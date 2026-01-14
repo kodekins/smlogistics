@@ -75,7 +75,7 @@ const ContactMain = () => {
                           name: formData.name,
                           email: formData.email,
                           phone: formData.phone,
-                          subject: currentValue === "Sub" ? "General Inquiry" : `Shipping Solutions ${currentValue}`,
+                          subject: currentValue === "Sub" ? "General Inquiry" : `Services ${currentValue}`,
                           message: formData.message
                         });
 
@@ -150,11 +150,11 @@ const ContactMain = () => {
                               disabled={isSubmitting}
                             >
                               <option value={"Sub"}>Subject</option>
-                              <option value={"01"}>Shipping Solutions - Flatbed</option>
-                              <option value={"02"}>Shipping Solutions - Reefer</option>
-                              <option value={"03"}>Shipping Solutions - Dry Van</option>
-                              <option value={"04"}>Shipping Solutions - LTL</option>
-                              <option value={"05"}>Shipping Solutions - Specialized</option>
+                              <option value={"01"}>Services - FTL</option>
+                              <option value={"02"}>Services - LTL</option>
+                              <option value={"03"}>Services - Reefer</option>
+                              <option value={"04"}>Services - Interstate Transport</option>
+                              <option value={"05"}>Services - Specialized</option>
                             </select>
                           </div>
                         </div>
@@ -233,7 +233,7 @@ const ContactMain = () => {
                   <div className="content">
                     <h2>Working Hours</h2>
                     <p>
-                      Wednesday - Sunday <br /> 7:00 AM - 5:00 PM
+                      24/7 (365 days)
                     </p>
                   </div>
                 </li>
@@ -245,8 +245,8 @@ const ContactMain = () => {
                   <div className="content">
                     <h2>Email</h2>
                     <p>
-                      <Link to="mailto:starmslogistics@gmail.com">starmslogistics@gmail.com</Link> <br />
-                      <Link to="mailto:support@starmslogistics.com">support@starmslogistics.com</Link>
+                      <Link to="mailto:Contact@starmslogistics.com">Contact@starmslogistics.com</Link> <br />
+                      <Link to="mailto:Contact@starmslogistics.com">Contact@starmslogistics.com</Link>
                     </p>
                   </div>
                 </li>
@@ -258,7 +258,7 @@ const ContactMain = () => {
                   <div className="content">
                     <h2>Phone</h2>
                     <p>
-                      <Link to="tel:+923313435042">+92 331 343 5042</Link>
+                      <Link to="tel:+18477891170">847-789-1170</Link>
                     </p>
                   </div>
                 </li>

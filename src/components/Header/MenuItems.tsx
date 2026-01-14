@@ -30,13 +30,8 @@ const MenuItems = () => {
           Why Us
         </Link>
       </li>
-      <li className={currentPath === '/types-of-commodities' ? 'current-menu-item' : ''}>
-        <Link to="/types-of-commodities" className={currentPath === '/types-of-commodities' ? 'active-menu' : ''}>
-          Types of Commodities
-        </Link>
-      </li>
       <li className={isActive(menuRoutes.services) ? 'dropdown current-menu-item' : 'dropdown'}>
-        <Link to="/service">Shipping Solutions</Link>
+        <Link to="/service">Services</Link>
         <ul className="sub-menu">
           <li>
             <Link to="/track-transport" className={currentPath === '/track-transport' ? 'active-menu' : ''}>
@@ -54,23 +49,8 @@ const MenuItems = () => {
             </Link>
           </li>
           <li>
-            <Link to="/ocean-transport?type=reefer" className={currentPath === '/ocean-transport' ? 'active-menu' : ''}>
+            <Link to="/ocean-transport" className={currentPath === '/ocean-transport' ? 'active-menu' : ''}>
               Reefer Transport
-            </Link>
-          </li>
-          <li>
-            <Link to="/ocean-transport?type=container" className={currentPath === '/ocean-transport' ? 'active-menu' : ''}>
-              Container Drayage
-            </Link>
-          </li>
-          <li>
-            <Link to="/international-transport?type=dryvan" className={currentPath === '/international-transport' ? 'active-menu' : ''}>
-              Dry Van
-            </Link>
-          </li>
-          <li>
-            <Link to="/emergency-transport?type=flatbed" className={currentPath === '/emergency-transport' ? 'active-menu' : ''}>
-              Flat Bed
             </Link>
           </li>
           <li>

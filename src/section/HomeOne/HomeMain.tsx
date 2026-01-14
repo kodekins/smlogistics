@@ -21,14 +21,15 @@ const HomeMain = () => {
 			<ServicesOne />
 			<WhyChooseOne />
 			<SkillOne />
-			<CTABrokering />
-			<TestimonialOne />
+			
+			
 			<FaqOne />
 			<CTAOne />
 			<CounterOne />
 			<TeamOne />
 			<FeaturesTwo />
-			<BrandOne />
+			<CTABrokering />
+			
 		</React.Fragment>
 	);
 }

@@ -1,18 +1,53 @@
 
 import { Link } from 'react-router-dom';
-import serviceSidebarImg from '/sm-contact.png';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Autoplay, Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
 import serviceDetailsImg1 from '/sm-ltl1.jpg';
 import serviceDetailsImg2 from '/sm-ltl3.jpg';
 import serviceDetailsImg3 from '/sm-ltl4.jpg';
 import serviceDetailsImg4 from '/sm-ltl5.jpg';
 
+// Import commodity images for LTL
+import apparelImg from '/ms-toc1.jpeg';
+import homeGoodsImg from '/ms-toc3.jpeg';
+import retailImg from '/ms-toc5.jpeg';
+import ecommerceImg from '/ms-toc2.jpeg';
+import householdImg from '/ms-toc4.jpeg';
+
 interface ServiceDetailsProps {
   serviceType?: string;
 }
 
+interface CommodityItem {
+  name: string;
+  items: string[];
+  image?: string;
+}
+
+interface ServiceSection {
+  title: string;
+  description: string;
+  commodities?: CommodityItem[];
+}
+
+interface ServiceContent {
+  title: string;
+  subtitle: string;
+  description: string;
+  mainContent: string;
+  whyChooseTitle: string;
+  benefits: string[];
+  whyChoose: string;
+  sections?: ServiceSection[];
+}
+
 const ServiceDetails = ({ serviceType = 'ltl' }: ServiceDetailsProps) => {
   
-  const serviceContent = {
+  const serviceContent: { [key: string]: ServiceContent } = {
     ltl: {
       title: 'LTL (Less Than Truckload)',
       subtitle: 'Cost-effective option for smaller shipments',
@@ -26,7 +61,66 @@ const ServiceDetails = ({ serviceType = 'ltl' }: ServiceDetailsProps) => {
         'Flexible pickup and delivery options',
         'Consistent, on-time deliveries'
       ],
-      whyChoose: 'Whether you\'re shipping pallets, cartons, or partial loads, our LTL solutions are designed to keep your supply chain moving smoothly while helping you control logistics costs.'
+      whyChoose: 'Whether you\'re shipping pallets, cartons, or partial loads, our LTL solutions are designed to keep your supply chain moving smoothly while helping you control logistics costs.',
+      sections: [
+        {
+          title: 'Consumer & Retail Goods Commodities in LTL Service',
+          description: 'Our LTL service is perfectly suited for moving consumer and retail goods across the United States. We handle everyday commercial products for retail and e-commerce supply chains efficiently and cost-effectively.',
+          commodities: [
+            {
+              name: 'Apparel & Fashion Products',
+              image: apparelImg,
+              items: [
+                'Clothing and garments',
+                'Footwear and accessories',
+                'Fashion merchandise',
+                'Seasonal apparel'
+              ]
+            },
+            {
+              name: 'Home Goods & Furniture',
+              image: homeGoodsImg,
+              items: [
+                'Home décor items',
+                'Small furniture pieces',
+                'Kitchen and dining products',
+                'Bedding and linens'
+              ]
+            },
+            {
+              name: 'Retail Merchandise',
+              image: retailImg,
+              items: [
+                'Packaged retail products',
+                'Store inventory replenishment',
+                'Display fixtures and POP materials',
+                'Promotional items'
+              ]
+            },
+            {
+              name: 'E-commerce Fulfillment',
+              image: ecommerceImg,
+              items: [
+                'Direct-to-consumer shipments',
+                'Distribution center transfers',
+                'Return merchandise handling',
+                'Multi-channel retail support'
+              ]
+            },
+            {
+              name: 'Household & Lifestyle Products',
+              image: householdImg,
+              items: [
+                'Personal care items',
+                'Cleaning supplies',
+                'Pet products',
+                'Sporting goods and recreation items',
+                'Toys and games'
+              ]
+            }
+          ]
+        }
+      ]
     },
     dumptruck: {
       title: 'Dump Truck Services',
@@ -51,7 +145,7 @@ const ServiceDetails = ({ serviceType = 'ltl' }: ServiceDetailsProps) => {
       <div className="container">
         <div className="row">
           {/* Sidebar */}
-          <div className="col-xl-4">
+          <div className="col-xl-4 order-2 order-xl-1">
             <div className="service-details__sidebar">
               {/* Services List */}
               <div className="service-details__sidebar-single">
@@ -93,24 +187,95 @@ const ServiceDetails = ({ serviceType = 'ltl' }: ServiceDetailsProps) => {
                 </div>
               </div>
 
-              {/* Contact Box */}
-              <div className="service-details__sidebar-contact text-center">
-                <div className="service-details__sidebar-contact-img">
-                  <div className="inner">
-                    <img src={serviceSidebarImg} alt="Contact" />
+              {/* Contact Box - Redesigned as a Professional Card */}
+              <div 
+                className="service-details__sidebar-contact" 
+                style={{ 
+                  backgroundColor: '#1a1a1a', 
+                  borderRadius: '20px', 
+                  padding: '40px 30px', 
+                  position: 'relative', 
+                  overflow: 'hidden',
+                  boxShadow: '0 20px 40px rgba(0,0,0,0.2)',
+                  marginTop: '40px'
+                }}
+              >
+                {/* Background Pattern/Overlay */}
+                <div style={{
+                  position: 'absolute',
+                  top: '-50px',
+                  right: '-50px',
+                  width: '150px',
+                  height: '150px',
+                  backgroundColor: 'rgba(255, 107, 53, 0.1)',
+                  borderRadius: '50%',
+                  zIndex: '0'
+                }}></div>
+
+                <div style={{ position: 'relative', zIndex: '1' }}>
+                  <div 
+                    className="icon" 
+                    style={{ 
+                      width: '70px', 
+                      height: '70px', 
+                      backgroundColor: '#ff6b35', 
+                      borderRadius: '15px', 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      justifyContent: 'center',
+                      marginBottom: '25px',
+                      boxShadow: '0 10px 20px rgba(255, 107, 53, 0.3)'
+                    }}
+                  >
+                    <span className="icon-phone" style={{ fontSize: '30px', color: '#fff' }}></span>
                   </div>
-                </div>
-                <div className="service-details__sidebar-contact-content">
-                  <div className="icon"><span className="icon-phone"></span></div>
-                  <h2><Link to="tel:+923313435042">+92 331 343 5042</Link></h2>
-                  <h3>If You Need Any Help <br /> Contact With Us</h3>
+                  
+                  <h3 style={{ color: '#fff', fontSize: '24px', fontWeight: '700', lineHeight: '1.4', marginBottom: '15px' }}>
+                    Need Expert Logistics Advice?
+                  </h3>
+                  
+                  <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '15px', lineHeight: '1.6', marginBottom: '30px' }}>
+                    Our dedicated team is ready to help you with your shipping needs 24/7.
+                  </p>
+                  
+                  <div style={{ marginBottom: '30px' }}>
+                    <p style={{ color: '#ff6b35', fontSize: '14px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '5px' }}>
+                      Call us anytime
+                    </p>
+                    <h2>
+                      <Link 
+                        to="tel:+18477891170" 
+                        style={{ color: '#fff', fontSize: '26px', fontWeight: '800', textDecoration: 'none' }}
+                      >
+                        847-789-1170
+                      </Link>
+                    </h2>
+                  </div>
+                  
+                  <Link 
+                    to="/contact" 
+                    className="thm-btn"
+                    style={{
+                      display: 'block',
+                      textAlign: 'center',
+                      padding: '15px',
+                      backgroundColor: '#fff',
+                      color: '#1a1a1a',
+                      borderRadius: '10px',
+                      fontWeight: '700',
+                      textDecoration: 'none',
+                      transition: 'all 0.3s ease'
+                    }}
+                  >
+                    Request a Quote
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Content Area */}
-          <div className="col-xl-8">
+          <div className="col-xl-8 order-1 order-xl-2">
             <div className="service-details__content">
               {/* Top Image */}
               <div className="service-details__content-img1">
@@ -120,28 +285,119 @@ const ServiceDetails = ({ serviceType = 'ltl' }: ServiceDetailsProps) => {
               </div>
 
               {/* Main Content */}
-              <div className="service-details__content-text1">
-                <h2>{content.title}</h2>
-                <p>
+              <div className="service-details__content-text1" style={{ textAlign: 'left', marginBottom: '40px' }}>
+                <h2 style={{ fontSize: '36px', fontWeight: '700', marginBottom: '20px', color: '#1a1a1a' }}>{content.title}</h2>
+                <p style={{ fontSize: '17px', lineHeight: '1.8', color: '#444' }}>
                   {content.description}
                 </p>
-                <p style={{ marginTop: '15px' }}>
+                <p style={{ marginTop: '20px', fontSize: '16px', lineHeight: '1.7', color: '#666' }}>
                   {content.mainContent}
                 </p>
               </div>
 
-              <div className="service-details__content-text2">
-                <h2>{content.whyChooseTitle || `Why Choose Our ${content.title} Service`}</h2>
+              <div className="service-details__content-text2" style={{ backgroundColor: '#fdf2ee', padding: '40px', borderRadius: '12px', marginBottom: '50px', borderLeft: '5px solid #ff6b35' }}>
+                <h2 style={{ fontSize: '28px', fontWeight: '700', marginBottom: '25px', color: '#1a1a1a' }}>{content.whyChooseTitle || `Why Choose Our ${content.title} Service`}</h2>
                 {content.benefits && (
-                  <ul style={{ marginBottom: '15px', paddingLeft: '20px' }}>
+                  <ul className="list-unstyled" style={{ marginBottom: '25px' }}>
                     {content.benefits.map((benefit: string, idx: number) => (
-                      <li key={idx} style={{ marginBottom: '8px' }}>{benefit}</li>
+                      <li key={idx} style={{ marginBottom: '12px', display: 'flex', alignItems: 'flex-start', fontSize: '16px', color: '#333' }}>
+                        <span className="icon-right-arrow21" style={{ color: '#ff6b35', fontSize: '14px', marginTop: '6px', marginRight: '12px' }}></span>
+                        {benefit}
+                      </li>
                     ))}
                   </ul>
                 )}
-                <p>
+                <p style={{ fontSize: '16px', fontStyle: 'italic', color: '#555' }}>
                   {content.whyChoose}
                 </p>
+              </div>
+
+              {/* Additional Sections for LTL */}
+              <div className="ltl-special-sections">
+                {content.sections && content.sections.map((section: any, idx: number) => (
+                  <div key={idx} style={{ marginTop: '60px' }}>
+                    <div className="sec-title text-center" style={{ marginBottom: '50px' }}>
+                      <h2 style={{ fontSize: '36px', fontWeight: '800', marginBottom: '20px', color: '#1a1a1a' }}>
+                        {section.title}
+                      </h2>
+                      <div style={{ width: '80px', height: '4px', backgroundColor: '#ff6b35', margin: '0 auto 25px' }}></div>
+                      <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#555', maxWidth: '800px', margin: '0 auto' }}>
+                        {section.description}
+                      </p>
+                    </div>
+                    
+                    {section.commodities && (
+                    <div style={{ marginTop: '20px' }}>
+                      {/* Commodities Section with Slider (Both Desktop & Mobile) */}
+                      <Swiper
+                        modules={[Pagination, Autoplay, Navigation]}
+                        spaceBetween={30}
+                        slidesPerView={1}
+                        pagination={{ clickable: true }}
+                        navigation={true}
+                        autoplay={{ delay: 5000, disableOnInteraction: false }}
+                        breakpoints={{
+                          768: {
+                            slidesPerView: 2,
+                          },
+                          1200: {
+                            slidesPerView: 2,
+                          }
+                        }}
+                        style={{ padding: '10px 10px 60px 10px' }}
+                      >
+                        {section.commodities.map((commodity: any, i: number) => (
+                          <SwiperSlide key={i}>
+                            <div 
+                              style={{ 
+                                backgroundColor: '#ffffff',
+                                padding: '30px',
+                                borderRadius: '20px',
+                                boxShadow: '0 15px 40px rgba(0,0,0,0.08)',
+                                border: '1px solid #f0f0f0',
+                                height: '100%',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                transition: 'transform 0.3s ease'
+                              }}
+                              onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-10px)'}
+                              onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+                            >
+                              {commodity.image && (
+                                <div style={{ overflow: 'hidden', borderRadius: '15px', marginBottom: '25px', position: 'relative' }}>
+                                  <img 
+                                    src={commodity.image} 
+                                    alt={commodity.name}
+                                    style={{
+                                      width: '100%',
+                                      height: '260px',
+                                      objectFit: 'cover',
+                                      display: 'block'
+                                    }}
+                                  />
+                                  <div style={{ position: 'absolute', top: '0', left: '0', right: '0', bottom: '0', background: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%)' }}></div>
+                                </div>
+                              )}
+                              <h3 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '20px', color: '#1a1a1a', display: 'flex', alignItems: 'center' }}>
+                                <span style={{ width: '25px', height: '2px', backgroundColor: '#ff6b35', marginRight: '15px' }}></span>
+                                {commodity.name}
+                              </h3>
+                              <ul className="list-unstyled" style={{ flex: '1' }}>
+                                {commodity.items.map((item: string, j: number) => (
+                                  <li key={j} style={{ marginBottom: '12px', display: 'flex', alignItems: 'flex-start', fontSize: '15px', color: '#444' }}>
+                                    <span className="icon-right-arrow21" style={{ color: '#ff6b35', fontSize: '12px', marginTop: '6px', marginRight: '12px' }}></span>
+                                    {item}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          </SwiperSlide>
+                        ))}
+                      </Swiper>
+                    </div>
+                    )}
+                  </div>
+                ))}
               </div>
 
               {/* 2 Images */}

@@ -12,8 +12,8 @@ const footerData = {
     { to: '#', icon: 'icon-pinterest', name: 'Pinterest' },
   ],
   contact: {
-    email: 'starmslogistics@gmail.com',
-    phones: ['+92 331 343 5042', 'support@starmslogistics.com'],
+    email: 'contact@starmslogistics.com',
+    phones: ['847-789-1170', 'contact@starmslogistics.com'],
   },
   services: [
     { to: '/skyline-roofing-solutions', text: 'Roof Renewal' },

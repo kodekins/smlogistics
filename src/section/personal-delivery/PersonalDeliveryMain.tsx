@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import serviceSidebarImg from '/sm-contact.png';
 import serviceDetailsImg1 from '/sm-interstate1.jpg';
 import serviceDetailsImg2 from '/sm-interstate2.png';
 import serviceDetailsImg3 from '/sm-interstate3.jpg';
@@ -38,7 +37,7 @@ const ServiceDetails = ({ serviceType = 'interstate' }: ServiceDetailsProps) => 
       <div className="container">
         <div className="row">
           {/* Sidebar */}
-          <div className="col-xl-4">
+          <div className="col-xl-4 order-2 order-xl-1">
             <div className="service-details__sidebar">
               {/* Services List */}
               <div className="service-details__sidebar-single">
@@ -80,24 +79,95 @@ const ServiceDetails = ({ serviceType = 'interstate' }: ServiceDetailsProps) => 
                 </div>
               </div>
 
-              {/* Contact Box */}
-              <div className="service-details__sidebar-contact text-center">
-                <div className="service-details__sidebar-contact-img">
-                  <div className="inner">
-                    <img src={serviceSidebarImg} alt="Contact" />
+              {/* Contact Box - Redesigned as a Professional Card */}
+              <div 
+                className="service-details__sidebar-contact" 
+                style={{ 
+                  backgroundColor: '#1a1a1a', 
+                  borderRadius: '20px', 
+                  padding: '40px 30px', 
+                  position: 'relative', 
+                  overflow: 'hidden',
+                  boxShadow: '0 20px 40px rgba(0,0,0,0.2)',
+                  marginTop: '40px'
+                }}
+              >
+                {/* Background Pattern/Overlay */}
+                <div style={{
+                  position: 'absolute',
+                  top: '-50px',
+                  right: '-50px',
+                  width: '150px',
+                  height: '150px',
+                  backgroundColor: 'rgba(255, 107, 53, 0.1)',
+                  borderRadius: '50%',
+                  zIndex: '0'
+                }}></div>
+
+                <div style={{ position: 'relative', zIndex: '1' }}>
+                  <div 
+                    className="icon" 
+                    style={{ 
+                      width: '70px', 
+                      height: '70px', 
+                      backgroundColor: '#ff6b35', 
+                      borderRadius: '15px', 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      justifyContent: 'center',
+                      marginBottom: '25px',
+                      boxShadow: '0 10px 20px rgba(255, 107, 53, 0.3)'
+                    }}
+                  >
+                    <span className="icon-phone" style={{ fontSize: '30px', color: '#fff' }}></span>
                   </div>
-                </div>
-                <div className="service-details__sidebar-contact-content">
-                  <div className="icon"><span className="icon-phone"></span></div>
-                  <h2><Link to="tel:+923313435042">+92 331 343 5042</Link></h2>
-                  <h3>If You Need Any Help <br /> Contact With Us</h3>
+                  
+                  <h3 style={{ color: '#fff', fontSize: '24px', fontWeight: '700', lineHeight: '1.4', marginBottom: '15px' }}>
+                    Need Expert Logistics Advice?
+                  </h3>
+                  
+                  <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '15px', lineHeight: '1.6', marginBottom: '30px' }}>
+                    Our dedicated team is ready to help you with your shipping needs 24/7.
+                  </p>
+                  
+                  <div style={{ marginBottom: '30px' }}>
+                    <p style={{ color: '#ff6b35', fontSize: '14px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '5px' }}>
+                      Call us anytime
+                    </p>
+                    <h2>
+                      <Link 
+                        to="tel:+18477891170" 
+                        style={{ color: '#fff', fontSize: '26px', fontWeight: '800', textDecoration: 'none' }}
+                      >
+                        847-789-1170
+                      </Link>
+                    </h2>
+                  </div>
+                  
+                  <Link 
+                    to="/contact" 
+                    className="thm-btn"
+                    style={{
+                      display: 'block',
+                      textAlign: 'center',
+                      padding: '15px',
+                      backgroundColor: '#fff',
+                      color: '#1a1a1a',
+                      borderRadius: '10px',
+                      fontWeight: '700',
+                      textDecoration: 'none',
+                      transition: 'all 0.3s ease'
+                    }}
+                  >
+                    Request a Quote
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Content Area */}
-          <div className="col-xl-8">
+          <div className="col-xl-8 order-1 order-xl-2">
             <div className="service-details__content">
               {/* Top Image */}
               <div className="service-details__content-img1">

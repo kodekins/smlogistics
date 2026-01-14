@@ -136,11 +136,11 @@ const Sidebar = ({ isSidebar, handleSidebar }) => {
                                         </li>
                                         <li>
                                             <span className="icon-phone"></span>
-                                            <Link to="tel:+923313435042">+92 331 343 5042</Link>
+                                            <Link to="tel:+18477891170">847-789-1170</Link>
                                         </li>
                                         <li>
                                             <span className="fa fa-envelope"></span>
-                                            <Link to="mailto:starmslogistics@gmail.com">starmslogistics@gmail.com</Link>
+                                            <Link to="mailto:Contact@starmslogistics.com">Contact@starmslogistics.com</Link>
                                         </li>
                                     </ul>
                                 </div>

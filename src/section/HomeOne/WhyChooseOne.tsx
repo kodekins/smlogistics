@@ -11,7 +11,7 @@ const cccc = () => {
     load: "Load",
   });
 
-  const [distanceRange, setDistanceRange] = useState({ min: 0, max: 1000 });
+  const [distanceRange, setDistanceRange] = useState({ min: 0, max: 10000 });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

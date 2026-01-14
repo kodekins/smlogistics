@@ -25,7 +25,7 @@ const CounterOne = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="shape1"></div>
+                            {/*<div className="shape1"></div>*/}
                         </div>
                     </div>
                     {/* End Counter One Single */}
