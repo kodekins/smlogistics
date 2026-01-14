@@ -85,8 +85,8 @@ const HeaderStyleOne = (props) => {
                                                         </div>
                                                         <div className="text-box">
                                                             <p>
-                                                                <span>Talk to Us</span>{" "}
-                                                                <Link to="tel:+18477891170">847-789-1170</Link>
+                                                                <span>Talk to Us</span>{"USDOT Number : "}
+                                                                <Link to="tel:+18477891170">4493768</Link>
                                                             </p>
                                                         </div>
                                                     </li>
@@ -96,8 +96,8 @@ const HeaderStyleOne = (props) => {
                                                         </div>
                                                         <div className="text-box">
                                                             <p>
-                                                                <span>Talk to Us</span>{" "}
-                                                                <Link to="tel:+18477891170">847-789-1170</Link>
+                                                                <span>Talk to Us</span>{"MC Number : "}
+                                                                <Link to="tel:+18477891170">1779397</Link>
                                                             </p>
                                                         </div>
                                                     </li>
@@ -120,11 +120,11 @@ const HeaderStyleOne = (props) => {
                                 </div>
                                 <div className="main-header-one__bottom">
                                     <div className="main-menu__wrapper-inner">
-                                        <div className="main-header-one__bottom-inner" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                                        <div className="main-header-one__bottom-inner" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', paddingTop: '10px', paddingBottom: '10px' }}>
                                             <div className="main-header-one__bottom-left">
                                                 <div className="logo-box">
                                                     <Link to="/">
-                                                        <img src={navLogo} alt="Logo" style={{ maxHeight: '60px', width: 'auto', objectFit: 'contain' }} />
+                                                        <img src={navLogo} alt="Logo" style={{ maxHeight: '80px', width: 'auto', objectFit: 'contain' }} />
                                                     </Link>
                                                 </div>
                                             </div>

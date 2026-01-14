@@ -151,7 +151,7 @@ const FooterTwo = () => {
                           </div>
                           <div className="text-box">
                             <p>
-                              United States <br /> Nationwide Coverage
+                              1348 Tiger Lily Drive <br /> Bartlett, IL 60193
                             </p>
                           </div>
                         </li>

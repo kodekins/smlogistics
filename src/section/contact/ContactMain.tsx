@@ -221,7 +221,7 @@ const ContactMain = () => {
                   <div className="content">
                     <h2>Location</h2>
                     <p>
-                      280 Granite Run Drive <br /> SuiteHobert, LA 90010, USA.
+                      1348 Tiger Lily Drive <br /> Bartlett, IL 60193
                     </p>
                   </div>
                 </li>

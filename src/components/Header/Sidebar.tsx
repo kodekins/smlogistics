@@ -132,7 +132,7 @@ const Sidebar = ({ isSidebar, handleSidebar }) => {
                                     <h4>Contact Info</h4>
                                     <ul>
                                         <li>
-                                            <span className="icon-location1"></span> United States - Nationwide Coverage
+                                            <span className="icon-location1"></span> 1348 Tiger Lily Drive, Bartlett, IL 60193
                                         </li>
                                         <li>
                                             <span className="icon-phone"></span>
@@ -140,7 +140,7 @@ const Sidebar = ({ isSidebar, handleSidebar }) => {
                                         </li>
                                         <li>
                                             <span className="fa fa-envelope"></span>
-                                            <Link to="mailto:Contact@starmslogistics.com">Contact@starmslogistics.com</Link>
+                                            <Link to="mailto:contact@starmslogistics.com">contact@starmslogistics.com</Link>
                                         </li>
                                     </ul>
                                 </div>
