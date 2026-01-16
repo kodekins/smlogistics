@@ -16,7 +16,7 @@ const CounterOne = () => {
                                 <div className="content-box">
                                     <div className="count-text-box count-box">
                                         <h3>
-                                            <CountUp start={0} end={10} duration={2.5} separator="," />
+                                            <CountUp start={0} end={6} duration={2.5} separator="," />
                                         </h3>
                                         <span className="plus">+</span>
                                     </div>

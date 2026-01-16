@@ -5,7 +5,6 @@ import gsap from 'gsap';
 // Images
 import About_shape3 from '/sm-home2.jpg';
 import About_Image from '/sm-home3.png';
-import About_shape4 from '../../assets/images/shapes/about-v1-shape3.png';
 
 const AboutOne = () => {
   const revealRef = useRef<HTMLDivElement[]>([]);
@@ -141,7 +140,7 @@ const AboutOne = () => {
                     <div className="text-box">
                       <p>Make A Phone Call</p>
                       <h4>
-                        <a href="tel:1234567890">+880 123 456 789</a>
+                        <a href="tel:+18477891170">847-789-1170</a>
                       </h4>
                     </div>
                   </div>
@@ -151,33 +150,46 @@ const AboutOne = () => {
 
             {/* About Image */}
             <div className="col-xl-5">
-              <div className="about-one__img">
-                <div className="about-one__img1" ref={addToRefs}>
+              <div className="about-one__img" style={{ position: 'relative', marginTop: '40px' }}>
+                <div className="about-one__img1" ref={addToRefs} style={{ position: 'relative', zIndex: 1, maxWidth: '90%' }}>
                   <img 
                     src={About_shape3} 
                     alt="About1"
                     style={{
                       width: '100%',
-                      height: '100%',
+                      height: '420px',
                       objectFit: 'cover',
-                      display: 'block'
+                      display: 'block',
+                      borderRadius: '15px',
+                      boxShadow: '0 20px 40px rgba(0,0,0,0.1)'
                     }}
                   />
                 </div>
-                <div className="about-one__img2">
-                  <div className="about-one__img2-inner" ref={addToRefs}>
+                <div className="about-one__img2" style={{ 
+                  position: 'absolute', 
+                  bottom: '-50px', 
+                  right: '-20px', 
+                  zIndex: 2,
+                  width: '70%',
+                  maxWidth: '350px'
+                }}>
+                  <div className="about-one__img2-inner" ref={addToRefs} style={{ 
+                    border: '10px solid #fff', 
+                    borderRadius: '15px',
+                    boxShadow: '0 20px 40px rgba(0,0,0,0.15)',
+                    overflow: 'hidden'
+                  }}>
                     <img 
                       src={About_Image} 
                       alt="About2"
                       style={{
                         width: '100%',
-                        height: '100%',
+                        height: '280px',
                         objectFit: 'cover',
                         display: 'block'
                       }}
                     />
                   </div>
-                  
                 </div>
               </div>
             </div>

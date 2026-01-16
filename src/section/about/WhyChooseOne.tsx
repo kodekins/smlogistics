@@ -233,11 +233,11 @@ const WhyChooseOne: React.FC = () => {
                           onChange={(e) => handleSelectChange("freightType", e.target.value)}
                         >
                           <option disabled>Freight Type</option>
-                          <option value="Freight Type 01">Freight Type 01</option>
-                          <option value="Freight Type 02">Freight Type 02</option>
-                          <option value="Freight Type 03">Freight Type 03</option>
-                          <option value="Freight Type 04">Freight Type 04</option>
-                          <option value="Freight Type 05">Freight Type 05</option>
+                          <option value="LTL (Less Than Truckload)">LTL (Less Than Truckload)</option>
+                          <option value="FTL (Full Truckload)">FTL (Full Truckload)</option>
+                          <option value="Interstate Transport">Interstate Transport</option>
+                          <option value="Reefer Transport">Reefer Transport</option>
+                          <option value="Dump Truck">Dump Truck</option>
                           <option value="Others">Others</option>
                         </select>
                       </div>

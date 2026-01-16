@@ -1,50 +1,8 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-import Img1 from '../../assets/images/team/team-v1-img1.jpg';
-import Img2 from '../../assets/images/team/team-v1-img2.jpg';
-import Img3 from '../../assets/images/team/team-v1-img3.jpg';
-import Img4 from '../../assets/images/team/team-v1-img4.jpg';
-import Img5 from '../../assets/images/team/team-v1-img5.jpg';
-import Img6 from '../../assets/images/team/team-v1-img6.jpg';
+import ownerImg from '/owner.jpg';
 import Shape1 from '../../assets/images/pattern/team-page-pattern.png';
-
-const teamMembers = [
-  { id: 1, img: Img1, name: 'Courtney Henry', title: 'FOUNDER', delay: '.1s' },
-  { id: 2, img: Img2, name: 'Jane Cooper', title: 'FOUNDER', delay: '.3s' },
-  { id: 3, img: Img3, name: 'Marvin McKinney', title: 'FOUNDER', delay: '.5s' },
-  { id: 4, img: Img4, name: 'Jacob Jones', title: 'FOUNDER', delay: '.1s' },
-  { id: 5, img: Img5, name: 'Darrell Steward', title: 'FOUNDER', delay: '.3s' },
-  { id: 6, img: Img6, name: 'Theresa Webb', title: 'FOUNDER', delay: '.5s' },
-];
-
-const TeamCard = ({ member }) => (
-  <div className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay={member.delay}>
-    <div className="team-one__single">
-      <div className="team-one__single-img">
-        <div className="inner">
-          <img src={member.img} alt={member.name} />
-        </div>
-      </div>
-      <div className="team-one__single-content">
-        <ul className="social-links">
-          <li><Link to="#"><span className="icon-linkedin"></span></Link></li>
-          <li><Link to="#"><span className="icon-twitter1"></span></Link></li>
-          <li><Link to="#"><span className="icon-instagram"></span></Link></li>
-          <li><Link to="#"><span className="icon-facebook-f"></span></Link></li>
-        </ul>
-        <span>{member.title}</span>
-        <h2><Link to="/team-details">{member.name}</Link></h2>
-        <p>Logistic service provider company plays a pivotal role in the global supply chain</p>
-        <div className="btn-box">
-          <Link to="/contact">
-            Contact Me <i className="icon-right-arrow21"></i>
-          </Link>
-        </div>
-      </div>
-    </div>
-  </div>
-);
 
 const TeamOneMain = () => {
   return (
@@ -53,10 +11,69 @@ const TeamOneMain = () => {
         <img src={Shape1} alt="Pattern" />
       </div>
       <div className="container">
-        <div className="row">
-          {teamMembers.map(member => (
-            <TeamCard key={member.id} member={member} />
-          ))}
+        <div className="row justify-content-center">
+            <div className="col-xl-6 col-lg-8">
+                <div className="leader-profile-card" style={{ 
+                    textAlign: 'center', 
+                    padding: '50px 40px', 
+                    background: '#fff', 
+                    borderRadius: '20px', 
+                    boxShadow: '0 10px 40px rgba(0,0,0,0.08)',
+                    border: '1px solid #f0f0f0',
+                    position: 'relative'
+                }}>
+                    <div className="leader-profile-img" style={{ 
+                        margin: '0 auto 35px', 
+                        width: '300px',
+                        height: '300px',
+                        borderRadius: '50%',
+                        overflow: 'hidden',
+                        border: '8px solid #ff6b35',
+                        boxShadow: '0 15px 30px rgba(255, 107, 53, 0.2)'
+                    }}>
+                        <img 
+                            src={ownerImg} 
+                            alt="Muzaffar A. Shaikh" 
+                            style={{ 
+                                width: '100%', 
+                                height: '100%', 
+                                objectFit: 'cover' 
+                            }} 
+                        />
+                    </div>
+
+                    <div className="leader-profile-content">
+                        <span style={{ 
+                            color: '#ff6b35', 
+                            fontWeight: '700', 
+                            fontSize: '14px', 
+                            textTransform: 'uppercase',
+                            letterSpacing: '2px',
+                            display: 'block',
+                            marginBottom: '12px'
+                        }}>
+                            Managing Director – Star MS Logistics
+                        </span>
+                        <h2 style={{ fontSize: '38px', fontWeight: '800', marginBottom: '20px', color: '#1a1a1a' }}>
+                            Muzaffar A. Shaikh
+                        </h2>
+                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#555', marginBottom: '35px', maxWidth: '600px', margin: '0 auto 35px' }}>
+                            With a vision to redefine freight brokerage through trust and reliability, 
+                            Muzaffar A. Shaikh leads Star MS Logistics with a commitment to excellence, 
+                            ensuring every shipment is managed with the highest level of accountability and care.
+                        </p>
+                        <div className="btn-box">
+                            <Link to="/contact" className="thm-btn" style={{ 
+                                padding: '16px 45px',
+                                borderRadius: '10px',
+                                display: 'inline-block'
+                            }}>
+                                Contact Me <i className="icon-right-arrow21"></i>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
     </section>

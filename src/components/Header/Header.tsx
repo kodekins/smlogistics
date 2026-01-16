@@ -133,9 +133,9 @@ const Header = (props) => {
                                 <div className="container">
                                     <div className="main-header-three__bottom-inner">
                                         <div className="main-header-three__bottom-left">
-                                            <div className="logo-box">
-                                                <Link to="/"><img src={navLogo} alt="" style={{ maxHeight: '60px', width: 'auto', objectFit: 'contain' }} /></Link>
-                                            </div>
+                                            
+                                                <Link to="/"><img src={navLogo} alt="" style={{ maxHeight: '80px', width: 'auto', objectFit: 'contain' }} /></Link>
+                                            
                                         </div>
 
                                         <div className="main-header-three__bottom-middle">
@@ -246,7 +246,7 @@ const Header = (props) => {
                                 <div className="main-header-three__bottom-inner">
                                     <div className="main-header-three__bottom-left">
                                         <div className="logo-box">
-                                            <Link to="/"><img src={navLogo} alt="" style={{ maxHeight: '60px', width: 'auto', objectFit: 'contain' }} /></Link>
+                                            <Link to="/"><img src={navLogo} alt="" style={{ maxHeight: '80px', width: 'auto', objectFit: 'contain' }} /></Link>
                                         </div>
                                     </div>
 

@@ -106,7 +106,7 @@ const ServiceOne = () => {
                     <span className={service.iconClass} style={{ fontSize: '32px', color: '#fff' }}></span>
                   </div>
                 </div>
-              </div>
+                  </div>
 
               {/* Content Column */}
               <div 
@@ -129,7 +129,7 @@ const ServiceOne = () => {
                     >
                       {service.title}
                     </Link>
-                  </h2>
+                    </h2>
                   <p style={{ 
                     fontSize: '16px', 
                     lineHeight: '1.8', 
@@ -138,7 +138,7 @@ const ServiceOne = () => {
                   }}>
                     {service.desc}
                   </p>
-                  <div className="btn-box">
+                    <div className="btn-box">
                     <Link 
                       to={service.link}
                       className="thm-btn"
@@ -153,7 +153,7 @@ const ServiceOne = () => {
                       }}
                     >
                       Learn More <span className="icon-right-arrow21"></span>
-                    </Link>
+                      </Link>
                   </div>
                 </div>
               </div>

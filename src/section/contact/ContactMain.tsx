@@ -271,7 +271,7 @@ const ContactMain = () => {
       <section className="google-map-one">
         <iframe
           title="Company Location on Google Map"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6209.242755903148!2d-77.04363602434464!3d38.90977276948481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1394992895496"
+          src="https://maps.google.com/maps?q=1348%20Tiger%20Lily%20Drive,%20Bartlett,%20IL%2060193&t=&z=15&ie=UTF8&iwloc=&output=embed"
           className="google-map-one__map"
           loading="lazy"
           allowFullScreen

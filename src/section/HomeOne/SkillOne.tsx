@@ -1,33 +1,23 @@
 import { Link } from 'react-router-dom';
 // Import images
-import skillImg1 from '/sm-home4.png';
-import skillImg2 from '/dumptrucks-2.jpeg';
+import skillImg1 from '/sm-home3.png'; // Handshake
+import skillImg2 from '/sm-home2.jpg'; // Ship
+import skillImg3 from '/dumptrucks-2.jpeg'; // Dump Truck
 
 const SkillOne = () => {
   return (
-    <section className="skill-one">
+    <section className="skill-one" style={{ padding: '80px 0' }}>
       <div className="container">
-        <div className="row">
+        <div className="row align-items-start">
           {/* Skill Images Section */}
           <div className="col-xl-5">
-            <div className="skill-one__img">
-              <div className="skill-one__img1">
-                <img 
-                  src={skillImg1} 
-                  alt="Skill demonstration"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    display: 'block'
-                  }}
-                />
-              </div>
-              <div className="skill-one__img2">
-                <div className="inner">
+            <div className="skill-one__img" style={{ position: 'relative', marginTop: '10px' }}>
+              {/* Top two images side by side */}
+              <div style={{ display: 'flex', gap: '15px', marginBottom: '15px' }}>
+                <div style={{ flex: 1, height: '220px', overflow: 'hidden', borderRadius: '10px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
                   <img 
-                    src={skillImg2} 
-                    alt="Skill demonstration"
+                    src={skillImg1} 
+                    alt="Skill demonstration 1"
                     style={{
                       width: '100%',
                       height: '100%',
@@ -36,6 +26,32 @@ const SkillOne = () => {
                     }}
                   />
                 </div>
+                <div style={{ flex: 1, height: '220px', overflow: 'hidden', borderRadius: '10px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
+                  <img 
+                    src={skillImg2} 
+                    alt="Skill demonstration 2"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      display: 'block'
+                    }}
+                  />
+                </div>
+              </div>
+              
+              {/* Bottom large image - width equivalent to total top width + gap */}
+              <div style={{ width: '100%', height: '350px', overflow: 'hidden', borderRadius: '10px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
+                <img 
+                  src={skillImg3} 
+                  alt="Skill demonstration 3"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    display: 'block'
+                  }}
+                />
               </div>
             </div>
           </div>

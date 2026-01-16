@@ -45,7 +45,7 @@ const FooterFour = ()=> {
             <div className="site-footer-four__top-inner">
               <div className="site-footer-four__logo">
                 <Link to="/">
-                  <img src={footerData.logo} alt="Footer Logo" />
+                  <img src={footerData.logo} alt="Footer Logo" style={{ maxHeight: '80px', width: 'auto', objectFit: 'contain' }} />
                 </Link>
               </div>
               <div className="site-footer-four__social">

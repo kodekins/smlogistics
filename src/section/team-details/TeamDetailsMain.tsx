@@ -1,5 +1,6 @@
+
 import React from 'react';
-import teamImg from '../../assets/images/team/team-details-img1.jpg';
+import ownerImg from '/owner.jpg';
 import patternImg from '../../assets/images/pattern/team-details__bottom-pattern.png';
 import { Link } from 'react-router-dom';
 
@@ -11,8 +12,8 @@ const TeamDetails = () => {
           <div className="row">
             <div className="col-xl-6">
               <div className="team-details__top-img">
-                <div className="inner">
-                  <img src={teamImg} alt="Team Member" />
+                <div className="inner" style={{ borderRadius: '20px', overflow: 'hidden', border: '10px solid #fff', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}>
+                  <img src={ownerImg} alt="Muzaffar A. Shaikh" style={{ width: '100%', height: '600px', objectFit: 'cover' }} />
                 </div>
               </div>
             </div>
@@ -22,16 +23,18 @@ const TeamDetails = () => {
                 <div className="title-box">
                   <div className="tagline">
                     <div className="text">
-                      <p>CONSULTANT</p>
+                      <p>MANAGING DIRECTOR</p>
                     </div>
                     <div className="line"></div>
                   </div>
-                  <h2>Esther Howard</h2>
+                  <h2>Muzaffar A. Shaikh</h2>
                 </div>
                 <div className="team-details__top-content-text">
                   <p>
-                    With a passion for innovation, we stay abreast of the latest industry trends to
-                    ensure our clients benefit from cutting-edge insurance solutions. At ABC Insurance Services,
+                    With a vision to redefine freight brokerage through trust and reliability, 
+                    Muzaffar A. Shaikh leads Star MS Logistics with a commitment to excellence, 
+                    ensuring every shipment is managed with the highest level of accountability and care. 
+                    He believes that great logistics is driven by great people and a customer-first mindset.
                   </p>
                 </div>
 
@@ -39,15 +42,15 @@ const TeamDetails = () => {
                   <ul>
                     <li>
                       <h4>Make A Call</h4>
-                      <p><Link to="tel:1234567890">680 123 456 789</Link></p>
+                      <p><Link to="tel:+18477891170">847-789-1170</Link></p>
                     </li>
                     <li>
                       <h4>Send Us Mail</h4>
-                      <p><Link to="mailto:support@logistra.com">support@logistra.com</Link></p>
+                      <p><Link to="mailto:contact@starmslogistics.com">contact@starmslogistics.com</Link></p>
                     </li>
                     <li>
-                      <h4>Web Address</h4>
-                      <p><Link to="https://www.google.com/">www.google.com</Link></p>
+                      <h4>Working Hours</h4>
+                      <p>24/7 (365 days)</p>
                     </li>
                   </ul>
                 </div>
@@ -74,17 +77,18 @@ const TeamDetails = () => {
             {/* Skills */}
             <div className="col-xl-6">
               <div className="team-details__bottom-progress">
-                <h2>My Skills</h2>
+                <h2>Our Commitment</h2>
                 <p>
-                  With a passion for innovation, we stay abreast of the latest industry trends to
-                  ensure our clients benefit from cutting-edge insurance solutions.
+                  At Star MS Logistics, we are dedicated to providing the most reliable 
+                  and transparent brokerage services in the industry. Our focus remains 
+                  on people excellence and operational readiness.
                 </p>
 
                 <ul className="skill-one__progress">
                   {[
-                    { title: 'Product Delivery', percent: 85 },
-                    { title: 'Quick Response', percent: 90 },
-                    { title: 'Customer Satisfaction', percent: 70 },
+                    { title: 'Brokerage Compliance', percent: 100 },
+                    { title: 'Real-Time Visibility', percent: 95 },
+                    { title: 'Customer Satisfaction', percent: 98 },
                   ].map((skill, index) => (
                     <li key={index}>
                       <div className="skill-one__progress-single">
@@ -107,8 +111,8 @@ const TeamDetails = () => {
                 <div className="title-box">
                   <h2>Give Us A Message</h2>
                   <p>
-                    Our dedicated team of experts is here to guide you through every step of the
-                    insurance journey, ensuring you make informed choices tailored to your unique needs.
+                    Our dedicated team of experts is here to guide you through every step of your 
+                    logistics journey, ensuring you make informed choices tailored to your unique needs.
                   </p>
                 </div>
 
@@ -116,7 +120,7 @@ const TeamDetails = () => {
                   className="why-choose-one__form"
                   onSubmit={(e) => {
                     e.preventDefault();
-                    alert("Form submitted! (Implement your logic)");
+                    alert("Message sent! We will get back to you shortly.");
                   }}
                 >
                   <div className="row">
@@ -146,10 +150,10 @@ const TeamDetails = () => {
                         <div className="select-box">
                           <select className="selectmenu wide" name="subject" required>
                             <option value="">Subject</option>
-                            <option>Freight Type 01</option>
-                            <option>Freight Type 02</option>
-                            <option>Freight Type 03</option>
-                            <option>Freight Type 04</option>
+                            <option>LTL Transport</option>
+                            <option>FTL Transport</option>
+                            <option>Interstate Transport</option>
+                            <option>Other Services</option>
                           </select>
                         </div>
                       </div>

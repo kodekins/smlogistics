@@ -27,7 +27,7 @@ const FooterStyleOne = () => {
                                     <div className="footer-widget__single footer-one__about">
                                         <div className="footer-one__about-logo">
                                             <Link to="/">
-                                                <img src={footerLogo} alt="" style={{ maxHeight: '60px', width: 'auto', objectFit: 'contain' }} />
+                                                <img src={footerLogo} alt="" style={{ maxHeight: '80px', width: 'auto', objectFit: 'contain' }} />
                                             </Link>
                                         </div>
                                         <p className="footer-one__about-text">
@@ -76,16 +76,6 @@ const FooterStyleOne = () => {
                                             <li>
                                                 <Link to="/about">
                                                     <span className="icon-right-arrow1" /> Our Story
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link to="/service">
-                                                    <span className="icon-right-arrow1" /> Freight Solutions
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link to="/faq">
-                                                    <span className="icon-right-arrow1" /> Types of Commodities
                                                 </Link>
                                             </li>
                                             <li>

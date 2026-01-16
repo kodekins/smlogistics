@@ -224,15 +224,22 @@ const WhyUs: React.FC = () => {
                           }
                         >
                           <option disabled>Freight Type</option>
-                          <option value="Full Truckload (FTL)">
-                            Full Truckload (FTL)
+                          <option value="LTL (Less Than Truckload)">
+                            LTL (Less Than Truckload)
                           </option>
-                          <option value="Less Than Truckload (LTL)">
-                            Less Than Truckload (LTL)
+                          <option value="FTL (Full Truckload)">
+                            FTL (Full Truckload)
                           </option>
-                          <option value="Refrigerated">Refrigerated</option>
-                          <option value="Flatbed">Flatbed</option>
-                          <option value="Hazmat">Hazmat</option>
+                          <option value="Interstate Transport">
+                            Interstate Transport
+                          </option>
+                          <option value="Reefer Transport">
+                            Reefer Transport
+                          </option>
+                          <option value="Dump Truck">
+                            Dump Truck
+                          </option>
+                          <option value="Others">Others</option>
                         </select>
                       </div>
                     </div>

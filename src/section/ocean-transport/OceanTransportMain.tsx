@@ -132,7 +132,7 @@ const ServiceDetails = ({ serviceType = 'reefer' }: ServiceDetailsProps) => {
                         847-789-1170
                       </Link>
                     </h2>
-                  </div>
+                </div>
                   
                   <Link 
                     to="/contact" 

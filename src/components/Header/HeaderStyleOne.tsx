@@ -122,11 +122,11 @@ const HeaderStyleOne = (props) => {
                                     <div className="main-menu__wrapper-inner">
                                         <div className="main-header-one__bottom-inner" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', paddingTop: '10px', paddingBottom: '10px' }}>
                                             <div className="main-header-one__bottom-left">
-                                                <div className="logo-box">
+                                                
                                                     <Link to="/">
-                                                        <img src={navLogo} alt="Logo" style={{ maxHeight: '80px', width: 'auto', objectFit: 'contain' }} />
+                                                        <img src={navLogo} alt="Logo" style={{ maxHeight: '90px', width: 'auto', objectFit: 'contain' }} />
                                                     </Link>
-                                                </div>
+                                                
                                             </div>
                                             <div className="main-header-one__bottom-menu" style={{ flex: '1', display: 'flex', justifyContent: 'center' }}>
                                                 <div className="main-menu__main-menu-box">
@@ -169,7 +169,7 @@ const HeaderStyleOne = (props) => {
                                                     <div className="main-header-one__bottom-left">
                                                         <div className="logo-box">
                                                             <Link to="/">
-                                                                <img src={navLogo} alt="Logo" style={{ maxHeight: '60px', width: 'auto', objectFit: 'contain' }} />
+                                                                <img src={navLogo} alt="Logo" style={{ maxHeight: '80px', width: 'auto', objectFit: 'contain' }} />
                                                             </Link>
                                                         </div>
                                                     </div>

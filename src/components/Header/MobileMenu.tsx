@@ -38,7 +38,7 @@ const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
           {/* Logo */}
           <div className="logo-box">
             <Link to="/" aria-label="logo image">
-              <img src={navLogo} alt="Logo" style={{ maxHeight: '60px', width: 'auto', objectFit: 'contain' }} />
+              <img src={navLogo} alt="Logo" style={{ maxHeight: '80px', width: 'auto', objectFit: 'contain' }} />
             </Link>
           </div>
 

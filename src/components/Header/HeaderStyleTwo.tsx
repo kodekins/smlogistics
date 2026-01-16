@@ -52,9 +52,9 @@ const HeaderStyleTwo = (props) => {
                         <div className="container">
                             <div className="main-menu__wrapper-inner">
                                 <div className="main-header-two__inner">
-                                    <div className="logo-box-two">
-                                        <Link to="/"><img src={navLogo} alt=""/></Link>
-                                    </div>
+                                    
+                                        <Link to="/"><img src={navLogo} alt="" style={{ maxHeight: '70px', width: 'auto', objectFit: 'contain' }} /></Link>
+                                    
 
                                     <div className="main-header-two__top">
                                         <div className="main-header-two__top-inner">
@@ -173,7 +173,7 @@ const HeaderStyleTwo = (props) => {
                                     <div className="main-menu__wrapper-inner">
                                         <div className="main-header-two__inner">
                                             <div className="logo-box-two">
-                                                 <Link to="/"><img src={navLogo} alt="" style={{ maxHeight: '60px', width: 'auto', objectFit: 'contain' }} /></Link>
+                                                 <Link to="/"><img src={navLogo} alt="" style={{ maxHeight: '100px', width: 'auto', objectFit: 'contain' }} /></Link>
                                             </div>
 
                                             <div className="main-header-two__top">

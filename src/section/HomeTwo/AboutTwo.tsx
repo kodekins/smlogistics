@@ -32,9 +32,9 @@ const AboutTwo = () => {
               <div className="shape4 float-bob-y">
                 <img src={shape4} alt="" />
               </div>
-              <div className="about-two__img1">
-                <div className="inner">
-                  <img src={aboutImg1} alt="" />
+              <div className="about-two__img1" style={{ position: 'relative', zIndex: 1, maxWidth: '90%' }}>
+                <div className="inner" style={{ borderRadius: '15px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}>
+                  <img src={aboutImg1} alt="" style={{ width: '100%', height: '420px', objectFit: 'cover' }} />
                 </div>
                 <div className="about-two__counter">
                   <div className="shape1">
@@ -51,8 +51,19 @@ const AboutTwo = () => {
                   </p>
                 </div>
               </div>
-              <div className="about-two__img2">
-                <img src={aboutImg2} alt="" />
+              <div className="about-two__img2" style={{ 
+                position: 'absolute', 
+                bottom: '-50px', 
+                right: '-20px', 
+                zIndex: 2,
+                width: '70%',
+                maxWidth: '350px',
+                border: '10px solid #fff',
+                borderRadius: '15px',
+                boxShadow: '0 20px 40px rgba(0,0,0,0.15)',
+                overflow: 'hidden'
+              }}>
+                <img src={aboutImg2} alt="" style={{ width: '100%', height: '280px', objectFit: 'cover' }} />
               </div>
             </div>
           </div>
